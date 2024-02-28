@@ -1,0 +1,122 @@
+
+<!-- <sharado-header></sharado-header> -->
+
+
+<!-- Header
+================================================== -->
+
+
+<!-- Titlebar
+================================================== -->
+<!-- <div id="titlebar" class="single">
+	<div class="container">
+
+		<div class="sixteen columns">
+			<h2>My Account</h2>
+			<nav id="breadcrumbs">
+				<ul>
+					<li>You are here:</li>
+					<li><a href="#">Home</a></li>
+					<li>My Account</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+</div> -->
+
+
+<!-- Content
+================================================== -->
+
+<!-- Container -->
+<div class="container">
+<div ncy-breadcrumb class="login-breadcrumb"></div>
+
+	<div class="my-account sharado-my-login col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<h1 class="sharado-h1">Sharado</h1>
+	<span ng-show="apply_login" class="apply_login" translate="need_to_be_logged_in"></span>
+	<span ng-show="login_activated" class="login_activated" translate="congratulations"></span>
+	<!-- <p class="sharado-congratulations" translate="congratulations"></p> -->
+	<a href="" class="facebook-login-a"><img src="/angular/images/capture-facebook-login.PNG" class="facebook-login" ng-click="facebookReg()"></a>
+	<span class="validation_error fbsuspended" ng-show="fbsuspended" translate="fb_suspended"></span>
+		
+		<!-- sirunacnel stex -->
+
+		<div class="tabs-container sharado-tabs-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- Login -->
+			<div class="tab-content sharado-login-tab col-md-6 col-sm-12 col-xs-12" id="tab1" >
+				<ul class="tabs-nav">
+					<li class="sign-in" translate="sign_in"></li>
+				</ul>
+				<form method="post" class="login sharado-login" name="loginForm">
+
+					<p class="form-row form-row-wide" >
+						<label for="username">
+							<i class="ln ln-icon-Mail login-page-icons"></i>
+							<input type="email" class="input-text" name="email" placeholder="{{'placeholder_email' | translate }}" id="email" value="" ng-model="login.email" required />
+						</label>
+						<span class="validation_error" ng-show="loginForm.email.$dirty && loginForm.email.$error.required" translate="email_required"></span>
+						<!-- <span class="validation_error" ng-show="resetUser.required">Email is required.</span> -->
+					</p>
+
+					<p class="form-row form-row-wide">
+						<label for="password">
+							<i class="ln ln-icon-Lock-2 login-page-icons"></i>
+							<input class="input-text" type="password" name="password" placeholder="{{'placeholder_password' | translate }}" id="password" ng-model="login.password" required />
+						</label>
+						<span class="validation_error" ng-show="loginForm.password.$dirty && loginForm.password.$error.required" translate="password_required"></span>
+					</p>
+						<span class="validation_error" ng-show="invalid_credentials" translate="invalid_credentials"></span>
+						<span class="validation_error" ng-show="something_went_wrong" translate="something_went_wrong"></span>
+						<span class="validation_error" ng-show="not_activated_user"><span translate="account_is_not_activated"></span> <a href="" ng-click="resendActivationEmail(not_activated_user_id)"> <span translate="here"></span> </a> <span translate="to_resend_email"></span></span>
+						<span class="resend_activation_email_span" ng-show="resend_status_success" translate="resend_success"></span>
+						<span class="validation_error" ng-show = 'resend_status_error' translate="resend_error"></span>
+						<span class="validation_error" ng-show="$root.emailSendingFailed" translate="email_sending_failed"></span>
+						<span class="validation_error suspended" ng-show="suspended" translate="suspended"></span>
+					<!-- <p class="form-row"> -->
+						<input type="submit" class="btn btn-block col-sm-8 col-xs-6 login-but" name="login" value="{{'login' | translate }}" ng-click="login()" style="height: 47px" />
+
+						<!-- <label for="rememberme" class="rememberme">
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label> -->
+					<!-- </p> -->
+
+					<p class="lost_password">
+						<a href="" ui-sref="forgot-password" translate="lost_your_password"></a>
+					</p>
+					
+				</form>
+			</div>
+
+			<!-- Register -->
+			<div class="tab-content sharado-register-tab col-md-6 col-sm-12 col-xs-12" id="tab2">
+				<ul class="tabs-nav">
+					<li class="new-to-sharado" translate="new_to_sharado"></li>
+				</ul>
+				<form method="post" class="register sharado-register">
+				<!-- <p>New to Sharado?</p> -->
+				<ul class="tabs-nav-login-page">
+					<li> <i class="fa fa-check"></i> <span translate="be_alerted"></span> <br /></li>
+					<li> <i class="fa fa-check"></i> <span translate="create_universal"></span> <br /></li>
+					<li> <i class="fa fa-check"></i> <span translate="showcase_profile"></span> <br /></li>
+					<li> <i class="fa fa-check"></i> <span translate="manage_applications"></span> <br /></li>
+				</ul>
+
+				<p class="form-row new-to-sharado-btn">
+					<button data-toggle="modal" data-target="#myModal" class="btn btn-block sharado-button-next col-sm-8 col-xs-6 reg-but" name="register" translate="register"></button>
+				</p>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+
+
+<!-- Wrapper / End -->
+<!-- <sharado-footer></sharado-footer> -->
+
+

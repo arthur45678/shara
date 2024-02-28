@@ -1,0 +1,79 @@
+<div class="contact-us" ng-controller="ContactUsController">
+
+	<span class="breadcrumbs" style="margin-left: 10%;">
+		<a ui-sref="/({lang:countryCode})"> Home </a>  /  Contact Us
+	</span>
+
+	<!-- Titlebar
+	================================================== -->
+	<div id="titlebar" class="single submit-page">
+		<div class="container">
+
+			<div class="sixteen columns">
+				<h2 style="display: inline-block; padding:0px 0px 0px 9%"><i class="fa fa-pencil-square-o"></i></h2> <h2 style="display: inline-block; padding: 0;" translate="fill_in_details"></h2> 
+			</div>
+
+		</div>
+	</div>
+	<div class="alert alert-success col-md-6 col-md-offset-2" ng-if="message != undefined" ng-bind="message"></div>
+
+
+	<!-- Content
+	================================================== -->
+	<div class="container">
+		
+		<!-- Submit Page -->
+		<div class="sixteen columns">
+			<div class="submit-page">
+				<!-- Company Name -->
+				<div class="form">
+					<h5><span translate="company_name"></span> <span class="required">*</span></h5>
+					<input type="text" placeholder="{{'placeholder_company_name' | translate }}" name="company_name" value="" ng-model="details.company_name">
+					<div class="alert alert-danger" ng-if="company_name_error != undefined">{{company_name_error}}</div>
+				</div>
+
+				<!-- Email -->
+				<div class="form">
+					<h5><span translate="your_email"></span> <span class="required">*</span></h5>
+					<input class="search-field" type="text" placeholder="mail@example.com" name="email" value=""/ ng-model="details.email">
+					<div class="alert alert-danger" ng-if="email_error != undefined">{{email_error}}</div>
+				</div>
+
+				<!-- Message -->
+				<div class="form">
+					<h5><span translate="message"></span> <span class="required">*</span></h5>
+					<textarea type="text"  name="message" value="" ng-model="details.message"> </textarea>
+					<div class="alert alert-danger" ng-if="message_error != undefined">{{message_error}}</div>
+				</div>
+
+				<!-- Location -->
+				<div class="form">
+					<h5><span translate="location"></span> <span translate="optional"></span></h5>
+					<input class="search-field" id="pac-input" type="text" placeholder="{{'placeholder_london' | translate}}" name="location" value=""/ ng-model="details.location">
+					<input type="hidden" name="country" ng-model="details.country" id="country">
+					<input type="hidden" name="city" ng-model="details.city" id='city'>
+					<div class="alert alert-danger" ng-if="errors['location'] != undefined" ng-bind="errors['location']"></div>
+				</div>
+
+				
+
+				<!-- Website -->
+				<div class="form">
+					<h5><span translate="website"></span> <span translate="optional"></span></h5>
+					<input type="text" placeholder="http://" name="web_stie" value="" ng-model="details.web_site">
+					<div class="alert alert-danger" ng-if="errors['web_site'] != undefined" ng-bind="errors['web_site']"></div>
+				</div>
+
+				
+
+
+				<div class="divider margin-top-0"></div>
+				<a href="" class="button big margin-top-5 contuct-success" ng-disabled="sent" ng-click="contact()"> <span translate="send"></span> <i class="fa fa-arrow-circle-right"></i></a>
+				<p class="validation_error" style="display: block; clear: both; float: none;" ng-show="contacEmailSendingFailed" translate="email_sending_failed"></p>
+
+
+			</div>
+		</div>
+
+	</div>
+</div>

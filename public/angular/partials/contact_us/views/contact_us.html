@@ -1,0 +1,91 @@
+<div class="contact-us" ng-controller="ContactUsController">
+<div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+  <div class="cover__filter"></div>
+  <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+
+<!-- Titlebar
+    ================================================== -->
+  <!-- content -->
+  <section class="content">
+    <div class="container">
+      <div class="alert alert-success col-md-6 col-md-offset-2" ng-if="message != undefined" ng-bind="message"></div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="huger light text-center margin-bottom" translate="contact_us" translate-default="&nbsp;"></h3>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="textbox1" translate="first_name" translate-default="&nbsp;"></label>
+                    <input class="form-control" id="textbox1" type="text" name="name" value="" ng-model="details.name" />
+                    <div class="alert alert-danger" ng-if="name_error != undefined">{{name_error}}</div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="textbox2" translate="last_name" translate-default="&nbsp;"></label>
+                    <input class="form-control" id="textbox2" type="text" name="surname" value="" ng-model="details.surname"/>
+                    <div class="alert alert-danger" ng-if="surname_error != undefined">{{surname_error}}</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="textbox2" translate="your_email" translate-default="&nbsp;"></label>
+                    <input class="form-control" type="text" placeholder="mail@example.com" name="email" value="" ng-model="details.email"/>
+                    <div class="alert alert-danger" ng-if="email_error != undefined">{{email_error}}</div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="textbox3" translate="company" translate-default="&nbsp;"></label>
+                    <input class="form-control" id="textbox3" type="text" placeholder="{{'placeholder_company_name' | translate }}" name="company_name" value="" ng-model="details.company_name"/>
+                    <div class="alert alert-danger" ng-if="company_name_error != undefined">{{company_name_error}}</div>
+                </div>
+
+
+                <div class="col-md-12">
+                  <label for="" translate="message" translate-default="&nbsp;"></label>
+                  <textarea class="form-control" rows="3" name="message" value="" ng-model="details.message"></textarea>
+                  <div class="alert alert-danger" ng-if="message_error != undefined">{{message_error}}</div>
+                </div>
+                <div class="col-md-12 checkbox">
+                  <label>
+                    <input type="checkbox"  id="privacy"  ng-model="details.privacy"><span translate="privacy_policy" translate-default="&nbsp;"></span>
+                  </label>
+                  <div class="alert alert-danger"  ng-if="privacy_error != undefined">{{privacy_error}}</div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="button margin-top" ng-disabled="sent" ng-click="contact()" translate="submit" translate-default="&nbsp;"></button>
+                  <p class="validation_error" style="display: block; clear: both; float: none;" ng-show="contacEmailSendingFailed" translate="email_sending_failed" translate-default="&nbsp;"></p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="prefooter margin-top">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_sectors" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat='sector in topSectors' ng-show="sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.sector.name)">{{sector.sector.name}}</a></li>
+            <li ng-repeat='sector in topSectors' ng-show="!sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.defaultSector.name)">{{sector.defaultSector.name}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_locations" translate-default="&nbsp;">Top Locations</h3>
+          <ul>
+            <li ng-repeat='location in topLocations'><a  ng-click="searchByTopLocation(location.city, location.latitude, location.longitude)" href="">{{location.city}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_jobs" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat="category in topCategories" ng-show="!category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')">{{category.defaultCategory.name}}</a></li>
+            <li ng-repeat="category in topCategories" ng-show="category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')">{{category.category.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>

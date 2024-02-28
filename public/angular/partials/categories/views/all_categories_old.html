@@ -1,0 +1,33 @@
+<div class="clearfix"></div>
+<!-- Titlebar
+================================================== -->
+<div id="titlebar" class="photo-bg" >
+	<div class="container">
+		<div class="ten columns">
+			<h2 translate="all_categories" class="all_categories_class">All Categories</h2>
+		</div>
+
+		<div class="six columns">
+			<!-- <a href="add-job.html" class="button">Post a Job, It’s Free!</a> -->
+		</div>
+
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+<div id="categories">
+	<!-- Categories Group -->
+	<div class="categories-group">
+		<div class="container">
+			<!-- <div class="four columns"><h4></h4></div> -->
+			<div class="four columns" ng-repeat="category in categoriesList | orderBy:'name'">
+				<ul>
+					<li><a href="" ng-click="getCategory(category.id, category.name, 'category')" ng-bind="category.name"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>

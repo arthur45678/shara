@@ -1,0 +1,215 @@
+
+<div  id="banner" class="with-transparent-header cover parallax background main-banner" style="background-image: url('img/bg-cover.jpg')" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+  <div class="cover__filter"></div>
+  <div class="cover__caption">
+      <div class="container">
+
+          <h1 class="white" translate="get_a_job_fast_and_easy" translate-default="&nbsp;"></h1>
+          <form ng-submit = "searchByLocation()" name="myForm">
+            <div class="form-small clearfix">
+              <div class="form-small__col">
+                <input  class="form-small__col__input type ico-01 search-loc-input" type="text" placeholder="{{'placeholder_search_text' | translate }}" value="" ng-model="$root.search_text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </div>
+              <div class="form-small__col">
+                <input  ng-model="locationField" type="text" id="pac-input" class=" form-small__col__input ico-02 search-loc-input search-location" placeholder="{{'placeholder_search_location' | translate}}" value="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </div>
+              <h4 class="empty-error" ng-show="emptyError" style="float: left; color: red;" translate="empty_search_query" translate-default="&nbsp;"></h4>
+            </div>
+            <p class="big white light"><span translate="whether_you_are" translate-default="&nbsp;"></span> <strong translate="hundreds" translate-default="&nbsp;"></strong> <span translate="job_opportunities" translate-default="&nbsp;"></span></p>
+            <p><input class="button" type="submit" value="{{'search_jobs' | translate}}"></p>
+          </form>
+      </div>
+  </div>
+</div>
+
+<section class="tiles">
+  <div class="container">
+    <h3 class="light text-center" translate="popular_categories" translate-default="&nbsp;"></h3>
+    <div class="row">
+      <div class="col-sm-3" ng-repeat = "category in homeCategories" ng-show="!category.category.name">
+        <a href="#" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')" class="tile" style="background:url('img/{{category.category.image}}') center center; background-size: cover;">
+          <div class="tile__filter"></div>
+          <div class="tile__copy">
+            <h3 class="big white">{{category.defaultCategory.name}}</h3>
+          </div>
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="col-sm-3" ng-repeat = "category in homeCategories" ng-show="category.category.name">
+        <a href="#" ng-click="popularCategories(category.category.id, category.category.name, 'category')" class="tile" style="background:url('img/{{category.category.image}}') center center; background-size: cover;">
+          <div class="tile__filter"></div>
+          <div class="tile__copy">
+            <h3 class="big white">{{category.category.name}}</h3>
+          </div>
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <p class="margin-top text-center light normal"><a href="" ui-sref="all-categories"  translate="browse_all_categories" translate-default="&nbsp;"><i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+  </div>
+</section>
+
+
+<section class="oblos" id="how_it_works">
+  <div class="oblos__bg"></div>
+  <div class="container" id="my_oblos">
+    <h3 class="text-center huge light" translate="how_it_works" translate-default="&nbsp;" ></h3>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <div class="oblo">
+          <div class="oblo__icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <div class="oblo__icon__number">
+              #1
+            </div>
+          </div>
+          <h3 class="margin-top text-center" translate="create_your_profile" translate-default="&nbsp;"></h3>
+          <p class="text-center" translate="create_universal_profile_text" translate-default="&nbsp;"></p>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+
+        <div class="oblo">
+          <div class="oblo__icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="oblo__icon__number">
+              #2
+            </div>
+          </div>
+          <h3 class="margin-top text-center" translate="find_jobs_gigs" translate-default="&nbsp;"></h3>
+          <p class="text-center" translate="find_jobs_gigs_text" translate-default="&nbsp;"></p>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+
+        <div class="oblo">
+          <div class="oblo__icon">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+            <div class="oblo__icon__number">
+              #3
+            </div>
+          </div>
+          <h3 class="margin-top text-center" translate="work_across_services" translate-default="&nbsp;"></h3>
+          <p class="text-center" translate="work_across_services_text" translate-default="&nbsp;"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+  <!-- content -->
+  <section class="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="huger light text-center" translate="there_are_hundreds" translate-default="&nbsp;"></h3>
+            <p class="text-center"> <a href="" ng-click="browseJobsGigs()" class="button" translate="try_it_now" translate-default="&nbsp;"></a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- content -->
+  <section class="badge">
+    <div class="container">
+
+      <h3 class="normal text-center light" translate="some_great_great" translate-default="&nbsp;"></h3>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <img class="badge__logos" src="img/logos-converted.png" alt="Partner Logos">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Carousel -->
+  <section id="slider" class="carousel slide slider-secondary" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="slider-secondary__image" style="background: url('img/person-converted.jpg') center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover; "></div>
+            </div>
+            <div class="col-sm-7">
+              <div class="slider-secondary__copy">
+                <div class="slider-secondary__copy__text">
+                  <h3 class="huge" translate="first_comment" translate-default="&nbsp;"></h3>
+                  <p class="orange big bold" translate="first_comment_name" translate-default="&nbsp;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="slider-secondary__image" style="background: url('img/man.jpg') center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover; "></div>
+            </div>
+            <div class="col-sm-7">
+              <div class="slider-secondary__copy">
+                <div class="slider-secondary__copy__text">
+                  <h3 class="huge" translate="second_comment" translate-default="&nbsp;"></h3>
+                  <p class="orange big bold" translate="second_comment_name" translate-default="&nbsp;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#slider" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#slider" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </section><!-- /.carousel -->
+
+
+  <section class="prefooter">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_sectors" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat='sector in sectors' ng-show="sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.sector.name)">{{sector.sector.name}}</a></li>
+            <li ng-repeat='sector in sectors' ng-show="!sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.defaultSector.name)">{{sector.defaultSector.name}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_locations" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat='location in locations'><a  ng-click="searchByTopLocation(location.city, location.latitude, location.longitude)" href="">{{location.city}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_jobs" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat="category in categories" ng-show="!category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')">{{category.defaultCategory.name}}</a></li>
+            <li ng-repeat="category in categories" ng-show="category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.category.name, 'category')">{{category.category.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>

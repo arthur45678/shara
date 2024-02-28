@@ -1,0 +1,23 @@
+.create-button {
+	
+	margin-bottom: 5px;
+	right: 0px;
+}
+
+.alert-danger {
+	margin-top: 10px;
+}
+
+.error-message {
+	color:red!important;
+	letter-spacing: 1px;
+}
+
+.country-error {
+	display: block;
+}
+
+.search_form {
+	margin-bottom:20px;
+}
+

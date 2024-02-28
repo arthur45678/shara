@@ -1,0 +1,43 @@
+.create-button {
+	
+	margin-bottom: 5px;
+	right: 0px;
+}
+
+.alert-danger {
+	margin-top: 10px;
+}
+
+.error-message {
+	color:red!important;
+	letter-spacing: 1px;
+}
+
+.metric-error {
+	display: block;
+}
+
+.check-box{
+	min-width: 17px!important;
+	min-height: 17px!important;
+	width: 17px!important;
+	height: 17px!important;
+	background-color: #fff !important;
+	border: 1px solid #c2cad8 !important;
+	line-height: 2.1ex !important;
+}
+
+.radio-check{
+	width: 16px !important;
+    height: 16px !important;
+    margin-left: -27px !important;
+    margin-bottom: -26px !important;
+}
+
+table tbody tr td span{
+	display: block;
+    height: 40px;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

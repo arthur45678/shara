@@ -1,0 +1,2791 @@
+.home-search {
+	width: 65px !important;
+    height: 65px !important;
+    margin-top: -1px !important;
+}
+
+.header-browse-jobsgigs{
+	left: 24%;
+}
+
+#for_companies {
+	color: #81a5c7;
+}
+
+.menu ul li.sfHover a.sf-with-ul {
+	color: #fff!important;
+}
+
+#for_companies:hover {
+	color: white!important;
+}
+
+.sticky-header.cloned #logo img {
+	min-width: 55% !important;
+	/*min-height: 70px;*/
+	margin-top: 6%;
+}
+
+.sticky-header.cloned{
+	min-height: 90px;
+}
+
+.transparent .sticky-header .alternative > div div div h1 a img{
+	width: 65% !important;
+}
+
+.action{
+	margin-bottom: 0px !important;
+
+}
+
+.tops{
+	margin-top: -65px !important;
+
+}
+
+.modal-dialog {
+  margin-top: 100px;
+}
+
+.facebook-reg {
+	/*margin-left: auto !important;*/
+    margin-right: auto !important;
+    width: 84%;
+}
+
+.facebook-login{
+	margin-left: 40%;
+	padding: 10px;
+}
+
+.social-wrapper {
+	width: 280px;
+	background-color: #1e4389;
+}
+
+.my-account-shar {
+	max-width: 430px!important;
+	margin-left: 50px;
+}
+
+.sharado-button-next {
+	padding: 12px 16px;
+    margin: 9px 0 16px 0;
+    line-height: 21px;
+    width: 100%;
+    font-weight: bold;
+    height: 46px;
+}
+
+.lang-ul {
+	min-width: 67px!important;
+}
+
+.sharado-tabs-container {
+	overflow: hidden;
+}
+
+.sharado-login-tab {
+	/*float:left;*/
+	/*width: 40%;*/
+	/*margin-right: 20px;*/
+	/*border-right: 1px solid rgba(29, 29, 29, 0.36);*/
+	padding: -1px 0px;
+}
+
+.sharado-register-tab {
+	/*overflow: hidden;*/
+	/*width: 40%;*/
+	border-left: 1px solid rgba(29, 29, 29, 0.36);
+	padding: -1px 0px;
+	
+}
+
+.new-to-sharado-btn {
+	margin-top: 1%;
+}
+
+.new-to-sharado{
+	margin-left: 4%;
+	font-size: 20px;
+    font-weight: bold;
+}
+
+.sign-in{
+	font-size: 20px;
+    font-weight: bold;
+    padding-left: 21px!important;
+}
+
+
+.sharado-my-account {
+	/*width: 1000px!important;*/
+	display: block!important;
+	margin: 0 auto !important;
+    float: none !important;
+}
+
+.sharado-my-login {
+	width: 1000px!important;
+	display: block!important;
+	margin: 0 auto !important;
+    float: none !important;
+}
+
+.sharado-h1 {
+	margin-top:50px;
+	text-align: center;
+}
+
+.sharado-h3 {
+	margin-top:100px;
+	color: green;
+}
+
+.sharado-register {
+	padding: 23px;
+}
+
+.sharado-login{
+	padding: 21px;
+}
+
+.lost_password{
+	padding: 10px;
+}
+
+.tabs-nav-login-page li{
+	padding: 8px;
+}
+
+.fa-ul {
+	margin-top: 69px;
+}
+
+.who-are-you {
+	width: 40%;
+	margin-top: 50px;
+}
+
+.my-account-reg {
+	margin-left: 100%;
+    width: 100%;
+    /*margin-bottom: 50px;*/
+    margin-bottom: 0px;
+	font-weight: 600;
+    color: #f16723;
+    text-align: center;
+}
+
+.my-skills-reg {
+	width: 100%;
+    font-weight: 600;
+    color: #f16723;
+    text-align: center;
+    margin-bottom: 10px;
+    /*margin-left: -5%;*/
+}
+
+.make-sure-label {
+	color: rgba(128, 128, 128, 0.58);
+    text-align: center;
+    margin-top: -15px;
+    font-weight: 600;
+    font-size: 13px!important;
+    line-height: 14px;
+}
+
+.profile-pic-upload {
+	color: #f5921a!important;
+    background-color: #ffffff!important;
+    border-color: #f5921a!important;
+    border-width: 2px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+
+.profile-pic-upload:hover, .profile-pic-change:hover {
+	color: #f16723!important;
+    background-color: #ffffff!important;
+    border-color: #f16723!important;
+}
+
+.profile-pic-change {
+	color: #f5921a!important;
+    background-color: #ffffff!important;
+    border-color: #f5921a!important;
+    border-width: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.profile-pic-delete {
+	color: #d9534f!important;
+    background-color: #ffffff!important;
+    border-color: #d9534f!important;
+    border-width: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.profile-pic-delete:hover {
+	color: #d43f3a!important;
+    background-color: #ffffff!important;
+    border-color: #d43f3a!important;
+}
+
+.upload-files-allowed {
+	text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 12px!important;
+}
+
+.image-text-wrapper {
+	width: 140px;
+}
+
+.profice-pic-wrap {
+	float: left;
+    text-align: center;
+    width: 140px;
+}
+
+.who-are-you-h4 {
+	font-weight: 600;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	color: #5a5a5a;
+	font-size: larger;
+}
+
+.question-mark {
+	color: #f5921a;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.sharado-register-form {
+	width: 275%;
+}
+
+.who-are-you-div {
+	float: left;
+    margin-right: 106px;
+    margin-left: 64px;
+    width: 100%!important;
+}
+
+.who-are-you-div-account {
+	float: left;
+    width: 100%;
+}
+
+.sharado-profile-pic {
+    width: 18%;
+    margin: auto;
+}
+
+.sharado-thumbnail {
+	position: relative;
+	float: left!important;
+}
+
+.sharado-thumbnail img {
+	display: inline-block;
+}
+
+.personal-info {
+	float: left;
+	width: 40%;
+	margin-left: 10px;
+}
+
+.personal-input {
+	border-radius: 15px;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 17px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 17px 12px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sharado-reg-info {
+	width: 100%;
+	float: left;
+	margin-left: 64px;
+}
+
+.first-next-but {
+	float: right;
+}
+
+.sharado-top {
+	text-align: center;
+}
+
+.skills-pill {
+	border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    background-color: white!important;
+    margin-top: 34px;
+    min-height: 45px;
+}
+
+.do-not-worry {
+	clear: both;
+}
+
+
+.skill-tag {
+	display: inline!important; 
+	padding: .2em .6em .3em!important; 
+	font-size: 75%!important; 
+	color: #fff!important; 
+	border-radius: .25em!important; 
+	background-color: #5cb85c!important;
+	cursor: pointer!important;
+	margin: 3px 3px 3px 0px !important;
+}
+
+.items-collection{
+    margin:20px 0 0 0;
+}
+.items-collection label.btn-default.active {
+	border:1px solid #fa5b0f;
+    color: #fa5b0f;
+    background-color: white;
+}
+
+.items-collection label.btn-default{
+    /*width:90%;
+    border:1px solid #fa5b0f;
+    margin:5px; 
+    border-radius: 17px;
+    color: #fa5b0f;*/
+    width: 100%;
+    border: 1px solid rgba(134, 134, 134, 0.65);
+    margin: 5px;
+    border-radius: 10px;
+    color: #000000;
+    padding: 5px;
+}
+.items-collection label .itemcontent{
+    width:100%;
+}
+
+.availability-buttons label.btn-default.active{
+	border:1px solid white!important;
+    color: white!important;
+    background-color: #fa5b0f!important;
+}
+
+.availability-buttons label.btn-default.active h5, .availability-buttons label.btn-default.active h6 {
+	color: white!important;
+}
+
+
+.items-collection .btn-group{
+    width: 100%
+}
+
+.transport-buttons {
+	float: left;
+}
+
+.transport-buttons-account {
+	border-top: 1px solid #e2e2e2;
+}
+
+.sharado-check {
+	clear: both;
+}
+
+.btn.active.focus, .btn.focus {
+	outline: none;
+}
+
+.skills {
+	margin-top: 100px;
+}
+
+.popular-jobs-categories {
+	font-weight: 600;
+}
+
+.skip-step {
+	float: right;
+	text-align: center;
+	clear: both;
+}
+
+.sharado-sectors-line li, .sharado-jobs-line li {
+	display: inline-block;
+	margin-left: 10px;
+
+}
+
+.sharado-sectors-line, .sharado-jobs-line {
+	text-align: center;
+}
+
+.sharado-register-form-step-3 {
+	width: 100%;
+}
+
+.availability {
+	margin-top: 100px;
+
+}
+
+.week-days {
+	margin-left: 2%;
+	width: 12%;
+	float: left;
+}
+
+.availability-h2 {
+	font-weight: 600!important;
+	color: #5a5a5a!important;
+	margin-bottom: 20px;
+}
+
+.availability-p {
+	font-weight: 600;
+    margin-bottom: 10px;
+    color: #5a5a5a;
+    font-size: larger;
+}
+
+.complete-registration {
+	float: right;
+}
+
+.complete-registration-back {
+	float: left;
+}
+
+.complete-registration-div {
+	margin-top: 200px;
+	text-align: center;
+}
+
+.complete-registration-container, .congratulations-h3 {
+	text-align: center;
+}
+
+.company-details-container {
+	margin-top: 120px;
+}
+
+/*.search-results-container {
+	margin-top: 120px;
+}
+
+.search-in-results{
+	border: 1px solid #e0e0e0;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #f5f5f5; 
+}*/
+
+.sharado-pagination{
+	display: inline;
+}
+
+.validation_error {
+	display: inline;
+	color: red;
+	float: left;
+	width: 200px;
+
+}
+
+.password_validation_error {
+	float: right;
+    /*margin-top: -68px;*/
+}
+
+.sharado-my-profile {
+	margin-left: 430px!important;
+}
+
+.sharado-my-profile-form {
+	width: 100%!important;
+}
+
+.view-details-div{
+	position: relative;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.view-details-div:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.search_btn{
+	padding: 15px 24px !important;
+	margin-left: 8px!important;
+}
+
+
+.sector-pill {
+	display: inline!important; 
+	padding: .2em .6em .3em!important; 
+	font-size: 75%!important; 
+	color: #fff!important; 
+	border-radius: .25em!important; 
+	background-color: #5cb85c!important;
+	cursor: pointer!important;
+	margin: 3px 3px 3px 0px !important;
+	width: auto!important;
+	clear: both;
+}
+
+.job-list-content {
+	margin-left: 40px!important;
+}
+
+.cities_operating_list {
+	display: block;
+	margin-top: 15px;
+}
+
+.company-short-description {
+	/*margin-left: 10px;*/
+	font-size: 14px;
+	/*width: 100%;*/
+    /*overflow: auto !important;*/
+    clear: both;
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden !important;
+	display: block!important;
+	margin-left: 10px!important;
+	padding-right: 10px;
+}
+
+.company-details-info {
+	margin-bottom: 10px!important;
+}
+
+.company-details-info span {
+	margin-right: 0px!important;
+}
+
+.company-details-info img {
+	width: auto!important;
+	height: 180px;
+	max-width: 220px;
+}
+
+.search-results-upper-search {
+	width: 112%;
+}
+
+.homepage-round-icons-wrapper {
+	margin-bottom: 15px!important;
+}
+
+.divik-indivik h4 {
+	margin-bottom: 15px;
+}
+
+.my-account-image {
+	padding-left: 7%;
+}
+
+.week_days_h5_mobile{
+	display: none;
+}
+
+.profile_week_days_h5_mobile{
+	display: none;
+}
+
+.login-but:hover, .reg-but:hover {
+	color: white;
+}
+
+.my-profile-applic-pic {
+	padding:0px!important;
+	margin-top: 35px!important;
+}
+
+.my-profile-applic-h4 {
+	cursor: pointer!important;
+	margin-left: 60px!important;
+}
+
+.my-profile-applic-desc {
+	margin-left: 60px!important;
+	margin-top: 10px!important;
+}
+
+.my-profile-applic-desc-mob {
+	display: none;
+}
+
+
+
+.collapsing_search_button {
+	display: none;
+}
+
+.cropArea {
+  background: #E4E4E4;
+  overflow: hidden;
+  width:500px;
+  height:350px;
+}
+
+@media(max-width: 1920px)
+{
+	.sharado-logo {
+		margin-left: 52%;
+	}
+
+	.search-in-results {
+		margin-left: 20px;
+		width: 85%!important;
+	}
+
+	.my-account-reg {
+		margin-left: 77%;
+	}
+
+	/*.sharado-menu-ul {
+		margin: 26px 0 0 120px!important;
+	}*/
+
+	.lower-part-reg {
+		margin-left: 37px;
+		width: 87%;
+	}
+}
+
+@media(max-width: 1680px)
+{
+	.sharado-logo {
+	    margin-left: 52%;
+	}
+}
+
+@media(max-width: 1620px)
+{
+	.sharado-my-profile {
+		margin-left: 370px!important;
+	}
+
+	.sharado-logo {
+		width: 55%;
+	    margin-top: 4%;
+	    margin-left: 48%;
+	}
+
+	/*.sharado-menu-ul {
+		margin: 26px 0 0 15px!important;
+	}*/
+}
+
+@media(max-width: 1590px)
+{
+	.sharado-logo {
+	    margin-left: 44%;
+	}
+}
+
+@media (max-width: 1525px)
+{
+	.sharado-my-profile {
+		margin-left: 370px!important;
+	}
+
+	.sharado-logo {
+		width: 55%;
+	    margin-top: 4%;
+	    margin-left: 38%;
+	}
+
+	/*.sharado-menu-ul {
+		margin: 26px 0 0 -15px!important;
+	}*/
+}
+
+@media(max-width: 1480px)
+{
+	.sharado-register-form {
+		width: 265%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 85px;
+	    
+	}
+
+	.sharado-reg-info {
+	    float: left;
+	    margin-left: 85px;
+	}
+
+	/*.profile-pic-upload {
+		padding: 7px;
+    	font-size: small;
+	}*/
+
+	.sharado-logo {
+	    margin-left: 32%;
+	}
+
+	.sharado-profile-pic {
+	    width: 15%;
+	}
+	.my-account-reg {
+	    margin-left: 77%;
+	}
+
+	.lower-part-reg {
+		margin-left: 107px;
+	}
+
+	.transport-buttons {
+		margin-left: -6%;
+	}
+
+	.reg-hr {
+        width: 114.5%!important;
+    	margin-left: -9.5%!important;
+	}
+}
+
+@media (max-width: 1465px)
+{
+	.sharado-logo {
+		width: 55%;
+	    margin-top: 4%;
+	    margin-left: 32%;
+	}
+
+	/*.sharado-menu-ul {
+		margin: 26px 0 0 35px!important;
+	}*/
+
+	.sharado-my-profile {
+		margin-left: 280px!important;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 86px;
+	    
+	}
+
+	.sharado-reg-info {
+	    float: left;
+	    margin-left: 86px;
+	}
+
+	.sharado-profile-pic {
+	    width: 15%;
+	}
+
+	.my-account-reg {
+	    margin-left: 78%;
+	}
+}
+
+@media (max-width: 1375px)
+{
+	.sharado-my-profile {
+		margin-left: 220px!important;
+	}
+
+	.sharado-register-form {
+		width: 250%;
+	}
+
+	.sharado-logo {
+	    margin-left: 22%;
+	}
+
+	.my-account-reg {
+		margin-left: 79%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 117px;
+	    
+	}
+
+	.sharado-reg-info {
+	    float: left;
+	    margin-left: 117px;
+	}
+
+	.sharado-profile-pic {
+	    width: 10%;
+	}
+
+	.reg-hr {
+	    width: 114.5%!important;
+	    margin-left: -10%!important;
+	}
+}
+
+@media (max-width: 1315px)
+{
+	.sharado-my-profile {
+		margin-left: 165px!important;
+	}
+
+	.sharado-logo {
+		width: 55%;
+	    margin-top: 22%;
+	    margin-left: 14%;
+	}
+
+	.my-account-reg {
+		margin-left: 79%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 118px;
+	    width: 65%;
+	}
+
+	.sharado-reg-info {
+	    float: left;
+	    margin-left: 118px;
+	}
+
+	.sharado-profile-pic {
+		width: 9%;
+	}
+
+
+	/*.sharado-menu-ul {
+		margin: 26px 0 0 75px!important;
+	}*/
+}
+
+@media(min-width: 1289px)
+{
+	.my-profile-account {
+		margin-left: -13%;
+	}
+}
+
+
+
+@media (max-width: 1289px)
+{
+	
+	#logo {
+		width: 24%;
+	}
+	.sixteen-columns {
+		overflow: hidden!important;
+	}
+
+	#navigation {
+		float: right!important;
+		width: 75%!important;
+		margin:0px!important;
+
+	}
+	.sharado-my-profile {
+		margin-left: 0px!important;
+	}
+
+	#logo img {
+		width: 71% !important;
+	    margin-top: 7% !important;
+	    margin-left: 20%!important;
+	}
+
+	/*.job-applying-content{
+		height: 53px;
+	}*/
+
+	/*.view-details-div {
+		padding-right: 30px!important;
+
+	}*/
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 113px;
+	    width: 65%;
+	}
+
+	.sharado-reg-info {
+	    float: left;
+	    margin-left: 113px;
+	}
+
+	.my-account-reg {
+		margin-left: 83%;
+	}
+
+	.sharado-profile-pic {
+		width: 8%;
+	}
+
+	.short-desc {
+		width: 56%!important;
+	}
+
+	.outer-hr {
+		width: 108%!important;
+	}
+
+	.reg-hr {
+	    width: 123.5%!important;
+    	margin-left: -12.5%!important;
+	}
+
+	.search-box-inner {
+		width: 98%!important;
+	}
+
+	.my-account-image {
+		padding-left: 10.5%;
+	}
+
+	.profile_week_days_h5{
+		font-size: 14px;
+	}
+
+}
+
+@media (max-width: 1271px)
+{
+	#logo img {
+		margin-top: 12% !important;
+		margin-left: 6%!important;
+	}
+
+	.sharado-register-form {
+		width: 240%;
+	}
+
+	.my-account-reg {
+		margin-left: 79%;
+	}
+
+	.transport-buttons {
+	    margin-left: -8%;
+	}
+	#logo img {
+		width: 91% !important;
+		margin-top: 7% !important;
+		margin-left: 4%!important;
+	}
+
+
+}
+
+@media (max-width: 1160px)
+{
+	.sharado-register-form {
+		width: 260%;
+	}
+
+	.my-account-reg {
+		margin-left: 78%;
+	}
+
+	.who-are-you-div {
+		margin-left: 78px;
+	}
+
+	.sharado-reg-info {
+		margin-left: 78px;
+	}
+
+	.sharado-profile-pic {
+	    width: 15%;
+	}
+
+	.outer-hr {
+		width: 100%!important;
+	}
+
+	.reg-hr {
+	    width: 116%!important;
+	    margin-left: -13%!important;
+	}
+
+}
+
+@media (max-width: 1062px)
+{
+	.sharado-register-form {
+		width: 250%;
+	}
+
+	.my-account-reg {
+		margin-left: 79%;
+	}
+
+	.who-are-you-div {
+		margin-left: 95px;
+	}
+
+	.sharado-reg-info {
+		margin-left: 95px;
+	}
+
+	.sharado-profile-pic {
+	    width: 11.5%;
+	}
+
+	.my-account-image {
+	    padding-left: 7%;
+	    margin-top: 30px;
+	}
+
+}
+
+@media(max-width: 991px) {
+	.sharado-register-form {
+		width: 240%;
+	}
+
+	.my-account-reg {
+		margin-left: 76%;
+	}
+
+}
+
+@media (max-width: 990px)
+{
+	#logo {
+		width: 40%!important;
+	}
+
+	#logo img {
+		margin-top: -19% !important;
+    	margin-left: 9%;
+    	width: 76%!important;
+	}
+
+	/*.view-details{
+		margin-top: 2% !important;
+		margin-left: 70% !important;
+	}*/
+
+	/*.job-applying-content{
+		height: 87px;
+	}*/
+
+	/*.sharado-h1 {
+		display: none;
+	}*/
+
+	.facebook-login-a {
+		float: left!important;
+		margin-top: 5%!important;
+		margin-left: 24%!important;
+	}
+
+	/*.facebook-login {
+		float: left!important;
+		margin-left: 0px!important;
+	}*/
+
+	.sharado-login-tab {
+		border: none!important;
+	}
+
+	.sharado-register-tab {
+		border: none!important;
+	}
+
+	.sharado-my-login {
+		/*width: 1100px!important;*/
+		width: 98% !important;
+	}
+
+	.register-modal-fields {
+		margin-bottom: 20px!important;
+	}
+	.menu-button {
+		margin-left: 242%!important;
+	}
+
+	/*.home-search{
+		width: 100% !important;
+	}*/
+
+	.login-breadcrumb {
+		margin-bottom: 52px!important;
+	}
+
+	.sharado-register-form {
+		width: 265%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 55px;
+	    width: 100%;
+	}
+
+	.sharado-reg-info {
+	    width: 100%;
+	    float: left;
+	    margin-left: 55px;
+	}
+
+	.my-account-reg {
+		margin-left: 80%;
+	}
+
+	.short-description-h5 {
+		line-height: 25px!important;
+	}
+
+	.transport-buttons {
+	    margin-left: -11%;
+	}
+
+	.sharado-profile-pic {
+	    width: 19.5%;
+	}
+
+	/*.sector-pill {
+		display: block!important;
+	}*/
+
+	.availability {
+	    margin-top: 100px;
+	    /*margin-left: 12%;*/
+	}
+
+	.reg-hr {
+	    
+	    margin-left: -15%!important;
+	}
+
+	.sharado-register-form-step-3 {
+		margin-left: 0!important;
+	}
+
+	.divik-indivik {
+		width: 220%;
+	}
+
+	.short-desc {
+		width: 63%!important;
+	}
+
+	.search-box-inner {
+		width: 95.5%!important;
+	}
+
+	.area-label, .time-label {
+		width: 60%!important;
+	}
+
+	.profile-time-label {
+		width: 50%!important;
+	}
+
+	.profile-area-label {
+		width: 70%!important;
+	}
+
+	.week-days{
+		margin-left: 1%;
+		width: 13%;
+	}
+
+	.week_days_h5{
+		font-size: 14px;
+	}
+
+	.my-avail {
+		margin-left: -2%;
+	}
+
+	.all_categories_class {
+		margin-top: 20px;
+	}
+
+}
+
+@media (max-width: 890px)
+{
+	.sharado-register-form {
+		width: 245%;
+	}
+
+	.my-account-reg {
+		margin-left: 81%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-right: 106px;
+	    margin-left: 81px;
+	    width: 100%;
+	}
+
+	.sharado-reg-info {
+	    width: 100%;
+	    float: left;
+	    margin-left: 81px;
+	}
+
+	.sharado-profile-pic {
+	    width: 12.5%;
+	}
+
+	.outer-hr {
+		width: 104%!important;
+		margin-left: 1%!important;
+	}
+
+	.reg-hr {
+	    width: 119%!important;
+	}
+
+}
+
+@media (max-width: 767px)
+{
+	#logo {
+		width: 70%!important;
+	}
+
+	#logo img {
+		margin-top: -18% !important;
+		margin-left: 0 !important;
+	}
+
+	.search-container h2 {
+	    font-size: 26px;
+	}
+
+
+	.home-top-content{
+		margin-top: -45% !important;
+	}
+
+	/*.view-details{
+		margin-top: 2% !important;
+		margin-left: 70% !important;
+	}*/
+
+	.sharado-my-login {
+		/*width: 770px!important;*/
+		width: 98% !important;
+	}
+
+	.facebook-login-a {
+		float: left!important;
+		margin-top: 5%!important;
+		margin-left: 15%!important;
+	}
+
+	.facebook-login {
+		margin-left: 20%;
+		padding: 
+	}
+
+	.search-in-results {
+		height: auto!important;
+	}
+
+	.search-field-results {
+		margin-bottom: 20px!important;
+		padding: 2px;
+		padding-left: 0!important;
+		width: 90.5%!important;
+	}
+
+	.search-field-results input {
+		width: 99%!important;
+	}
+
+	.company-description, .company-short-description {
+		display: none!important;
+	}
+
+	.company-short-description-wherelong {
+		width: 100%;
+	    overflow: hidden !important;
+		display: block!important;
+	}
+
+	.menu-button {
+		margin-left: 70%!important;
+	}
+
+	.job-list-content {
+		margin-left: 30px!important;
+		margin-top: 10px!important;
+		padding-top: 10px!important;
+		/*margin-top: 0px!important;*/
+	}
+
+	.view-details-div {
+		margin-top: 8px!important;
+	}
+
+	.company-job-name {
+		margin-left: 25px!important;
+	}
+
+	/*.view-details-div {
+		position: absolute;
+		right: 0;
+		bottom: 8px;
+	}*/
+
+	.menu-button {
+		margin-left: 135%!important;
+	}
+
+	.home-search{
+		width: 100% !important;
+	}
+
+	.search_btn{
+		width: 89%;
+		margin-left: 0px!important;
+	}
+
+	.not_collapsing_search_button {
+		display: none;
+	}
+
+	/*#notCollapsingBox {
+		display: none;
+	}*/
+
+	.collapsing_search_button {
+		display: inline;
+	}
+
+	
+
+	.search-in-results {
+		margin:0;
+		width: auto!important;
+		padding-bottom: 0!important;
+	}
+
+	.sharado-register-form {
+		width: 300%;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-left: 42px;
+	    width: 90%!important;
+	}
+
+	.sharado-reg-info {
+	    width: 90%;
+	    float: left;
+	    margin-left: 42px;
+	}
+
+	.personal-info {
+		float: none;
+		width: 70%;
+	}
+
+	/*.profile-pic-upload {
+		padding: 5px;
+    	font-size: x-small;
+	}*/
+
+	.make-sure-label, .upload-files-allowed {
+		display: none;
+	}
+
+	.profice-pic-wrap {
+		margin-left: -40%;
+	}
+
+	.my-account-reg {
+	    margin-left: 52%;
+	    width: 150%;
+	    margin-bottom: 10px;
+	    margin-top: -63px;
+	}
+
+	.links-ul {
+		float: left!important;
+		margin-left: 4%;
+	}
+
+	.links-ul li {
+		display: inline-block!important;
+	}
+
+	.company-content-info {
+		width: 100%!important;
+	}
+
+	.main-five {
+		display: none!important;
+	}
+
+	/*.who-are-you-div {
+		margin-top: 80px;
+	}*/
+
+	.lower-part-reg {
+		margin:0px!important;
+	}
+
+	.transport-buttons {
+	    margin-left: 6%;
+	}
+
+	.education-buttons {
+		padding-left: 20%!important;
+	}
+
+	.sharado-profile-pic {
+	    width: 24%;
+	}
+
+	.skills {
+	    margin-top: 110px;
+	}
+
+	.skills-label {
+		margin-left: 0%!important;
+	}
+
+	.select-skills {
+		width: 100%!important;
+	}
+
+	.skills-pill {
+		width: 100%;
+	}
+
+	/*.daily-container {
+		margin-left: 5%;
+	}*/
+
+	.education-items {
+		margin-left: 15%;
+	}
+
+	.week-collection {
+		margin-left: 10%;
+	}
+
+	.day-collection {
+		margin-left: 22%;
+	}
+
+	.schedule-buttons {
+		margin-left: 17%;
+	}
+
+	.place-collection {
+		margin-left: 15%;
+	}
+
+	.outer-hr {
+		margin-left: -7%!important;
+	}
+
+	.reg-hr {
+	    width: 119%!important;
+	    margin-left: -8%!important;
+	}
+
+	.you-subscribed-qarakusik {
+		margin-top: 10px!important;
+	}
+
+	.sharado-h1 {
+		display: none;
+	}
+
+	.sharado-login {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.sharado-login-tab {
+		padding-bottom: 0;
+	}
+
+	.sharado-register {
+		padding-top: 0;
+	}
+
+	.view-details-div {
+		text-align: center;
+	}
+
+	.view-details {
+		float: none!important;
+	}
+
+	.sector-wrapper {
+		display: none;
+	}
+
+	.search-res-logo {
+		margin-top: 10px!important;
+	}
+
+	.search-results-upper-search {
+		margin-left: 4%;
+	}
+
+	.overview-image {
+		width: 150px!important;
+		height: 150px!important;
+	}
+
+	.company-details-divik {
+		margin-top: 0!important
+	}
+
+	.divik-indivik {
+		/*margin-left: 30%;*/
+/*		width: 100%;*/
+	    clear: both;
+	    display: block;
+	    width: 150%;
+	    padding-top: 20px!important;
+	}
+
+	.short-desc {
+	    width: 55%!important;
+	}
+
+	.company-details-breadcrumb {
+		width: 100%!important;
+		margin-left: 0!important;
+		padding-left: 0!important;
+	}
+
+	.homepage-round-icon {
+		margin-bottom: 0!important;
+	}
+
+	.tops {
+		margin-top: 0!important;
+		padding-top: 0!important;
+	}
+
+	.homepage-round-icons-wrapper {
+		padding-bottom: 0!important;
+		margin-bottom: 0!important; 
+	}
+	.top-sector-icon-box {
+		margin-top: 15px!important;
+	}
+
+	.leave-email {
+		display: none;
+	}
+
+	.short-desc {
+	    width: 100%!important;
+	}
+
+	.cities_operating_list {
+		width: 82%!important;
+	}
+
+	.get-alerts-h4 {
+		margin-bottom: 0!important;
+	}
+
+	.who-are-you {
+	    width: 40%;
+	    margin-top: 110px;
+	}
+
+	.under-av-hr {
+		margin-left: -4%;
+	}
+
+	.under-week-hr {
+		margin-left: -2%;
+	}
+
+	.under-hour-hr {
+		margin-left: -3.5%;
+	}
+
+	.under-area-hr {
+		margin-left: -3.5%;
+	}
+
+	.activate-alerts {
+		padding-top: 10px!important;
+		padding-bottom: 15px!important;
+	}
+
+	.my-account-image {
+	    padding: 0;
+    	margin-left: 1%;
+	}
+
+	.my-profile-tab5 {
+		overflow-x:auto;
+	}
+
+	/*.complete-registration {
+		margin-right: 4%;
+	}*/
+
+	/*.complete-registration-back {
+		margin-left: -13%;
+	}*/
+
+	.my-profile-tabs {
+		margin-top: 30px;
+    	margin-left: 45px;
+	}
+
+	.my-profile-tabs li {
+		line-height: 12px;
+		display: block!important;
+		margin-bottom: 6px;
+		max-width: 140px;
+		word-break: break-word;
+	}
+
+	.my-profile-tabs li a {
+		border-radius: 12px;
+	    border: 1px solid rgba(134, 134, 134, 0.65);
+	}
+
+	.tabs-wrapper {
+		margin-bottom: 0!important;
+	}
+
+	.week_days_h5{
+		display: none;
+	}
+
+	.week_days_h5_mobile{
+		display: block;
+	}
+
+	.profile_week_days_h5{
+		display: none;
+	}
+
+	.profile_week_days_h5_mobile{
+		display: block;
+	}
+
+	.all_categories_class {
+		margin-top: 35px;
+	}
+
+	/*@media (hover:on-demand), (pointer:coarse) {
+	    .login-but:hover {
+	    	background-color: #fa5b0f!important;
+	    }
+	}*/
+
+	.login-but:hover, .reg-but:hover {
+    	background-color: #fa5b0f!important;
+    	color: #333;
+    }
+
+    .new-to-sharado {
+    	margin-left: 6%;
+    }
+
+    .my-profile-applic-pic {
+		margin-top: 25px!important;
+		margin-left: 0!important;
+	}
+
+	.my-profile-applic-h4 {
+		margin-left: 0!important;
+		margin-bottom: 0!important;
+	}
+
+	.my-profile-applic-desc {
+		display: none;
+	}
+
+	.my-profile-job-list-cont {
+		margin-left: 0!important;
+		padding-bottom: 0!important;
+	}
+
+	.by-reg-you-agree {
+	    margin-left: 8.5%!important;
+	}
+
+
+	.my-profile-applic-desc-mob {
+		display: block;
+		margin-left: 0!important;
+		margin-top: 10px!important;
+	}
+
+	.results-pagination {
+		margin-left: 35.5%!important;
+		margin-bottom: 1%!important;
+	}
+
+	.you-subscribed-qarakusik {
+		margin-top: -2.5%!important;
+	}
+
+	.daily-hr {
+		margin-bottom: 6%!important;
+	}
+
+	.daily-p {
+		margin-bottom: 5%!important;
+	}
+
+	.hourly-p {
+		margin-bottom: -2%!important;
+	}
+
+	.not_sub_widg, .sub_widg {
+		margin-top: 13%!important;
+	}
+
+	.pagination-container {
+		margin-bottom: -10%!important;
+	}
+
+	.cropArea {
+	  background: #E4E4E4;
+	  overflow: hidden;
+	  width:400px;
+	  height:350px;
+	}
+
+	#my_alerts_tab {
+		display: none!important;
+	}
+
+}
+
+@media(max-width: 600px)
+{
+	.sharado-register-form {
+		width: 265%;
+		margin-left: 18%;
+	}
+
+	/*.profile-pic-upload {
+		padding: 3px;
+    	font-size: xx-small;
+	}*/
+
+	.my-account-reg {
+		margin-left: 47%;
+	}
+
+	.first-next-but {
+		margin-right: 7%;
+	}
+
+	.sharado-profile-pic {
+	    width: 28%;
+	}
+
+	.my-account-reg {
+	    margin-left: 51%;
+	}
+
+	.sharado-my-profile-form {
+		margin-left: 0!important;
+	}
+
+	.lower-part-reg {
+	    margin-left: -19px!important;
+	}
+
+	.who-are-you-div {
+	    float: left;
+	    margin-left: 31px;
+	    width: 90%!important;
+	}
+
+	.sharado-reg-info {
+	    width: 90%;
+	    float: left;
+	    margin-left: 31px;
+	}
+
+	.transport-buttons {
+	    margin-left: 2%;
+	}
+
+	.area-label, .time-label {
+		width: 70%!important;
+	}
+
+}
+
+@media (max-width: 480px)
+{
+	#logo {
+		width: 100%!important;
+	}
+
+	.sharado-my-login {
+		/*width: 490px!important;*/
+		width: 98% !important;
+	}
+
+	.facebook-login-a {
+		float: left!important;
+		margin-top: 5%!important;
+		margin-left: 9%!important;
+	}
+
+	.menu-button {
+		margin-left: 93%!important;
+	}
+
+	.announce {
+		padding-bottom: 20px;
+	}
+
+	.home-search{
+		width: 100% !important;
+	}
+
+	.facebook-login {
+		margin-top: 4%;
+		margin-left: 4%;
+	}
+
+	.profile-pic-upload, .profile-pic-change, .profile-pic-delete {
+		margin:0;
+	}
+
+	.profice-pic-wrap, {
+		margin-left: -65%;
+	}
+
+	.my-account-reg {
+		margin-left: 46%;
+		width: 200%;
+	}
+
+	#spokenLangs {
+		margin-left: 13px!important;
+	}
+
+	.sharado-register-form {
+		margin-left: 10%;
+	}
+
+	.sharado-profile-pic {
+	    width: 31%;
+	}
+	.my-account-reg {
+	    margin-left: 27%;
+	}
+
+	/*.daily-container {
+		padding-left: 23%;
+		margin: 0;
+	}*/
+
+	.my-account-image {
+		margin-left: 7%;
+	}
+
+	/*.my-account-form-3 {
+		width: 122%;
+		margin-left: -5%;
+	}*/
+
+	.week-collection {
+	    margin-left: 25%;
+	}
+
+	.day-collection {
+	    margin-left: 22%;
+	}
+
+	.place-collection {
+	    margin-left: 7%;
+	    width: 102%;
+	}
+
+	.lower-part-reg {
+	    /*margin: 0!important;*/
+	    margin-left: -15px!important;
+	}
+
+	.who-are-you-div {
+		float: left;
+	    margin-left: 29px;
+	    width: 90%!important;
+	}
+
+	.sharado-reg-info {
+	    width: 90%;
+	    float: left;
+	    margin-left: 29px;
+	}
+
+	.skills-next-button {
+		margin-right: 0!important;
+	}
+
+	.search-results-upper-search {
+	    margin-left: 5.5%;
+	}
+
+	.schedule-buttons {
+		margin-left: 10%;
+		width: 102%;
+	}	
+
+	.my-account-image {
+	    padding-left: 0;
+	    margin-left: 0!important;
+	}
+
+	/*.complete-registration {
+		margin-right: -6%;
+	}*/
+
+	/*.complete-registration-back {
+		margin-left: -24%;
+	}*/
+
+	.my-profile-tabs li {
+		width: 75%;
+    	margin-left: 8%!important;
+	}
+
+	.my-profile-tabs {
+		margin-left: 45px;
+		width: 100%;
+	}
+
+	.account-pic-wrap {
+		margin-left: -52%!important;
+	}
+
+	.area-label, .time-label {
+		width: 90%!important;
+	}
+
+	.profile-area-label {
+		width: 90%!important;
+	}
+
+	.jobs-tags {
+		padding-top: 7px;
+	}
+
+	.new-to-sharado {
+    	margin-left: 9%;
+    }
+
+    .by-reg-you-agree {
+	    margin-left: 2%!important;
+	    font-size: 11px!important;
+	}
+
+	.results-pagination {
+		margin-left: 29.5%!important;
+	}
+
+	.you-subscribed-qarakusik {
+		margin-top: -3.5%!important;
+	}
+
+	.cropArea {
+	  background: #E4E4E4;
+	  overflow: hidden;
+	  width:300px;
+	  height:350px;
+	}
+
+}
+
+.availability-label {
+	/*margin-left: 5px!important;*/
+	float: none!important;
+}
+
+.availability-buttons {
+	text-align: center;
+}
+
+.company-short-description-wherelong {
+	display: none;
+}
+
+.menu-button {
+	margin-top: 40px; 
+	color: #f79828;
+    margin-left: 70%;
+    font-size: 24px;
+    padding: 0px 5px 12px 5px;
+}
+
+.language-dropdown {
+	background-color: white;
+	color: black;
+}
+
+.language-dropdown:hover {
+	background-color: white;
+	color: black;
+}
+
+.language-dropdown:active:focus {
+	outline:none;
+}
+
+.language-dropdown-modal, .language-dropdown-modal:hover, .language-dropdown-modal:focus, .language-dropdown-modal:active{
+	background-color: #333;
+}
+
+.lang-ul {
+	width: 50%!important;
+}
+
+.reset-password-h1 {
+	margin-top: 150px;
+}
+
+.modal-header {
+	text-align: center;
+}
+
+.modal-first {
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.spoken-langs {
+	margin-left: 30px;
+    margin-top: 25px;
+    display: inline;
+}
+
+#spokenLangs {
+	display: inline;
+
+}
+
+.sharado-dropdown-select {
+	max-width: 570px;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.my-profile-tabs {
+	overflow: hidden;
+}
+
+.my-profile-tab {
+	display: inline-block!important;
+}
+
+.saved-button {
+	background-color: grey;
+}
+
+.saved-button1 {
+	background-color: grey;
+}
+
+.user-schedule {
+	margin-bottom: 30px;
+	margin-left: -10px;
+}
+
+.reg-user-schedule {
+	margin-bottom: 30px;
+	margin-left: -5px;
+}
+
+.user-schedule-my-profile {
+	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-left: -30px;
+}
+
+.language-tag {
+	display: inline-block; 
+	padding: 0.01em 0.6em .03em; 
+	font-size: 75%; 
+	color: #fff; 
+	border-radius: .25em; 
+	background-color: #5cb85c;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.select-lang-wrapper {
+	float: left;
+	margin-top: 20px;
+}
+
+.selected_languages_tags {
+	float: left;
+}
+
+#selected_languages_tags {
+	clear: both;
+	margin-left: 25px;
+    padding-top: 15px;
+}
+
+.apply_login {
+	color:red;
+	font-size: 14px;
+}
+
+.login-page-icons{
+	bottom: 19px !important;
+}
+
+.login_activated {
+	color:green;
+	font-size: 20px;
+}
+
+.required-asterisk {
+	color:red;
+}
+
+.resend_activation_email_span {
+	color: green;
+}
+
+.company-h4 {
+	letter-spacing: 2px;
+	/*line-height: 10px!important;*/
+	margin-top: 20px;
+}
+
+.company-p {
+	line-height: 20px;
+}
+
+.cookies-warning {
+	bottom: 0;
+    left: 0;
+    color: #fff;
+    background: #2c2c2c;
+    border: 2px solid #d4d4d4 !important;
+    position: fixed;
+    max-width: 330px;
+    max-height: 120px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin: 10px;
+    overflow: hidden;
+    z-index: 9999;
+    font-size: 14px;
+}
+
+/*.cookies-warning-actions {
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+}*/
+
+.cookies-warning-actions {
+	padding: 2px 10px;
+	line-height: normal;
+}
+
+.cookies-warning-message{
+	margin: 5px;
+}
+
+.accept-cookie {
+	background-color: #fa5b0f;
+	color: white;
+	border: none;
+}
+
+.content_loading {
+	display: none;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #f8981b;
+  border-bottom: 16px solid #f8981b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contact-us{
+	margin-top:130px;
+}
+
+.required {
+	color: red !important;
+}
+
+/*.save-third-tab{
+	right: 670%;
+}*/
+
+.nav-pills>li.active>a{
+	background-color: #fa5b0f!important;
+}
+
+.existing-skills{
+	margin-top: -199px;
+}
+
+/*.skills span{
+	color:rgba(0, 0, 0, 0.73) !important;
+
+}*/
+
+.autocomplete-list ul li.autocomplete-active{
+	    background-color: #fa5b0f !important;
+}
+
+.autocomplete-list{
+	position: relative!important;
+	width: 100% !important;
+	max-height: 130px;
+	overflow: scroll;
+
+}
+
+.form-item-container .list-inline li span{
+	color: white !important;
+	background-color: #fa5b0f !important;
+	border: none !important;
+}
+
+.user-tabs{
+	padding: 20px;
+	border:1px solid #e2e2e2;
+}
+
+.tabs-wrapper{
+	display: inline-block;
+}
+
+.account-education{
+	border-bottom: 1px solid #e2e2e2; 
+	border-top: 1px solid #e2e2e2;
+}
+
+hr{
+	width: 100%;
+}
+
+.select-schedule:hover, .select-schedule:focus{
+	border-color: #fa5b0f !important;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #fa5b0f;
+}
+
+.select-skills {
+	width: 80%;
+	height: 45px;
+    border-radius: 10px;
+}
+
+.skills-label {
+	margin-left: 18%;
+}
+
+.menu-modal-content{
+	background-color: black;
+}
+
+.heading{
+	background-color: #333;
+}
+
+.nav-item {
+	left: 5%;
+}
+
+header.transparent a.menu-button {
+    background: #505050;
+    color: #fff;
+    display: block;
+    float: left;
+    z-index: 100;
+    position: relative;
+    margin: 0 0 30px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+ a.menu-button i {
+    font-size: 18px;
+    padding: 17px 17px 18px 17px;
+    margin: 0px 10px 0px 0px;
+    background-color: rgba(255,255,255, 0.08);
+    font-weight: 500;
+}
+
+
+a.menu-button, a.menu-button i {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+        color: #fff;
+}
+
+.modal{
+	overflow-y:auto; 
+}
+
+/*.page-content{
+	margin-top: 130px;
+}*/
+
+.search-result-content{
+	border: 1px solid rgba(128, 128, 128, 0.44);
+	margin-top: 3px;
+}
+
+.search-result-content:hover{
+	border: 1px solid #fa5b0f;
+}
+
+.company-name-apply-wrap {
+	overflow:hidden;
+	padding-bottom: 5px;
+}
+
+.search-result-details{
+	padding-top: 30px;
+}
+
+.job-applying-content{
+	padding: 7px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+    /*height: 53px;*/
+    background-color: rgba(128, 128, 128, 0.31);
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+
+.results-applying {
+	float: right!important; 
+	width: 20%!important; 
+	float: right!important; 
+	text-align: center!important; 
+	color: white!important;
+}
+
+.view-details {
+	/*padding: 10px !important;*/
+    /*margin-right: 5px !important;*/
+    /*min-width: 20% !important;*/
+    /*width: 20% !important;*/
+    /*max-width: 20% !important;*/
+    /*float: right!important; */
+	/*text-align: center!important; */
+	float: right;
+	color: white!important;
+	/*margin-left: 75%;*/
+	text-decoration: none;
+	font-weight: 600!important;
+}
+
+.company-job-name {
+	cursor: pointer;
+	font-size: 27px; 
+	float: left;
+	margin-left: 10px;
+}
+
+.company-category{
+	cursor: pointer;
+    text-decoration: underline;
+}
+
+.user-name{
+	max-width: 156px;
+	padding-right: 5px!important;
+}
+
+.applied-job{
+	background-color: grey!important;
+}
+
+.company-description{
+	width: 100%;
+    overflow: auto !important;
+}
+
+.company-requirement {
+	float: right;
+}
+
+.job-applying {
+	text-align: center!important;
+	border-radius: 5px;
+}
+
+.header-menu:hover{
+	color:white!important;
+}
+
+.alerts-box{
+	margin: 5px;
+}
+
+.contact-us-title{
+	background-color: none;
+}
+
+.register-modal-fields{
+	margin-bottom: 30px;
+}
+
+.register-modal-logo{
+	margin-left: auto !important;
+    margin-right: auto !important;
+    padding-bottom: 10px;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:active, .pagination>.disabled>a:focus {
+	background-color:rgb(216, 216, 216);
+}
+
+/*.pagination-sm>li:last-child>a, .pagination-sm>li:first-child>a {
+	background-color: white; 
+}*/
+
+/*.footer {
+	position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+*/
+
+.alternative-container {
+	text-align: center;
+}
+
+.alternative-button {
+	width: 150px!important;
+	font-size: 17px!important;
+}
+
+.alternative-banner {
+	margin-bottom: -21px!important;
+}
+
+.main-eleven {
+	width: 100%!important;
+}
+
+.links-ul {
+	float: right;
+	margin-right: 10%;
+}
+
+.links-ul li{
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgba(136, 136, 136, 0.25)!important;
+}
+
+.links-ul li a {
+	color: #666;
+}
+
+.links-ul li a:hover{
+	color: #fa5b0f;
+	text-decoration: none;
+}
+
+.company-content-info {
+	width: 65%;
+	float: left;
+}
+
+.main-five {
+	float: right!important;
+	margin-top: 9%;
+}
+
+.short-description-h5 {
+	font-weight: 600;
+	color: #666;
+	float: left;
+}
+
+
+.overview-image {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-right: 30px;
+    float: left;
+}
+
+.overview-description {
+	clear: both;
+}
+
+.overview-company-name {
+	font-weight: 600;
+	color: #666;
+	margin-top: 10px;
+}
+
+.company-jobs {
+	float: left;
+    margin-right: 10px;
+    padding-top: 5px;
+    color: #666;
+    font-weight: 600;
+}
+
+.job-pill {
+	padding: 3px 10px!important;
+	border: 1px solid #fa5b0f;
+	color: #333;
+}
+
+.job-tab {
+	margin-left: 5px!important;
+}
+
+.jobs-tags {
+	padding-top: 7px;
+	overflow: hidden;
+}
+
+.job-name-underlined {
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-color: #fa5b0f;
+	/*border-bottom: 1px solid #fa5b0f;
+	padding-bottom: 3px;
+	width: auto;*/
+	margin-bottom: 10px;
+}
+
+.tabs-wrapper {
+	padding-left: 0!important;
+	margin-bottom: 40px;
+}
+
+.job-applying-upper {
+	float: right;
+	border-radius: 5px;
+}
+
+.overview-image {
+	width: auto;
+	height: 70px;
+}
+
+.job-overview {
+	background-color: rgba(136, 136, 136, 0.25)!important;
+}
+
+.activate-alerts {
+	background-color: #fdfdfd!important;
+}
+
+.short-desc {
+	padding: 0px!important;
+	margin-right: 5%;
+}
+
+.page-content {
+  min-height: calc(100vh - 180px);
+}
+.footer {
+  /*height: 180px;*/
+  /*width: 120%;*/
+}
+
+
+
+.popular-jobs {
+	margin-bottom: -15px;
+}
+
+.overlay_pic {
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.sharado-uploaded-thumb:hover .overlay_pic {
+	opacity: 1;
+	
+    /*width: 150px;*/
+}
+
+.sharado-uploaded-thumb:hover .thum {
+	opacity: 0.5;
+}
+
+.no_email {
+	display: inline-block;
+}
+
+.my-profile-account {
+	color: #f16723;
+    font-weight: 600;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+.pac-container {
+    z-index: 10510 !important;
+
+}
+
+.in-specific-areas {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.reg-hr {
+	width: 115%;
+    margin-left: -3%;
+}
+
+
+
+.job-list-content-sharado {
+	padding-bottom: 0!important;
+}
+
+@media(width: 1289px)
+{
+	#logo img {
+	    width: 70% !important;
+	    margin-top: 7% !important;
+	    margin-left: 34%!important;
+	}
+}
+
+.easiest-way {
+	margin-bottom: 0;
+}
+
+.search-box-inner {
+	padding-left: 5px;
+}
+
+.search-field-results {
+	padding-left: 0!important;
+}
+
+.search-field-results input {
+	width: 99%!important;
+}
+
+pre {
+  white-space: pre-wrap;
+  text-align: justify;
+  word-break: break-word;
+}
+
+b {
+	font-weight: bold!important;
+}
+
+.join-sharado {
+	margin-bottom: 0!important;
+}
+
+.by-reg-you-agree {
+	clear: both;
+    display: block;
+    margin-left: 11.5%;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+

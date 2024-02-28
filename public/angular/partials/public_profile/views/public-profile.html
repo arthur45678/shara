@@ -1,0 +1,103 @@
+<div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+    <div class="cover__filter"></div>
+    <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+<div ng-if="!not_exist">
+  <section class="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div ng-show="image" class="container-image" style="text-align: center;">
+            <img class="thum round" src="/uploads/{{image}}" alt="Placeholder Person">
+            <a class="button button--image contact-me-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe7Y1WNEfZI6JUdHC5kozhugGcSy8-IC-AIb6lj8QalnzrvIw/viewform?vc=0&c=0&w=1" target="_blank" translate="contact_me" translate-default="&nbsp;"></a>
+          </div>
+          <div ng-show="!image" class="container-image" style="text-align: center;">
+            <img class="thum round" src="http://www.placehold.it/300x300/A9A9A9/FFFFFF&text=no+image" alt="Placeholder Person">
+            <a class="button button--image contact-me-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe7Y1WNEfZI6JUdHC5kozhugGcSy8-IC-AIb6lj8QalnzrvIw/viewform?vc=0&c=0&w=1" target="_blank" translate="contact_me" translate-default="&nbsp;"></a>
+          </div>
+        </div>
+        <div class="col-sm-9">
+
+            <h1 class="huger margin-top">{{first_name}} {{last_name}}</h1>
+            <p class="bigger"><span ng-if="gender">{{gender}}</span><span ng-if = "age">, {{age}}</span></p>
+            <p class="meta" ng-if="city"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{city}}</p>
+
+        </div>
+      </div>
+
+
+      <hr id="hr-placeholder-menu">
+
+  </div>
+
+</section>
+
+
+
+<section class="content wide--content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 ng-if="experience" translate="get_to_know_me" translate-default="&nbsp;"></h3>
+        <p ng-if="experience">{{experience}}</p>
+
+        <h3 ng-show="daily" class="margin-top" translate="im_available" translate-default="&nbsp;"></h3>
+        <p ng-show="daily"><span translate="p_available" translate-default="&nbsp;" class="col-md-2 col-sm-2 col-xs-4 bold"></span> 
+                  <span class="col-md-10 col-sm-10 col-xs-8">
+                      <span class="button-checkbox">
+                       <button type="button" class="button--small button button--checked" translate="{{schedule}}" translate-default="&nbsp;"> </button>
+                      </span>
+                  </span>
+                  <br>
+          <span translate="p_daily" class="col-md-2 col-sm-2 col-xs-4 bold" translate-default="&nbsp;"></span> 
+                <span class="col-md-10 col-sm-10 col-xs-8">
+                    <span ng-repeat="day in daily" class="button-checkbox">
+                       <button type="button" class="button--small button button--checked" translate="{{day}}" translate-default="&nbsp;"> </button>
+                    </span>
+                </span>
+                <br>
+          <span translate="p_hourly" translate-default="&nbsp;" class="col-md-2 col-sm-2 col-xs-4 bold"></span>
+                <span class="col-md-10 col-sm-10 col-xs-8">
+                    <span ng-repeat="hour in hourly" class="button-checkbox">
+                       <button type="button" class="button--small button button--checked" translate="{{hour}}" translate-default="&nbsp;"> </button> 
+                    </span>
+                </span>
+                <br>
+          <span translate="p_where" translate-default="&nbsp;" class="col-md-2 col-sm-2 col-xs-4 bold"></span>
+              <span class="col-md-10 col-sm-10 col-xs-8">
+                    <span ng-repeat="area in areas" class="button-checkbox">
+                       <button type="button" class="button--small button button--checked" translate="{{area | lowercase}}" translate-default="&nbsp;"> </button>
+                    </span>
+              </span>
+                
+        </p>
+      </div>
+      <div ng-show="skills.length > 0" class="col-md-6">
+        <h3 translate="interested_in" translate-default="&nbsp;"></h3>
+        <p><span ng-repeat="skill in skills" class="button-checkbox">
+                   <button type="button" class="button--small button button--checked" ng-show="skill.name"> {{skill.name}} </button>
+                   <button type="button" class="button--small button button--checked" ng-show="!skill.name"> {{skill.defaultSkill.name}} </button>
+                   <input type="checkbox" class="hidden" />
+                </span></p>
+      </div>
+    </div>
+  </div>
+
+</section>
+</div>
+<div ng-if="not_exist">
+    <section class="content">
+    <div class="container">
+
+      <div class="row" style="text-align: center;">
+        <h2 translate="page_not_found" translate-default="&nbsp;"></h2>
+      </div>
+
+
+      <hr id="hr-placeholder-menu">
+
+  </div>
+
+</section>
+</div>

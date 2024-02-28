@@ -1,0 +1,672 @@
+<style type="text/css">
+	body{
+		padding-right: 0px !important;
+		overflow-x: hidden !important;
+	}
+</style>
+<div class="container" ng-show="currentState == 'step2'">
+<div ncy-breadcrumb></div>
+	<div class="who-are-you" flow-init="{headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'}}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+      flow-files-submitted="$flow.upload()" flow-name="$root.obj.flow" flow-files-added="processFiles($files)">
+    <h1 class="my-account-reg" translate="my_profile"></h1>
+    <p class="my-account-reg" style="margin-top: 0!important; margin-bottom: 15px;" translate="be_sure_to_fill"></p>
+	<form method="post" class="register sharado-register-form" ng-submit="secondStep(secondStepForm)" name="secondStepForm" files = "true" enctype="multipart/form-data" novalidate>
+	<div class="form-row form-row-wide sharado-profile-pic">
+		
+		<div ng-show="$root.user.image" flow-drop>
+            <div class="profice-pic-wrap">
+                <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-hide="$flow.files.length">
+                  <img flow-btn src="/uploads/{{$root.user.image}}" style="cursor: pointer;" />
+                  <img flow-btn src="/angular/images/lavaazz.png" class="overlay_pic" style="cursor:pointer; "  />
+                </div>
+                <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-show="$flow.files.length">
+                  <img flow-btn flow-img="$flow.files[0]" ng-src="{{outputImageNew}}" style="cursor: pointer;" />
+                  <img flow-btn src="/angular/images/lavaazz.png" class="overlay_pic" style="cursor:pointer; "  />
+                </div>
+       
+            </div>
+
+            <div class="image-text-wrapper">
+                        <label class="control-label make-sure-label" for="header-image" translate="photo_upload_rules"></label>
+                    
+            </div>
+        </div>
+
+		<div id="cropModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      </div>
+		      <div class="modal-body">
+		        
+	   			<div class="cropArea">
+			        <img-crop image="imageString" result-image="$root.outputImage" area-type="square"></img-crop>
+			    </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" translate="ok" ng-click="hideModal()"></button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
+		<div ng-if="!$root.user.image" flow-drop id="fileInput">
+			<div class="profice-pic-wrap">
+				<div class="thumbnail sharado-thumbnail" ng-hide="$flow.files.length">
+			      <img flow-btn src="/angular/images/verjapeesss.png" style="cursor: pointer;" />
+			    </div>
+			    <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-show="$flow.files.length">
+			      <img id="thum" class="thum" flow-btn flow-img="$flow.files[0]" ng-src="{{outputImageNew}}" style="cursor:pointer;"/>
+			      <img flow-btn src="/angular/images/lavaazz.png" class="overlay_pic" style="cursor:pointer; "  />
+			    </div>
+
+			    
+			</div>
+		    
+		    <div class="image-text-wrapper">
+			    	<label class="control-label make-sure-label" for="header-image" translate="photo_upload_rules">
+			    </label>
+			    <!-- <p class="upload-files-allowed" translate="upload_files_allowed">
+			    </p> -->
+		    </div>
+		    
+		</div>
+	</div>
+	<div class="who-are-you-div">
+		<h4 class="who-are-you-h4" translate="personal_information"></h4>
+			<p class="form-row form-row-wide personal-info right-inner-addon">			
+					<i class="ln ln-icon-Male">*</i>
+					<input type="text" class="input-text personal-input" name="first_name" id="first_name" value="" ng-model="$root.user.first_name" placeholder="{{'placeholder_first_name' | translate }}" required/>					
+				<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.first_name.$error.required" translate="first_name_required"></span>
+				<span class="validation_error" ng-show="first_name_error">{{first_name_error}}</span>
+			</p>
+			<p class="form-row form-row-wide personal-info right-inner-addon">
+					<i class="ln ln-icon-Male">*</i>
+					<input type="text" class="input-text personal-input" name="last_name" id="last_name" value="" ng-model="$root.user.last_name" placeholder="{{'placeholder_last_name' | translate}}" required />
+				<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.last_name.$error.required" translate="last_name_required"></span>
+				<span class="validation_error" ng-show="last_name_error">{{last_name_error}}</span>
+			</p>
+			<p class="form-row form-row-wide personal-info right-inner-addon">
+					<i class="ln ln-icon-Mail">*</i>
+					<input type="email" class="input-text personal-input user-email" name="email" id="email2" value="" ng-model="$root.user.email" placeholder="{{'placeholder_email' | translate}}" required />
+				<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.required" translate="email_required"></span>
+				<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.email" translate="invalid_email"></span>
+			</p>
+			<p class="form-row form-row-wide personal-info right-inner-addon">
+					
+					
+
+					<i class="ln ln-icon-Calendar-3">*</i>
+				  	<input name="birth_date" class="input-text personal-input birthdate-date" ng-model="$root.user.birth_date" type="text" placeholder="dd/mm/yyyy" required datepicker autocomplete=“off”/>
+					<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.birth_date.$error.required" translate="birth_date_required"></span>
+					<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.birth_date.$error.max" translate="birth_date_max"></span>
+					<span class="validation_error" ng-show="birth_date_error">{{birth_date_error}}</span>
+			</p>
+	</div>
+
+		
+		<div class="sharado-reg-info">
+		<h4 class="who-are-you-h4" translate="location_information"></h4>
+			<p class="form-row form-row-wide personal-info right-inner-addon">
+					<i class="ln ln-icon-Location-2">*</i>
+					<input type="text" class="input-text personal-input" name="location_reg" id="pac-input" ng-model="$root.user.location_reg" value="" placeholder="{{'placeholder_where_you_live' | translate}}" required autocomplete=“off”/>
+					<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.location_reg.$error.required" translate="location_required"></span>
+					<span class="validation_error" ng-show="city_error" translate="city_required"></span>
+					<span class="validation_error" ng-show="country_error" translate="invalid-location"></span>
+			</p>
+			<p class="form-row form-row-wide personal-info right-inner-addon">
+					<i class="ln ln-icon-Phone-2">*</i>
+					<input type="text" class="input-text personal-input" name="phone" id="phone" ng-model="$root.user.phone" placeholder="{{'placeholder_phone_number' | translate}}" value="" required autocomplete=“off”/>
+					<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.phone.$error.required || customPhoneValidation" translate="phone_number_required"></span>
+					<span class="validation_error" ng-show="phone_number_error">{{phone_number_error}}</span>
+			</p>
+			
+		</div>
+		
+		<hr class="outer-hr">
+		<div class="lower-part-reg">
+			<p class="who-are-you-h4" translate="transportation"></p>
+			<div class="container transport-buttons">
+		    <div class="row">
+		        <div class="form-group">
+		            <div class="items-collection availability-buttons">
+		            	<div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.bike = !$root.user.bike">
+		                            <label class="btn btn-default" id="bike">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off" >
+		                                    <span class="fa fa-bicycle  fa-2x"></span>
+		                                    <h5 translate="bike"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+
+		                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.scooter = !$root.user.scooter">
+		                            <label class="btn btn-default" id="scooter">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off">
+		                                    <span class="fa fa-motorcycle fa-2x"></span>
+		                                    <h5 translate="scooter"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+
+		                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="$root.user.car = !$root.user.car">
+		                            <label class="btn btn-default" id="car">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off">
+		                                    <span class="fa fa-car fa-2x"></span>
+		                                    <h5 translate="car"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.truck = !$root.user.truck">
+		                            <label class="btn btn-default" id="truck">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off"> 
+		                                    <span class="fa fa-truck fa-2x"></span>
+		                                    <h5 translate="truck"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+			            </div>
+			        </div>
+			    </div>   
+			</div>
+			<ul class="checkboxes sharado-check">
+	<!-- 			<li>
+					<input id="check-0" type="checkbox" name="check" ng-click=" tranportationChange()">
+					<label for="check-0">Select all that apply</label>
+				</li> -->
+				<li>
+					<input id="check-1" type="checkbox" name="check" ng-click="$root.user.driving_license = !$root.user.driving_license">
+					<label for="check-1" translate="have_driving_license"></label>
+					<span class="in-specific-areas" translate="in_specific_areas"></span>
+				</li>
+
+			</ul>
+			<!-- <span class="validation_error" ng-show="secondStepForm.$submitted && !$root.user.car && !$root.user.truck && !$root.user.bike && !$root.user.scooter">Select transportation mean which can be used for work.</span> -->
+			<hr class="reg-hr">
+			<p class="who-are-you-h4" translate="education"></p>
+			<div class="container transport-buttons education-buttons">
+		    <div class="row">
+		        <div class="form-group">
+		            <div class="items-collection availability-buttons">
+
+		                <div class="items col-xs-10 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="educationChange('school')">
+		                            <label class="btn btn-default" id="school">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off" >
+		                                    <span class="fa fa-book fa-2x"></span>
+		                                    <h5 translate="hight_school"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="items col-xs-10 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="educationChange('undergraduate')">
+		                            <label class="btn btn-default" id="undergraduate">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off">
+		                                    <span class="fa fa-university fa-2x"></span>
+		                                    <h5 translate="undergraduate"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="items col-xs-10 col-sm-3 col-md-3 col-lg-3">
+		                    <div class="info-block block-info clearfix">
+		                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="educationChange('graduate')">
+		                            <label class="btn btn-default" id="graduate">
+		                                <div class="itemcontent">
+		                                    <input type="checkbox" name="var_id[]" autocomplete="off">
+		                                    <span class="fa fa-graduation-cap  fa-2x"></span>
+		                                    <h5 translate="graduate"></h5>
+		                                </div>
+		                            </label>
+		                        </div>
+		                    </div>
+		                </div>                
+			            </div>
+			        </div>
+			    </div>   
+			</div>
+			<span class="validation_error" ng-show="education_error">{{education_error}}</span>
+			<ul class="checkboxes sharado-check">
+				<li>
+					<input id="check-2" type="checkbox" name="check" ng-click="$root.user.currently_student = !$root.user.currently_student">
+					<label for="check-2" translate="currently_student"></label>
+				</li>
+			</ul>
+			<hr class="reg-hr">
+			<p class="who-are-you-h4" translate="languages"></p>
+			<ul class="checkboxes sharado-check" ng-show="doYouSpeak">
+				<!-- <label for="speakCheck">Do you speak {{$root.doYouSpeak}} ?</label>
+				<input id="speakCheck" type="checkbox"> -->
+				<li>
+					<input id="speakCheck" type="checkbox" name="check" ng-click="$root.user.speakLang = !$root.user.speakLang" checked="checked">
+					<label for="speakCheck"><span translate="do_you_speak"></span> {{doYouSpeak}}?</label>
+				</li>
+				
+			</ul>
+			<div class="select-lang-wrapper">
+				<label class="spoken-langs" for="spokenLangs" translate="speak_other_languages"></label>
+				<am-multiselect id="spokenLangs" class="input-lg" multiple="true"
+			    ng-model="$root.user.spokenLanguages" ms-header="Languages"
+			    options="language for language in languages_options"
+			    change="selected()" size="2"></am-multiselect>
+			</div>
+
+			<div id="selected_languages_tags"></div>
+			<hr class="reg-hr">
+			<ul class="checkboxes sharado-check">
+				<li>
+					<input id="check-3" type="checkbox" name="read_terms" ng-click="$root.user.read_terms = !$root.user.read_terms" required>
+					<label for="check-3" translate="have_read_terms"></label>
+				</li>
+				<span class="validation_error" ng-show="read_terms_error" translate="read_terms_error"></span>
+			</ul>
+			<hr class="reg-hr">
+		</div>	
+		<p class="form-row">
+			<button type="submit" ng-click="submitted()" class="button border fw margin-top-10 first-next-but" name="register" ><span translate="next"></span> <i class="fa fa-arrow-circle-right"></i></button>
+		</p>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="container" ng-show="currentState == 'step3'">
+<form method="post" class="register" ng-submit="thirdStep(thirdStepForm)" name="thirdStepForm">
+	<div class="skills">
+		<p class="form-row form-row-wide">
+		<h1 translate="skills" class="my-skills-reg"></h1>
+
+			<label class="skills-label"><p translate="my_jobs_skills"></p>
+				<select class="form-control select-schedule select-skills" id="selectpicker_schedule" title="Schedule" name="schedule" ng-model="$root.user.selectedList" ng-change="changeSkills($root.user.selectedList)" required>
+	                <option ng-repeat="option in optionsList | orderBy:'name'"  data-content = "{{option.name}}" value="{{option.id}}">{{option.name}}</option>
+	            </select>
+	            <p class="validation_error" ng-show="skillsRequired" translate="skills_required" style="width: 100%;"></p>
+			</label>
+
+			<label class="skills-label"><p translate="selected_jobs"></p>
+				<span class="skills-pill" >
+					<span ng-show="selectedSkills" ng-repeat="item in selectedSkills" class="skill-tag" ng-click="deleteSkill(item)">{{item.name}} ×</span>
+				</span>
+				<p class="do-not-worry"><b translate="do_not_worry"></b></p>
+			</label>
+
+			
+		</p>
+		
+		<p  translate="popular_jobs" class="popular-jobs"></p>
+		<p class="form-row form-row-wide">
+			<ul class="sharado-sectors-line">
+				<li ng-repeat = "sector in sectors">{{sector.sector.name}}</li>
+			</ul>
+			<ul class="sharado-jobs-line">
+				<li ng-repeat='(key, value) in categoriesList'>{{value.name}}</li>
+			</ul>
+		</p>
+	</div>
+	<hr />
+	<button ng-click="currentState = 'step2'; disableFirstStep = false" type="button" ng-disabled="disableBackButton" class="button border fw margin-top-10" name="register" ><span translate="back"></span> <i class="fa fa-arrow-circle-left"></i></button>
+		<button ng-click="submitted()" class="button border fw margin-top-10 first-next-but skills-next-button" name="register" ><span translate="next"></span> <i class="fa fa-arrow-circle-right"></i></button>
+	<p class="form-row">
+		
+		
+	</p>
+	</form>
+</div>
+
+
+<div class="container" ng-show="currentState == 'step4'">
+<form method="post" class="register sharado-register-form-step-3" name="StepFourForm" ng-submit="fourthStep(StepFourForm)">
+<div class="availability">
+<h1 class="my-skills-reg my-avail" translate="my_availability"></h1>
+	<p class="availability-p" translate="i_am_available_to_work"></p>
+	<div class="container">
+    <div class="row">
+        <div class="form-group">
+        <div class="col-md-12 reg-user-schedule">
+	        <div class="items-collection availability-buttons">
+	        	<div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="availabilityChange('full_time')">
+                            <label class="btn btn-default availability-label time-label" id="full_time">
+                                <div class="itemcontent">
+                                    <input type="checkbox" id="full_time_check" name="var_id[]" autocomplete="off" ng-required="!($root.user.part_time || $root.user.both)">
+                                    
+                                    <h5 translate="full_time"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="availabilityChange('part_time')">
+                            <label class="btn btn-default availability-label time-label" id="part_time">
+                                <div class="itemcontent">
+                                    <input type="checkbox" id="part_time_check" name="var_id[]" autocomplete="off" ng-required="!($root.user.full_time || $root.user.both)">
+                                    
+                                    <h5 translate="part_time"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="availabilityChange('both')">
+                            <label class="btn btn-default availability-label time-label" id="both">
+                                <div class="itemcontent">
+                                    <input type="checkbox" id="both_check" name="var_id[]" autocomplete="off" ng-required="!($root.user.part_time || $root.user.full_time)">
+                                    
+                                    <h5 translate="both"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+	        </div>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+        <p class="validation_error" ng-show="availabilityRequired" translate="skills_required" style="width: 100%;"></p>
+        <hr class="under-av-hr"/>
+        <p class="availability-p" translate="daily"></p> 
+        <div class="container daily-container">
+    	<div class="row">
+        <div class="form-group">
+        <div class="col-md-12">
+        
+               
+            <div class="items-collection availability-buttons">
+
+            <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="$root.user.monday = !$root.user.monday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.tuesday || $root.user.wednesday ||$root.user.thursday || $root.user.thursday || $root.user.friday || $root.user.saturday || $root.user.sunday)">
+                                    
+                                    <h5 translate="monday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Mo</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.tuesday = !$root.user.tuesday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.wednesday ||$root.user.thursday || $root.user.thursday || $root.user.friday || $root.user.saturday || $root.user.sunday)">
+                                    
+                                    <h5 translate="tuesday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Tu</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.wednesday = !$root.user.wednesday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.tuesday ||$root.user.thursday || $root.user.thursday || $root.user.friday || $root.user.saturday || $root.user.sunday)">
+                                    
+                                    <h5 translate="wednesday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">We</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.thursday = !$root.user.thursday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.tuesday || $root.user.wednesday || $root.user.thursday || $root.user.friday || $root.user.saturday || $root.user.sunday)">
+                                    
+                                    <h5 translate="thursday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Th</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.friday = !$root.user.friday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.tuesday || $root.user.wednesday ||$root.user.thursday ||  $root.user.saturday || $root.user.sunday)">
+                                    
+                                    <h5 translate="friday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Fr</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.saturday = !$root.user.saturday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.tuesday || $root.user.wednesday ||$root.user.thursday || $root.user.friday ||  $root.user.sunday)">
+                                    
+                                    <h5 translate="saturday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Sa</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items week-days">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.sunday = !$root.user.sunday">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.monday || $root.user.tuesday || $root.user.wednesday ||$root.user.thursday || $root.user.thursday || $root.user.friday || $root.user.saturday)">
+                                    
+                                    <h5 translate="sunday" class="week_days_h5"></h5>
+                                    <h5 translate="" class="week_days_h5_mobile">Su</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                                 
+	            </div>
+	            
+
+	        </div>
+	    </div>   
+	</div>
+	</div>
+	<p class="validation_error" ng-show="weekRequired" translate="skills_required" style="width: 100%;"></p>
+	<hr class="under-week-hr">
+	<p class="availability-p" translate="hourly"></p>
+	<div class="container">
+    <div class="row">
+        <div class="form-group">
+            <div class="items-collection availability-buttons">
+
+                <div class="items col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="$root.user.morning = !$root.user.morning">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="hours_check[]" value="morning" autocomplete="off" ng-required="!($root.user.afternoon || $root.user.evening ||  $root.user.night)">
+                                    
+                                    <h5 translate="morning"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.afternoon = !$root.user.afternoon">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="hours_check[]" value="afternoon"  autocomplete="off" ng-required="!($root.user.morning || $root.user.evening ||  $root.user.night)">
+                                    
+                                    <h5 translate="afternoon"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.evening = !$root.user.evening">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="hours_check[]" value="evening" autocomplete="off" ng-required="!($root.user.morning || $root.user.afternoon || $root.user.night)">
+                                    
+                                    <h5 translate="evening"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.night = !$root.user.night">
+                            <label class="btn btn-default availability-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="hours_check[]" value="night" autocomplete="off" ng-required="!($root.user.morning || $root.user.afternoon || $root.user.evening)">
+                                    
+                                    <h5 translate="night"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                                               
+	            </div>
+	            
+
+	        </div>
+	    </div>   
+	</div>
+	<p class="validation_error" ng-show="hoursRequired" translate="skills_required" style="width: 100%;"></p>
+	<hr class="under-hour-hr">
+	<p class="availability-p" translate="where_do_i_work"></p>
+	<div class="container">
+    <div class="row">
+        <div class="form-group">
+            <div class="items-collection availability-buttons">
+
+                <div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect" ng-click="$root.user.my_area = !$root.user.my_area">
+                            <label class="btn btn-default availability-label area-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.outside_my_area || $root.user.remotely)">
+                                    
+                                    <h5 translate="my_area"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.outside_my_area = !$root.user.outside_my_area">
+                            <label class="btn btn-default availability-label area-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.my_area || $root.user.remotely)">
+                                    
+                                    <h5 translate="outside_my_area"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent" ng-click="$root.user.remotely = !$root.user.remotely">
+                            <label class="btn btn-default availability-label area-label">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" ng-required="!($root.user.my_area || $root.user.outside_my_area)">
+                                    
+                                    <h5 translate="remotely"></h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                                               
+	            </div>
+	            
+
+	        </div>
+	    </div>   
+	</div>
+	<p class="validation_error" ng-show="areaRequired" translate="skills_required" style="width: 100%;"></p>
+	<hr class="under-area-hr"/>
+	<div style="position: relative; overflow: hidden;">
+		<p class="form-row complete-registration-back">
+			<button ng-click="currentState = 'step3'" type="button" class="button border fw margin-top-10" name="register" ng-disabled="disableBackButton"><span translate="back"></span> <i class="fa fa-arrow-circle-left" ></i></button>
+		</p>
+		<p class="form-row complete-registration">		
+			<button ng-click="submitted()" class="button border fw margin-top-10" name="register" ><span translate="finish"></span> <i class="fa fa-arrow-circle-right"></i></button>
+		</p>
+	</div>
+	
+</form>
+</div>
+</div>
+
+
+<div class="container complete-registration-container" ng-show="currentState == 'step5'">
+
+	<div class="complete-registration-div" ng-show="!$root.facebook_message">
+		<h3 class="congratulations-h3"><span translate="check_your_inbox"></span><span class="no_email" translate="no_email"></span> <a href="" ng-click="resendActivationEmail(current_user_id)" translate="here"></a> <span translate="to_resend"></span></h3>
+		<span class="resend_activation_email_span" ng-show="resend_status_success" translate="resend_success"></span>
+		<span class="validation_error" ng-show = 'resend_status_error' translate="resend_error"></span>
+		<span class="validation_error" ng-show="$root.emailSendingFailed" translate="email_sending_failed"></span>
+	</div>
+	<div class="complete-registration-div" ng-show="$root.facebook_message">
+		<h3 class="congratulations-h3" translate="facebook_reg_success"></h3>
+		<h3 class="congratulations-h3"><span translate="facebook_reg_action"></span><a href="" ui-sref="/" translate="here"></a></h3>
+	</div>
+
+</div>
+
+<script src="/angular/scripts/chosen.jquery.min.js"></script>
+	
+	

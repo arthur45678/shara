@@ -1,0 +1,599 @@
+
+<div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+    <div class="cover__filter"></div>
+    <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+<div class="container" flow-init="{headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'}}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+      flow-files-submitted="$flow.upload()" flow-name="$root.obj.flow" flow-files-added="processFiles($files)">
+  	  <!-- content -->
+  <section class="content">
+    <div class="container">
+    	<h3 class="sharado-h3" ng-show="savedAccountInfo" translate="account_edit_success" translate-default="&nbsp;"></h3>
+      <div class="row">
+        <div ng-show="$root.user.image" class="col-sm-3 my-account-image" flow-drop>
+			<div class="profice-pic-wrap account-pic-wrap">
+				<div class="thumbnail sharado-thumbnail sharado-uploaded-thumb round" ng-hide="$flow.files.length">
+			      <img class="thum round" flow-btn src="/uploads/{{$root.user.image}}" style="cursor: pointer;" />
+			    </div>
+			    <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-show="$flow.files.length">
+			      <img class="thum round" flow-btn flow-img="$flow.files[0]" ng-src="{{outputImageNew}}" style="cursor: pointer;" />
+			    </div>
+			    <!-- <span class="btn btn-primary btn-lg profile-pic-upload" ng-hide="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}" translate="change"></span>
+		       <span class="btn btn-info btn-lg profile-pic-change" ng-show="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}" translate="change"></span>
+		       <span class="btn btn-danger btn-lg profile-pic-delete" ng-show="$flow.files.length"
+		          ng-click="$flow.cancel()" translate="remove"> -->
+		       <!-- </span> -->
+			</div>
+		    
+		    <!-- <div class="image-text-wrapper">
+			    	<label class="control-label make-sure-label" style="margin-top: -10px!important;" for="header-image" translate="photo_upload_rules"></label>
+			    <!-- <p class="upload-files-allowed" translate="upload_files_allowed">
+			    </p>
+		    </div> --> 
+		</div>
+		<div id="cropModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      </div>
+		      <div class="modal-body">
+		        
+	   			<div class="cropArea">
+			        <img-crop image="imageString" result-image="$root.outputImage" area-type="square"></img-crop>
+			    </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" translate="ok" translate-default="&nbsp;" ng-click="hideModal()"></button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
+		<div ng-show="!$root.user.image" class="col-sm-3 my-account-image" flow-drop>
+			<div class="profice-pic-wrap">
+				<div class="thumbnail sharado-thumbnail round" ng-hide="$flow.files.length">
+			      <img flow-btn src="img/placeholder-person.jpg" style="cursor: pointer;" class="round thum" />
+			    </div>
+			    <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-show="$flow.files.length">
+			      <img class="thum round" flow-btn flow-img="$flow.files[0]" ng-src="{{outputImageNew}}" style="cursor:pointer;"/>
+			    </div>
+			    
+			    <!-- <span class="btn btn-primary profile-pic-upload" ng-hide="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}" translate="select_image"></span>
+		       <span class="btn btn-info  profile-pic-change" ng-show="$flow.files.length" flow-btn flow-attrs="{accept:'image/*'}" translate="change"></span>
+		       <span class="btn btn-danger  profile-pic-delete" ng-show="$flow.files.length"
+		         ng-click="$flow.cancel()" translate="remove">
+		       </span> -->
+			</div>
+		    
+		    <!-- <div class="image-text-wrapper">
+			    	<label class="control-label make-sure-label" style="margin-top: -10px!important;" for="header-image" translate="photo_upload_rules">
+			    </label>
+			    <!-- <p class="upload-files-allowed" translate="upload_files_allowed">
+			    </p>
+		    </div> --> 
+		    
+		</div>
+
+		<div class="col-md-2">
+			<a href="" ng-click="download()" class="btn btn-success" style="display:none" translate="download_profile" translate-default="&nbsp;"></a>
+		</div>
+        <div class="col-sm-9">
+
+            <h1 class="huger">{{$root.user.first_name}}</h1>
+            <p class="bigger" ng-show="$root.user.gender == 'male'"><span translate="man" translate-default="&nbsp;"></span>, {{$root.user.age}}</p>
+            <p class="bigger" ng-show="$root.user.gender == 'female'"><span translate="woman" translate-default="&nbsp;"></span>, {{$root.user.age}}</p>
+
+        </div>
+      </div>
+
+
+      <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+        <div id="navbar-secondary" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            	<li class="my-profile-tab " ng-class="{ active: isSet(1), }">
+		          	<a href ng-click="setTab(1)" translate="my_profile" translate-default="&nbsp;"></a>
+		       	</li>
+		       	<li class="my-profile-tab " ng-class="{ active: isSet(2) }">
+		          	<a href ng-click="setTab(2)" translate="my_skills" translate-default="&nbsp;"></a>
+		       	</li>
+		       	<li class="my-profile-tab " ng-class="{ active: isSet(3) }">
+		          	<a href ng-click="setTab(3)" translate="my_availability" translate-default="&nbsp;"></a>
+		       	</li>
+		       	<li class="my-profile-tab " ng-class="{ active: isSet(4) }">
+		          	<a href ng-click="setTab(4)" translate="my_applications" translate-default="&nbsp;"></a>
+		       	</li>
+		       	<li id="my_alerts_tab" class="my-profile-tab " ng-class="{ active: isSet(5) }">
+		          	<a href  ng-click="setTab(5)" translate="my_alerts" translate-default="&nbsp;"></a> 
+		       	</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+ 
+
+  <div ng-show="$root.tab == 1" class="user-tabs">
+	<div class="row">
+
+      <div class="col-sm-12">
+        <p class="wide margin-top" translate="this_is_your_profile" translate-default="&nbsp;"></p>
+      </div>
+
+    </div>
+	<form method="post" class="register sharado-register-form sharado-my-profile-form margin-top" name="secondStepForm" files = "true" enctype="multipart/form-data" ng-submit="saveFirstTab(secondStepForm)" novalidate>
+
+		<div class="row">
+	          <div class="col-sm-6 form-group">
+	              <input type="text" class="input-text form-control" name="first_name" id="first_name" value="" ng-model="$root.user.first_name" placeholder="{{'placeholder_first_name' | translate}}" required/>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.first_name.$error.required" translate="first_name_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="first_name_error">{{first_name_error}}</span>
+	          </div>
+	          <div class="col-sm-6 form-group">
+	              <input  type="text" class="input-text form-control" name="last_name" id="last_name " value="" ng-model="$root.user.last_name" placeholder="{{'placeholder_last_name' | translate}}" required/>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.last_name.$error.required" translate="last_name_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="last_name_error">{{last_name_error}}</span>
+	          </div>
+	          <div class="col-sm-6 form-group">
+	              <input class="form-control" type="email" class="input-text user-email form-control" name="email" id="email2 " value="" ng-model="$root.user.email" placeholder="{{'placeholder_email' | translate}}" required/>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.required" translate="email_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.email" translate="invalid_email" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="email_error">{{email_error}}</span>
+	          </div>
+	          <div class="col-sm-6 form-group">
+	              <input id="textbox4" name="birth_date" class="input-text personal-input form-control" ng-model="$root.user.birth_date" type="text" placeholder="dd/mm/yyyy" datepicker required />
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.birth_date.$error.required" translate="birth_date_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="birth_date_error">{{birth_date_error}}</span>
+	          </div>
+	          <div class="col-sm-6 form-group">
+	              <input type="text" class="input-text form-control" name="country" id="pac-input" ng-model="$root.user.location" value="" placeholder="{{'placeholder_where_you_live' | translate}}" required/>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.country.$error.required" translate="location_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" id="city_error" ng-show="city_error" translate="city_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" id="country_error" ng-show="country_error" translate="invalid_location" translate-default="&nbsp;"></span>
+	          </div>
+	          
+	            <div class="col-sm-6 form-group">
+	                <select class="form-control" ng-model="$root.user.gender">
+				            <option value="male" translate="man" translate-default="&nbsp;"></option>
+				            <option value="female" translate="woman" translate-default="&nbsp;"></option>
+		          	</select>
+	            </div>
+	          
+	          <div class="col-sm-6 form-group">
+	              <input type="text" class="input-text form-control" name="phone" id="phone textbox6" ng-model="$root.user.phone" placeholder="{{'placeholder_phone_number' | translate}}" value="" required/>
+	              <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.phone.$error.required || customPhoneValidation" translate="phone_number_required" translate-default="&nbsp;"></span>
+	              <span class="validation_error" ng-show="phone_number_error">{{phone_number_error}}</span>
+	          </div>
+	          <div class="col-sm-6 form-group">
+	                <select class="form-control" ng-model="$root.user.nationality">
+				        <option ng-repeat="country in $root.countries" value="{{country.name}}">{{country.name}}</option>
+				    </select>
+	          </div>
+
+        </div>
+
+		<div class="row">
+
+		  <div class="col-md-12 col-sm-12">
+		    <h3 class="wide margin-top margin-bottom" translate="do_you_have_something" translate-default="&nbsp;"></h3>
+		  </div>
+		  <div class="col-md-3 col-sm-6 btn-group itemcontent" data-toggle="buttons" ng-click="$root.user.bike = !$root.user.bike">
+		    <span class="button-checkbox">
+		       <button type="button" class="button  button--block" ng-class="{'button--checked':$root.user.bike}"> <i class="fa fa-bicycle fa-2x" aria-hidden="true"></i> <span translate="bike" translate-default="&nbsp;"></span> </button>
+		       <input type="checkbox" class="hidden" />
+		    </span>
+		  </div>
+		  <div  data-toggle="buttons" class="btn-group itemcontent col-md-3 col-sm-6" ng-click="$root.user.scooter = !$root.user.scooter">
+		    <span class="button-checkbox">
+		       <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.scooter}"> <i class="fa fa-motorcycle fa-2x" aria-hidden="true"></i> <span translate="scooter" translate-default="&nbsp;"></span> </button>
+		       <input type="checkbox" class="hidden" />
+		    </span>
+		  </div>
+		  <div class="col-md-3 col-sm-6" data-toggle="buttons" ng-click="$root.user.car = !$root.user.car">
+		    <span class="button-checkbox">
+		       <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.car}"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> <span translate="car" translate-default="&nbsp;"></span> </button>
+		       <input type="checkbox" class="hidden" />
+		    </span>
+		  </div>
+		  <div class="col-md-3 col-sm-6" ng-click="$root.user.truck = !$root.user.truck" data-toggle="buttons">
+		    <span class="button-checkbox">
+		       <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.truck}"> <i class="fa fa-truck fa-2x" aria-hidden="true"></i> <span translate="truck" translate-default="&nbsp;"></span> </button>
+		       <input type="checkbox" class="hidden" />
+		    </span>
+		  </div>
+
+		  <div class="col-md-12 checkbox">
+		    <label>
+		      <input id="check-1" type="checkbox" name="check" ng-click="$root.user.driving_license = !$root.user.driving_license" ng-checked="$root.user.driving_license"><span translate="i_have_driving_license" translate-default="&nbsp;"></span>
+		    </label>
+		    <hr>
+		  </div>
+
+		</div>
+
+		<div class="row">
+
+		<div class="col-md-12 col-sm-12">
+		  <h3 class="wide margin-top margin-bottom"><span translate="education" translate-default="&nbsp;"></span>?</h3>
+		</div>
+		<div class="col-md-3 col-sm-6" ng-click="educationChange('school')">
+		  <span class="button-checkbox">
+		     <button type="button" class="button button--block "  ng-class="{'button--checked':$root.user.school}"> <i class="fa fa-book fa-2x" aria-hidden="true"></i> <span translate="hight_school" translate-default="&nbsp;"></span> </button>
+		     <input type="checkbox" class="hidden" />
+		  </span>
+		</div>
+		<div class="col-md-3 col-sm-6" ng-click="educationChange('undergraduate')">
+		  <span class="button-checkbox">
+		     <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.undergraduate}"> <i class="fa fa-university fa-2x" aria-hidden="true"></i> <span translate="undergraduate" translate-default="&nbsp;"></span> </button>
+		     <input type="checkbox" class="hidden" />
+		  </span>
+		</div>
+		<div class="col-md-3 col-sm-6" ng-click="educationChange('graduate')">
+		  <span class="button-checkbox">
+		     <button type="button" class="button button--block"  ng-class="{'button--checked':$root.user.graduate}"> <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i> <span translate="graduate" translate-default="&nbsp;"></span> </button>
+		     <input type="checkbox" class="hidden" />
+		  </span>
+		</div>
+
+
+		<div class="col-md-12 checkbox">
+		  <label>
+		    <input id="check-2" type="checkbox" name="check" ng-click="$root.user.currently_student = !$root.user.currently_student" ng-checked="$root.user.currently_student"><span translate="actually_student"  translate-default="&nbsp;"></span>
+		  </label>
+		  <hr>
+		</div>
+
+		</div>
+
+		<div class="row">
+
+		  <div class="col-md-12">
+		    <h3 class="wide margin-top margin-bottom" translate="languages" translate-default="&nbsp;"></h3>
+		  </div>
+
+		  <!-- <div class="col-md-4">
+		    <am-multiselect id="spokenLangs" class="input-lg" multiple="true"
+		    ng-model="$root.user.spokenLanguages" ms-header="Languages"
+		    options="language for language in languages_options"
+		    change="selected()" after-select-item="afterSelectItem" size="10"></am-multiselect>
+		    <div id="selected_languages_tags"></div>
+		  </div> -->
+		  <div class="col-md-4">
+		    <select class="form-control" ng-change="selectLanguage($root.user.spokenLanguages)" ng-model="$root.user.spokenLanguages">
+		      <option ng-repeat="language in languages_options | orderBy">{{language | capitalize}}</option>
+		    </select>
+		  </div>
+
+		  <div class="col-md-7">
+            <span ng-repeat="language in $root.selectedLanguages" class="notice" ng-click="deleteLanguage(language)"> {{language | capitalize}} <i class="fa fa-times" aria-hidden="true"></i></span>
+          </div>
+
+
+			<ul class="checkboxes sharado-check col-md-12" ng-show="$root.doYouSpeak">
+				<!-- <label for="speakCheck">Do you speak {{$root.doYouSpeak}} ?</label>
+				<input id="speakCheck" type="checkbox"> -->
+					<input id="speakCheck" type="checkbox" name="check" ng-click="$root.user.speakLang = !$root.user.speakLang">
+					<label for="speakCheck"><span translate="do_you_speak" translate-default="&nbsp;"></span> {{doYouSpeak | capitalize}}?</label>
+				
+			</ul>
+
+			<div class="col-md-12">
+				<button ng-disabled="saved_disable_first" type="submit" ng-click="submitted()" class="button border fw margin-top-10 save-first-tab button margin-top" name="save"> {{saveButtonFirst}} </button>
+			</div>
+		</div>
+	</form>
+  </div>
+
+    <div ng-show="$root.tab == 2" class="user-tabs">
+    	<div class="row">
+
+	      <div class="col-sm-12">
+	        <p class="wide margin-top my_jobs_skills" ></p>
+	      </div>
+
+	    </div>
+		<form method="post" class="register" files = "true" enctype="multipart/form-data" >
+
+			<div class="row">
+
+			    <div class="col-md-5 col-md-push-7">
+	           		<p class="info"  translate="select_your_favorite" translate-default="&nbsp;"></p>
+	          	</div>
+
+	            <div class="col-md-7 col-md-pull-5">
+		            <select class="form-control" ng-change="chooseOptionList($root.user.selectedList1)" ng-model="$root.user.selectedList1">
+		              <option ng-repeat="list in optionsList" value="{{list.id}}" ng-show="!checkInArray($root.user.selectedList,list)">{{list.name}}</option>
+		            </select>
+		            <p class="validation_error" ng-show="skillsRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%;"></p>
+	            </div>
+
+			    <div class="col-md-12">
+			      <p class="wide margin-top" translate="your_interesting" translate-default="&nbsp;"></p>
+			    </div>
+			    <div class="col-md-7">
+			      <span class="notice" ng-repeat="list in $root.user.selectedList" ng-click="deleteSkill(list.id)"> {{list.name}} <i class="fa fa-times" aria-hidden="true" ></i></span> 
+			    </div>
+			    <div class="col-md-5">
+			      <p class="info" translate="dont_worry" translate-default="&nbsp;"></p>
+			    </div>
+
+		    </div>
+		    <div class="row margin-top">
+				      
+				        <div class="col-md-5 col-md-push-7">
+					       
+						    <p translate="please_tell_us" translate-default="&nbsp;">
+							</p>
+			            </div>
+
+				        <div class="col-md-7 col-md-pull-5">
+					        <textarea class="form-control" rows="3" ng-model="$root.user.user_experience"></textarea> 
+				        </div>
+			         
+				    </div>
+			      
+				    <div class="row margin-bottom">
+				      
+				        <div class="col-md-5 col-md-push-7">
+				            <p class="info"> <br/> <span translate="insert_fb" translate-default="&nbsp;"></span></p>
+				        </div>
+
+				        <div class="col-md-7 col-md-pull-5">
+					          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+				           	 <input class="form-control" placeholder="Facebook Profile" id="textbox1" type="text" ng-model="$root.user.facebook_link"/>	 
+				        </div>
+			         
+				    </div>
+			    <div class="col-md-12">
+			        <button class="button border fw margin-top-10 save-second-tab button margin-top" ng-disabled="saved_disable_second" name="register" ng-click="saveSecondTab()" >{{saveButtonSecond}}</button>
+			    </div>
+		</form>
+  	</div>
+  	<div ng-show="$root.tab == 3" class="user-tabs">
+  		<div class="row">
+
+	      <div class="col-sm-12">
+	        <p class="wide margin-top" translate="this_is_your_availability" translate-default="&nbsp;"></p>
+	      </div>
+
+	    </div>
+
+
+	    <form method="post" class="register sharado-register-form-step-3 my-account-form-3 margin-top" files = "true" enctype="multipart/form-data">
+
+	        <div class="row">
+
+	       		<div class="col-md-2 col-md-push-10">
+	            	<p class="info" translate="time_of_work" translate-default="&nbsp;"></p>
+	          	</div>
+
+		        <div class="col-md-10 col-md-pull-2">
+		            <span class="button-checkbox" ng-click="availabilityChange('full_time')">
+		               <button type="button" class="button  button--small" ng-class="{'button--checked':$root.user.full_time}" translate="full_time" translate-default="&nbsp;"></button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="availabilityChange('part_time')">
+		               <button type="button" class="button button--small "  ng-class="{'button--checked':$root.user.part_time}" translate="part_time" translate-default="&nbsp;"></button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="availabilityChange('both')">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.both}" translate="both" translate-default="&nbsp;"></button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <p class="validation_error" ng-show="availabilityRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left;"></p>
+		        </div>
+		        
+		        <div class="col-md-12">
+		          <hr>
+		        </div>
+
+	     	</div>
+
+		    <div class="row margin-top">
+						
+				<div class="col-md-12">
+				    <h3 class="wide big"  translate="daily" translate-default="&nbsp;"></h3>
+			    </div>
+			        
+			    <div class="col-md-2 col-md-push-10">
+		            <p class="info" translate="select_days" translate-default="&nbsp;"></p>
+		        </div>
+
+		        <div class="col-md-10 col-md-pull-2">
+		        
+		            <span class="button-checkbox" ng-click="$root.user.monday = !$root.user.monday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.monday}" translate="monday" translate-default="&nbsp;"> </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.tuesday = !$root.user.tuesday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.tuesday}" translate="tuesday" translate-default="&nbsp;"> </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.wednesday = !$root.user.wednesday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.wednesday}" translate="wednesday" translate-default="&nbsp;"> </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.thursday = !$root.user.thursday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.thursday}"  translate="thursday" translate-default="&nbsp;"> </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.friday = !$root.user.friday"> 
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.friday}" translate="friday" translate-default="&nbsp;"> </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.saturday = !$root.user.saturday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.saturday}" translate="saturday" translate-default="&nbsp;">   </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.sunday = !$root.user.sunday">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.sunday}" translate="sunday" translate-default="&nbsp;">   </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <p class="validation_error" ng-show="weekRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%;float: left;"></p>
+		        </div>
+
+		       
+		       
+		        <div class="col-md-12">
+		          <hr>
+		        </div>
+
+		    </div>
+
+
+	        <div class="row margin-top">
+
+	         	<div class="col-md-12">
+			         <h3 class="wide big" translate="hourly" translate-default="&nbsp;"></h3>
+		        </div>
+						
+			 	<div class="col-md-2 col-md-push-10">
+	            	<p class="info" translate="select_range" translate-default="&nbsp;"></p>
+	            </div>
+						
+	            <div class="col-md-10 col-md-pull-2">
+	           
+		            <span class="button-checkbox" ng-click="$root.user.morning = !$root.user.morning">
+		               <button type="button" class="button  button--small" ng-class="{'button--checked':$root.user.morning}" translate="morning" translate-default="&nbsp;"> <br/> 8:00 - 13:00 </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.afternoon = !$root.user.afternoon">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.afternoon}" translate="afternoon" translate-default="&nbsp;"> <br> 13:00 - 18:00  </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.evening = !$root.user.evening">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.evening}" translate="evening" translate-default="&nbsp;"> <br/> 18:00 - 23:00  </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.night = !$root.user.night">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.night}" translate="night" translate-default="&nbsp;"> <span translate="night" translate-default="&nbsp;"></span> <br/>  23:00 - 8:00  </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <p class="validation_error" ng-show="hoursRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left"></p>
+	            </div>
+	            
+		        <div class="col-md-12">
+		          <hr>
+		        </div>
+
+		    </div>
+
+	      	<div class="row margin-top">
+
+		        <div class="col-md-12">
+				    <h3 class="wide big" translate="where" translate-default="&nbsp;"></h3>
+		        </div>
+			    <div class="col-md-2 col-md-push-10">
+		            <p class="info" translate="select_area" translate-default="&nbsp;"></p>
+		        </div>
+
+		        <div class="col-md-10 col-md-pull-2">
+		            <span class="button-checkbox" ng-click="$root.user.my_area = !$root.user.my_area">
+		               <button type="button" class="button  button--small" ng-class="{'button--checked':$root.user.my_area}" translate="my_area" translate-default="&nbsp;"> <br/>  -- </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.outside_my_area = !$root.user.outside_my_area">
+		               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.outside_my_area}" translate="outside_my_area" translate-default="&nbsp;"> <br> 20 - 100 km  </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+		            <span class="button-checkbox" ng-click="$root.user.remotely = !$root.user.remotely">
+		               <button type="button" class="button button--small "  ng-class="{'button--checked':$root.user.remotely}" translate="remotely" translate-default="&nbsp;"> <br/>  -- </button>
+		               <input type="checkbox" class="hidden" />
+		            </span>
+				<p class="validation_error" ng-show="areaRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left"></p>
+		        </div>
+		          
+
+		        <div class="col-md-12">
+		          <hr>
+		        </div>
+
+		      <div class="col-md-12">
+		        <button type="submit"  ng-disabled="saved_disable1" class="button border fw margin-top-10 save-third-tab button margin-top" ng-click="saveThirdTab()" name="register" >{{saveButtonThird}} </button>
+		      </div>
+		  	</div>
+	  	</form>
+	</div>
+	<div ng-show="$root.tab == 4" class="user-tabs">
+  		<div class="row margin-top">
+
+		    <div class="col-md-8 margin-top">
+			    <p translate="your_applications" translate-default="&nbsp;"></p>
+			    
+		        <div class="list-item" ng-show="$root.user.applications" ng-repeat="job in $root.user.applications">
+			        <div class="row">
+			          <div class="col-xs-3">
+			            <img class="my-profile-applic-pic round" ng-src="/uploads/{{job.company.logo}}" alt="" ng-if="job.company.logo">
+						<img class="my-profile-applic-pic round" src="/images/default-organization.png" alt="" ng-if="!job.company.logo">
+			          </div>
+			          <div class="col-xs-9">
+			            <h3  class="my-profile-applic-h4 huger no-margin" ng-click="goToCompanyPage(job.company.name, job.company.type, job.company.sub_type, job.company.id)">{{job.name}}</h3>
+			            <p class="meta"  ng-click="goToCompanyPage(job.company.name, job.company.type, job.company.sub_type, job.company.id)"> <i class="fa fa-briefcase" aria-hidden="true"></i> {{job.company.name}}</p>
+			            <p>{{job.description}}</p>
+			            <p>{{job.description | ellipsis:150}}</p>
+			          </div>
+			        </div>
+		        </div>
+		    </div>
+	 	</div>
+ 	</div>
+
+ 	<div ng-show="$root.tab == 5" class="user-tabs my-profile-tab5">
+			<div class="container">
+				<div ng-show="user.subExists" class="ten columns col-lg-12 col-md-12 col-sm-12 col-xs-12" style="max-width: 100%;">
+					<p class="margin-bottom-25" translate="your_job_alerts" translate-default="&nbsp;"></p>
+					<table class="manage-table resumes responsive-table" style="width: 100%">
+						<tr>
+							<th><i class="fa fa-tags"></i> <span translate="keyword" translate-default="&nbsp;"></span></th>
+							<th><i class="fa fa-tags"></i> <span translate="category" translate-default="&nbsp;"></span></th>
+							<th><i class="fa fa-tags"></i> <span translate="sector" translate-default="&nbsp;"></span></th>
+							<th><i class="fa fa-map-marker"></i> <span translate="location" translate-default="&nbsp;"></span></th>
+							<th></th>
+						</tr>
+
+						<tr ng-repeat="(key, value) in user.subscribtions">
+						
+							<td class="keywords">
+								<span ng-bind="value.keyword" ng-show="value.keyword"></span>
+								<span ng-show="!value.keyword">N/A</span>
+							</td>
+							<td class="keywords">
+								<span ng-bind="value.categoryName"></span>
+							</td>
+							<td class="keywords">
+								<span ng-bind="value.sectorName"></span>
+							</td>
+							<td> 
+								<span  ng-bind="value.city"></span>
+								<span  ng-bind="value.country"></span>
+								<span  ng-show="!value.city && !value.country">N/A</span>
+							</td>
+							<td class="action">
+								<a href="" class="delete" ng-click='removeAlert(key, value.id)'><i class="fa fa-remove"></i> <span translate="delete" translate-default="&nbsp;"></span></a>
+							</td>
+							
+						</tr>
+					</table>
+					<br>
+				</div>
+				<h2 ng-show="!user.subExists" class="margin-bottom-25" translate="you_have_no_alerts" translate-default="&nbsp;"></h2>
+			</div>
+     	</div>
+
+</div>
+</section>
+
+</div>

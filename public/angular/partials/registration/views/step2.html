@@ -1,0 +1,503 @@
+ <div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+    <div class="cover__filter"></div>
+    <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+<div class="who-are-you" flow-init="{headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'}}" flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
+      flow-files-submitted="$flow.upload()" flow-name="$root.obj.flow" flow-files-added="processFiles($files)">
+	<section class="content">
+	    <div class="container">
+		    <div ng-show="currentState == 'step2'">
+		    	<div class="row">
+			        <div ng-show="$root.user.image" flow-drop class="col-sm-3">
+			            <div class="profice-pic-wrap">
+			                <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb thum" ng-hide="$flow.files.length">
+			                  <img flow-btn src="/uploads/{{$root.user.image}}" style="cursor: pointer;" class="round"/>
+			                </div>
+			                <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb thum" ng-show="$flow.files.length">
+			                  <img flow-btn flow-img="$flow.files[0]" style="cursor: pointer;" ng-src="{{outputImageNew}}" class="round" />
+			                </div>
+			       
+			            </div>
+			        </div>
+			        <div id="cropModal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+
+					    <div class="modal-content">
+					      <div class="modal-header">
+					      </div>
+					      <div class="modal-body">
+					        
+				   			<div class="cropArea">
+						        <img-crop image="imageString" result-image="$root.outputImage" area-type="square"></img-crop>
+						    </div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" translate="ok" translate-default="&nbsp;" ng-click="hideModal()"></button>
+					      </div>
+
+					    </div>
+
+					  </div>
+					</div>
+					<div ng-if="!$root.user.image" flow-drop id="fileInput" class="col-sm-3">
+						<div class="profice-pic-wrap">
+							<div class="thumbnail sharado-thumbnail" ng-hide="$flow.files.length">
+						      <img flow-btn ng-src="{{imageUrl}}" style="cursor: pointer;" class="round thum" />
+						    </div>
+						    <div class="thumbnail sharado-thumbnail sharado-uploaded-thumb" ng-show="$flow.files.length">
+						      <img id="thum" class="thum round" flow-btn flow-img="$flow.files[0]" style="cursor: pointer;" ng-src="{{outputImageNew}}" >
+						    </div>
+						</div>
+					</div>
+			        <div class="col-sm-9">
+			            <h1 class="huger margin-top" translate="my_profile" translate-default="&nbsp;"></h1>
+			            <p class="bigger" translate="be_sure_to_fill" translate-default="&nbsp;"></p>
+			        </div>
+			    </div>
+
+		    <hr id="hr-placeholder-menu">
+			    <div class="row">
+			        <div class="col-sm-12">
+			          <p class="wide" translate="tell_us_about_yourself" translate-default="&nbsp;"></p>
+			        </div>
+			    </div>
+
+			    <form  method="post" class="register sharado-register-form margin-top" ng-submit="secondStep(secondStepForm)" name="secondStepForm" files = "true" enctype="multipart/form-data" novalidate>
+
+		            <div class="row">
+
+			            <div class="col-sm-6 form-group">
+			                <input type="text" class="input-text form-control personal-input" name="first_name" id="first_name " value="" ng-model="$root.user.first_name" placeholder="{{'placeholder_first_name' | translate }}" required/>
+			                <span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.first_name.$error.required" translate="first_name_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="first_name_error">{{first_name_error}}</span>	
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <input type="text" class="input-text personal-input form-control" name="last_name" id="last_name " value="" ng-model="$root.user.last_name" placeholder="{{'placeholder_last_name' | translate}}" required />
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.last_name.$error.required" translate="last_name_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="last_name_error">{{last_name_error}}</span>
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <input type="email" class="input-text personal-input user-email form-control" name="email" id="email2" value="" ng-model="$root.user.email" placeholder="email" required />
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.required" translate="email_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.email.$error.email" translate="invalid_email" translate-default="&nbsp;"></span>
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <input type="text" class="input-text personal-input form-control" name="location_reg" id="pac-input" ng-model="$root.user.location_reg" value="" placeholder="{{'placeholder_where_you_live' | translate}}" required autocomplete=“off”/>
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.location_reg.$error.required" translate="location_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="city_error" translate="city_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="country_error" translate="invalid-location" translate-default="&nbsp;"></span>
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <input name="birth_date" class="input-text personal-input birthdate-date form-control" ng-model="$root.user.birth_date" type="text" id="textbox5" placeholder="dd/mm/yyyy" required datepicker autocomplete=“off”/>
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.birth_date.$error.required" translate="birth_date_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.birth_date.$error.max" translate="birth_date_max" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="birth_date_error">{{birth_date_error}}</span>
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <select class="form-control" ng-model="$root.user.gender">
+			                		<option value="" disabled selected translate="gender" translate-default="&nbsp;"></option>
+						            <option value="male" translate="man" translate-default="&nbsp;"></option>
+						            <option value="female" translate="woman" translate-default="&nbsp;"></option>
+				          	</select>
+			            </div>
+			            <div class="col-sm-6 form-group">
+			                <input type="text" class="input-text personal-input form-control" name="phone" id="phone textbox4" ng-model="$root.user.phone" placeholder="{{'placeholder_phone_number' | translate}}" value="" required autocomplete=“off”/>
+							<span class="validation_error" ng-show="secondStepForm.$submitted && secondStepForm.phone.$error.required || customPhoneValidation" translate="phone_number_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" ng-show="phone_number_error">{{phone_number_error}}</span>
+			            </div>
+			            <div class="col-sm-6 form-group">
+
+			                 <select class="form-control" ng-model="$root.user.nationality">
+			                 		<option value="" disabled selected translate="nationality" translate-default="&nbsp;"></option>
+						           <option ng-repeat="country in $root.countries" value="{{country.name}}">{{country.name}}</option>
+						      </select>
+			            </div>
+
+		            </div>
+
+		          	<div class="row">
+
+			            <div class="col-md-12 col-sm-12">
+			              <h3 class="wide margin-top margin-bottom" translate="transportation" translate-default="&nbsp;"></h3>
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			              <span class="button-checkbox" ng-click="$root.user.bike = !$root.user.bike">
+			                 <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.bike}"> <i class="fa fa-bicycle fa-2x" aria-hidden="true"></i> <span translate="bike" translate-default="&nbsp;"></span> </button>
+			                 <input type="checkbox" class="hidden" />
+			              </span>
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			              <span class="button-checkbox" ng-click="$root.user.scooter = !$root.user.scooter">
+			                 <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.scooter}"> <i class="fa fa-motorcycle fa-2x" aria-hidden="true"></i> <span translate="scooter" translate-default="&nbsp;"></span> </button>
+			                 <input type="checkbox" class="hidden" />
+			              </span>
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			              <span class="button-checkbox" ng-click="$root.user.car = !$root.user.car">
+			                 <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.car}"> <i class="fa fa-car fa-2x" aria-hidden="true"></i> <span translate="car" translate-default="&nbsp;"></span> </button>
+			                 <input type="checkbox" class="hidden" />
+			              </span>
+			            </div>
+			            <div class="col-md-3 col-sm-6" ng-click="$root.user.truck = !$root.user.truck">
+			              <span class="button-checkbox">
+			                 <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.truck}"> <i class="fa fa-truck fa-2x" aria-hidden="true"></i> <span translate="truck" translate-default="&nbsp;"></span> </button>
+			                 <input type="checkbox" class="hidden" />
+			              </span>
+			            </div>
+
+			            <div class="col-md-12 checkbox">
+			              <label>
+			                <input id="check-1" type="checkbox" name="check" ng-click="$root.user.driving_license = !$root.user.driving_license"><span translate="i_have_driving_license" translate-default="&nbsp;"></span>
+			              </label>
+			              <hr>
+			            </div>
+
+			        </div>
+
+			        <div class="row">
+
+			          <div class="col-md-12 col-sm-12">
+			            <h3 class="wide margin-top margin-bottom" translate="education" translate-default="&nbsp;"></h3>
+			          </div>
+			          <div class="col-md-3 col-sm-6">
+			            <span class="button-checkbox" ng-click="educationChange('school')">
+			               <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.school}"> <i class="fa fa-book fa-2x" aria-hidden="true"></i> <span translate="hight_school" translate-default="&nbsp;"></span> </button>
+			               <input type="checkbox" class="hidden" />
+			            </span>
+			          </div>
+			          <div class="col-md-3 col-sm-6" ng-click="educationChange('undergraduate')">
+			            <span class="button-checkbox">
+			               <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.undergraduate}"> <i class="fa fa-university fa-2x" aria-hidden="true"></i> <span translate="undergraduate" translate-default="&nbsp;"></span> </button>
+			               <input type="checkbox" class="hidden" />
+			            </span>
+			          </div>
+			          <div class="col-md-3 col-sm-6">
+			            <span class="button-checkbox"  ng-click="educationChange('graduate')">
+			               <button type="button" class="button button--block" ng-class="{'button--checked':$root.user.graduate}"> <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i> <span translate="graduate" translate-default="&nbsp;"></span> </button>
+			               <input type="checkbox" class="hidden" />
+			            </span>
+			          </div>
+
+			          <span class="validation_error" ng-show="education_error">{{education_error}}</span>
+			          <div class="col-md-12 checkbox">
+			            <label>
+			              <input id="check-2" type="checkbox" name="check" ng-click="$root.user.currently_student = !$root.user.currently_student"><span translate="actually_student" translate-default="&nbsp;"></span>
+			            </label>
+			            <hr>
+			          </div>
+
+			        </div>
+
+			        <!-- <div class="row">
+
+				        <div class="col-md-12">
+				          <h3 class="wide margin-top margin-bottom">Languages?</h3>
+				        </div>
+
+				        <div class="col-md-4">
+				          <select class="form-control">
+				            <option>Select a language</option>
+				            <option>2</option>
+				            <option>3</option>
+				            <option>4</option>
+				            <option>5</option>
+				          </select>
+				        </div>
+			            
+		            </div> -->
+		            <div class="row">
+		            	<div class="col-md-12">
+				          <h3 class="wide margin-top margin-bottom"><span translate="languages" translate-default="&nbsp;"></span>?</h3>
+				        </div>
+			            <div class="col-md-4">
+					    <select class="form-control" ng-change="selectLanguage($root.user.spokenLanguages)" ng-model="$root.user.spokenLanguages">
+					      <option ng-repeat="language in languages_options | orderBy">{{language | capitalize}}</option>
+					    </select>
+					  	</div>
+		            </div>
+		            
+
+				  <div class="col-md-7 selected_languages">
+		            <span ng-repeat="language in $root.selectedLanguages" class="notice" ng-click="deleteLanguage(language)"> {{language | capitalize}} <i class="fa fa-times" aria-hidden="true"></i></span>
+		          </div>
+
+
+					<ul class="checkboxes sharado-check" ng-show="doYouSpeak" style="display: block; clear: both; padding-left: 0; padding-top: 10px;">
+						<!-- <label for="speakCheck">Do you speak {{$root.doYouSpeak}} ?</label>
+						<input id="speakCheck" type="checkbox"> -->
+						
+							<input id="speakCheck" type="checkbox" name="check" ng-click="$root.user.speakLang = !$root.user.speakLang">
+							<label for="speakCheck"><span style="margin-left: 6px;" translate="do_you_speak" translate-default="&nbsp;"></span> {{doYouSpeak | capitalize}}?</label>
+						
+						
+					</ul>
+		            <div class="row">
+
+			            <div class="col-md-12 checkbox">
+			            <hr>
+				              <label >
+				                <input id="check-3" type="checkbox" name="read_terms" ng-click="$root.user.read_terms = !$root.user.read_terms" required> 
+				                <label for="check-3" translate="have_read_terms" translate-default="&nbsp;"></label>
+				              </label><br>
+				              <span class="validation_error" ng-show="read_terms_error" translate="read_terms_error" translate-default="&nbsp;"></span>
+				              
+			            </div>
+			            <div class="col-md-12">
+			              <button type="submit" ng-click="submitted()" class="button border fw margin-top-10 first-next-but margin-top" name="register" translate="next_step" translate-default="&nbsp;"> &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> </button>
+			            </div>
+		            </div>
+		        </form>
+	        </div>
+	        <div ng-show="currentState == 'step3'">
+		        <div class="row">
+			        <div class="col-sm-8">
+			          <h1 class="huger margin-top" translate="skills" translate-default="&nbsp;"></h1>
+			          <p class="bigger" translate="add_a_job_to_your" translate-default="&nbsp;"></p>
+			        </div>
+		        </div>
+		        <form class="margin-top" method="post" class="register" ng-submit="thirdStep(thirdStepForm)" name="thirdStepForm">
+		            <div class="row">  
+					    <div class="col-md-5 col-md-push-7">
+				            <p class="info" translate="select_your_favorite" translate-default="&nbsp;"></p>
+				        </div>
+
+				        <div class="col-md-7 col-md-pull-5">
+				            <select class="form-control select-schedule select-skills" id="selectpicker_schedule" title="Schedule" name="schedule" ng-model="$root.user.selectedList" ng-change="changeSkills($root.user.selectedList)" required>
+				              <option ng-repeat="option in optionsList | orderBy:'name'"  data-content = "{{option.name}}" value="{{option.id}}">{{option.name}}</option>
+				            </select>
+				            <p class="validation_error" ng-show="skillsRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%;"></p>
+				        </div>
+		          
+
+				        <div class="col-md-12">
+				            <p class="wide margin-top" translate="your_interesting_jobs" translate-default="&nbsp;"></p>
+				        </div>
+				        <div class="col-md-7">
+				        	<span ng-show="selectedSkills" ng-repeat="item in selectedSkills" class="skill-tag notice" ng-click="deleteSkill(item)">{{item.name}} <i class="fa fa-times" aria-hidden="true"></i></span>
+				        </div>
+				        <div class="col-md-5">
+				            <p class="info" translate="dont_worry" translate-default="&nbsp;"></p>
+				        </div>
+			        </div>  
+		          
+			        <div class="row margin-top">
+				      
+				        <div class="col-md-5 col-md-push-7">
+					       
+						    <p translate="please_tell_us" translate-default="&nbsp;">
+							</p>
+			            </div>
+
+				        <div class="col-md-7 col-md-pull-5">
+					        <textarea class="form-control" rows="3" ng-model="$root.user.user_experience"></textarea> 
+				        </div>
+			         
+				    </div>
+			      
+				    <div class="row margin-bottom">
+				      
+				        <div class="col-md-5 col-md-push-7">
+				            <p class="info"> <br/> <span translate="insert_fb" translate-default="&nbsp;"></span></p>
+				        </div>
+
+				        <div class="col-md-7 col-md-pull-5">
+					          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+				           	 <input class="form-control" placeholder="Facebook Profile" id="textbox1" type="text" ng-model="$root.user.facebook_link"/>	 
+				        </div>
+			         
+				    </div>
+
+
+					<div class="row margin-bottom">
+			            <div class="col-md-12">
+			              <button type="submit" ng-click="submitted()" class="button border fw margin-top-10 first-next-but skills-next-button margin-top" name="register" translate="next_step" translate-default="&nbsp;">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i> </button>
+			            </div>
+
+			        </div>
+		        </form>
+      		</div>
+      		<div ng-show="currentState == 'step4'">
+      			<div class="row">
+			        <div class="col-sm-8">
+			          <h1 class="huger margin-top" translate="my_availability" translate-default="&nbsp;"></h1>
+			          <p class="bigger" translate="i_am_available_to_work" translate-default="&nbsp;"></p>
+			        </div>
+			    </div>
+
+		        <form  method="post" class="register sharado-register-form-step-3 margin-top" name="StepFourForm" ng-submit="fourthStep(StepFourForm)">
+
+			        <div class="row">
+				        
+				        <div class="col-md-2 col-md-push-10">
+				            <p class="info" translate="time_of_work" translate-default="&nbsp;"></p>
+				        </div>
+
+				        <div class="col-md-10 col-md-pull-2">
+				            <span class="button-checkbox" ng-click="availabilityChange('full_time')">
+				               <button type="button" class="button button--small" ng-class="{'button--checked':$root.user.full_time}" translate="full_time" translate-default="&nbsp;"></button>
+				               <input name="var_id[]" type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="availabilityChange('part_time')">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.part_time}" translate="part_time" translate-default="&nbsp;"></button>
+				               <input name="var_id[]" type="checkbox" class="hidden" />
+				            </span> 
+				            <span class="button-checkbox" ng-click="availabilityChange('both')">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.both}" translate="both" translate-default="&nbsp;"></button>
+				               <input name="var_id[]" type="checkbox" class="hidden" />
+				            </span>
+				            <p class="validation_error" ng-show="availabilityRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left;"></p>
+				        </div>
+
+				        
+			         
+
+				        <div class="col-md-12">
+				            <hr>
+				        </div>
+			        </div>
+
+			        <div class="row margin-top">
+				        
+				        <div class="col-md-12">
+					        <h3 class="wide big" translate="daily" translate-default="&nbsp;"></h3>
+				        </div>
+				        
+				        <div class="col-md-2 col-md-push-10">
+				            <p class="info" translate="select_days" translate-default="&nbsp;"></p>
+				        </div>
+
+			            <div class="col-md-10 col-md-pull-2">
+			        
+				            <span class="button-checkbox" ng-click="$root.user.monday = !$root.user.monday">
+				               <button type="button" class="button button--small" ng-class="{'button--checked':$root.user.monday}" translate="monday" translate-default="&nbsp;" > </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.tuesday = !$root.user.tuesday">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.tuesday}" translate="tuesday" translate-default="&nbsp;">   </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.wednesday = !$root.user.wednesday">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.wednesday}" translate="wednesday" translate-default="&nbsp;">   </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.thursday = !$root.user.thursday">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.thursday}" translate="thursday" translate-default="&nbsp;">   </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.friday = !$root.user.friday">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.friday}" translate="friday" translate-default="&nbsp;">  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.saturday = !$root.user.saturday">
+				               <button type="button" class="button button--small "  ng-class="{'button--checked':$root.user.saturday}" translate="saturday" translate-default="&nbsp;">  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.sunday = !$root.user.sunday">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.sunday}" translate="sunday" translate-default="&nbsp;">  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <p class="validation_error" ng-show="weekRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%;float: left;"></p>
+				        </div>
+			         
+				        
+				        <div class="col-md-12">
+				            <hr>
+				        </div>
+				        
+			        </div>
+
+
+			        <div class="row margin-top">
+				        
+				        <div class="col-md-12">
+					         <h3 class="wide big" translate="hourly" translate-default="&nbsp;"></h3>
+				        </div>
+								
+					 	<div class="col-md-2 col-md-push-10">
+			            	<p class="info" translate="select_range" translate-default="&nbsp;"></p>
+			            </div>
+								
+				        <div class="col-md-10 col-md-pull-2">
+				           
+				            <span class="button-checkbox" ng-click="$root.user.morning = !$root.user.morning">
+				               <button type="button" class="button  button--small " ng-class="{'button--checked':$root.user.morning}" translate="morning" translate-default="&nbsp;"> <br/> 8:00 - 13:00 </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.afternoon = !$root.user.afternoon"> 
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.afternoon}" translate="afternoon" translate-default="&nbsp;"> <br> 13:00 - 18:00  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.evening = !$root.user.evening">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.evening}" translate="evening" translate-default="&nbsp;"> <br/> 18:00 - 23:00  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.night = !$root.user.night">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.night}" translate="night" translate-default="&nbsp;"> <br/>  23:00 - 8:00  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <p class="validation_error" ng-show="hoursRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left"></p>
+				        </div>
+			         
+				        
+				        <div class="col-md-12">
+				            <hr>
+				        </div>
+				         
+			        </div>
+
+			        <div class="row margin-top">
+				       
+				        <div class="col-md-12">
+					        <h3 class="wide big" translate="where_do_i_work" translate-default="&nbsp;"></h3>
+				        </div>
+				        <div class="col-md-2 col-md-push-10">
+				            <p class="info" translate="select_area" translate-default="&nbsp;"></p>
+				        </div>
+
+				        <div class="col-md-10 col-md-pull-2">
+				            <span class="button-checkbox" ng-click="$root.user.my_area = !$root.user.my_area">
+				               <button type="button" class="button  button--small " ng-class="{'button--checked':$root.user.my_area}" translate="my_area" translate-default="&nbsp;"> <br/>  -- </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.outside_my_area = !$root.user.outside_my_area">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.outside_my_area}" translate="outside_my_area" translate-default="&nbsp;"> <br> 20 - 100 km  </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <span class="button-checkbox" ng-click="$root.user.remotely = !$root.user.remotely">
+				               <button type="button" class="button button--small " ng-class="{'button--checked':$root.user.remotely}" translate="remotely" translate-default="&nbsp;"> <br/>  -- </button>
+				               <input type="checkbox" class="hidden" />
+				            </span>
+				            <p class="validation_error" ng-show="areaRequired" translate="skills_required" translate-default="&nbsp;" style="width: 100%; float: left"></p>
+				        </div>
+			          
+				        
+				        <div class="col-md-12">
+				            <hr>
+				        </div>
+				        
+			        </div>
+
+			        <div class="row">
+			          <div class="col-md-12">
+			            <button type="submit" ng-click="submitted()" class="button border fw margin-top-10 margin-top" name="register" translate="finish" translate-default="&nbsp;"> </button>
+			          </div>
+			        </div>
+		        </form> 
+      		</div>
+      		<div class="container complete-registration-container" ng-show="currentState == 'step5'">
+      			<div class="row">
+			        <div class="col-md-8 col-md-offset-2" ng-show="!$root.facebook_message">
+			            <h3 class="huger light text-center margin-bottom" translate="check_your_inbox" translate-default="&nbsp;"><span class="no_email" translate="no_email" translate-default="&nbsp;"></span> <a href="" ng-click="resendActivationEmail(current_user_id)" translate="here" translate-default="&nbsp;"></a> <span translate="to_resend" translate-default="&nbsp;"></span></h3>
+			            <p class="resend_activation_email_span" ng-show="resend_status_success" translate="resend_success" translate-default="&nbsp;"></p>
+						<p class="validation_error" ng-show = 'resend_status_error' translate="resend_error" translate-default="&nbsp;"></p>
+						<p class="validation_error" ng-show="$root.emailSendingFailed" translate="email_sending_failed" translate-default="&nbsp;"></p>
+			        </div>
+			        <div class="col-md-8 col-md-offset-2" ng-show="$root.facebook_message">
+			        	<h3 class="huger light text-center margin-bottom" translate="facebook_reg_success" translate-default="&nbsp;"></h3>
+			        	<h3 class="huger light text-center margin-bottom"><span translate="facebook_reg_action" translate-default="&nbsp;"></span><a href="" ui-sref="/" translate="here" translate-default="&nbsp;"></a></h3>
+			        </div>
+			    </div>
+      		</div>
+	    </div>
+	</section>
+</div>

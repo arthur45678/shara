@@ -1,0 +1,93 @@
+<div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+  <div class="cover__filter"></div>
+  <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+
+<!-- Titlebar
+    ================================================== -->
+  <!-- content -->
+<section class="content">
+    <div class="container">
+    	<div class="row">
+			<span ng-show="apply_login" class="apply_login" translate="need_to_be_logged_in" translate-default="&nbsp;"></span>
+			<span ng-show="login_activated" class="login_activated" translate="congratulations" translate-default="&nbsp;"></span>
+	<!-- <p class="sharado-congratulations" translate="congratulations"></p> -->
+			
+			
+			<span class="validation_error fbsuspended" ng-show="fbsuspended" translate="fb_suspended" translate-default="&nbsp;"></span>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- Login -->
+				<div class="row col-md-6 " id="tab1" >
+					<div class="col-md-8 col-md-offset-2 form-group">
+						<ul class="tabs-nav">
+							<li class="sign-in" translate="sign_in" translate-default="&nbsp;"></li>
+						</ul>
+					</div>
+					<form method="post" class="login sharado-login" name="loginForm">
+
+						<div class="col-md-8 col-md-offset-2 form-group">
+							<label for="username">
+								<i class="ln ln-icon-Mail login-page-icons"></i>
+								<input type="email" class="form-control" name="email" placeholder="{{'placeholder_email' | translate }}" id="email" value="" ng-model="login.email" required />
+							</label>
+							<span class="validation_error" style="display: block;" ng-show="loginForm.email.$dirty && loginForm.email.$error.required" translate="email_required" translate-default="&nbsp;"></span>
+							<!-- <span class="validation_error" ng-show="resetUser.required">Email is required.</span> -->
+						</div>
+
+						<div class="col-md-8 col-md-offset-2 form-group">
+							<label for="password">
+								<i class="ln ln-icon-Lock-2 login-page-icons"></i>
+								<input class="form-control" type="password" name="password" placeholder="{{'placeholder_password' | translate }}" id="password" ng-model="login.password" required />
+							</label>
+							<span class="validation_error" style="display: block;" ng-show="loginForm.password.$dirty && loginForm.password.$error.required" translate="password_required" translate-default="&nbsp;"></span>
+							<span class="validation_error" style="display: block;" ng-show="invalid_credentials" translate="invalid_credentials" translate-default="&nbsp;"></span>
+							<span class="validation_error" style="display: block;" ng-show="something_went_wrong" translate="something_went_wrong" translate-default="&nbsp;"></span>
+							<span class="validation_error" style="display: block;" ng-show="not_activated_user"><span translate="account_is_not_activated" translate-default="&nbsp;"></span> <a href="" ng-click="resendActivationEmail(not_activated_user_id)"> <span translate="here" translate-default="&nbsp;"></span> </a> <span translate="to_resend_email" translate-default="&nbsp;"></span></span>
+							<span class="resend_activation_email_span" style="display: block;" ng-show="resend_status_success" translate="resend_success" translate-default="&nbsp;"></span>
+							<span class="validation_error" style="display: block;" ng-show = 'resend_status_error' translate="resend_error" translate-default="&nbsp;"></span>
+							<span class="validation_error" style="display: block;" ng-show="$root.emailSendingFailed" translate="email_sending_failed" translate-default="&nbsp;"></span>
+							<span class="validation_error suspended" style="display: block;" ng-show="suspended" translate="suspended" translate-default="&nbsp;"></span>
+						</div>
+							
+						<!-- <p class="form-row"> -->
+						<div class="col-md-8 col-md-offset-2 form-group">
+							<input type="submit" class="col-sm-8 col-xs-6 button " name="login" value="{{'login' | translate }}" ng-click="login()" /><br><br><br>
+							<p>
+								<a href=""><img ng-src="{{$root.facebookLoginImg}}" class="facebook-login" ng-click="facebookReg()"></a>
+							</p>
+						</div>
+							<!-- <label for="rememberme" class="rememberme">
+							<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label> -->
+						<!-- </p> -->
+						
+						<div class="col-md-8 col-md-offset-2 form-group">
+							<a href="" ui-sref="forgot-password" translate="lost_your_password" translate-default="&nbsp;" class=""></a>
+						</div>
+						
+					</form>
+				</div>
+
+			<!-- Register -->
+				<div class="tab-content sharado-register-tab col-md-6 col-sm-12 col-xs-12" id="tab2">
+					<ul class="tabs-nav">
+						<li class="new-to-sharado" translate="new_to_sharado" translate-default="&nbsp;"></li>
+					</ul>
+					<form method="post" class="register sharado-register">
+						<div class="col-md-12 form-group">
+							<ul class="tabs-nav-login-page">
+								<li> <i class="fa fa-check"></i> <span translate="be_alerted" translate-default="&nbsp;"></span> <br /></li>
+								<li> <i class="fa fa-check"></i> <span translate="create_universal" translate-default="&nbsp;"></span> <br /></li>
+								<li> <i class="fa fa-check"></i> <span translate="showcase_profile" translate-default="&nbsp;"></span> <br /></li>
+								<li> <i class="fa fa-check"></i> <span translate="manage_applications" translate-default="&nbsp;"></span> <br /></li>
+							</ul>
+
+							<div class="col-md-12 form-group">
+								<button ng-click="openSignUpModal()" class="button col-sm-8 col-xs-6 openSignUpModal" name="register" translate="register" translate-default="&nbsp;"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+    	</div>
+	</div>
+</section>

@@ -1,0 +1,292 @@
+<div class="container search-results-container">
+ 	<div class="clearfix"></div>
+	<div class="bububu">
+		<div class=" search-in-results">
+			<!-- Form -->
+			<form ng-submit = "searchByLocation()" name="myForm" class="search-results-upper-search"> 
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 search-box-inner">
+						
+						<div id="notCollapsingBox">
+							<div class="col-md-5 col-sm-5 col-xs-12 search-field-results">
+								<input type="text" class="ico-01 search-loc-input six columns" placeholder="job, keyword or company" value="" ng-model="$root.search_text"/>
+							</div >
+							<div class="col-md-5 col-sm-5 col-xs-12 search-field-results">
+								<input name="location" type="text" id="pac-input" class="ico-02 search-loc-input six columns pac-input-results  search-location" placeholder="city, province or region" value="" ng-model="inSearchLocation"/>
+							</div>
+						</div>
+										
+						<!-- <div class="col-md-2 col-sm-2 col-xs-12"> -->
+							<button class="search_btn not_collapsing_search_button" type="submit" id="search-button"><i class="fa fa-search"></i></button>
+							<button class="search_btn collapsing_search_button" type="button" id="search-button" ng-click="changeSearchButtons()" data-toggle="collapse" data-target="#collapsingBox"><i class="fa fa-search"></i></button>
+						<!-- </div> -->
+						<h4 class="empty-error" ng-show="emptyError" style="color: red;" translate="empty_search_query"></h4>
+
+					</div>
+				</div>
+			</form>
+		</div>
+		<div ncy-breadcrumb ng-show="breadcrumbs.length == 0"></div>
+		<!-- <span ncy-breadcrumb-text ncy-breadcrumb-text-separator=" > "></span> -->
+		<span class="breadcrumbs" ng-show="breadcrumbs" style="margin-left: 4%;">
+		  <span ng-repeat="(key, breadcrumb) in breadcrumbs" > 
+		  	<span ng-show="::breadcrumb.name">
+			  	<span ng-show="key != breadcrumbs.length - 1 && breadcrumbs[key +1].name">
+			  		<a ng-if="breadcrumb.type !== 'gigs' && breadcrumb.type !== 'disabled'" ng-style="{color: {true:'grey'}[key == breadcrumbs.length - 1 || !breadcrumbs[key +1].name]}" ng-bind="::breadcrumb.name" href="{{breadcrumb.url}}">  </a>
+			  		<a ng-if="breadcrumb.type === 'gigs'" ng-style="{color: {true:'grey'}[key == breadcrumbs.length - 1 || !breadcrumbs[key +1].name]}" ng-bind="::breadcrumb.name" ng-click="browseJobsGigs()" style="cursor: pointer;">  </a>
+			  		<span ng-show="breadcrumb.type === 'disabled'" style="color:grey" ng-bind="::breadcrumb.name"></span>
+			  		<span style="color: grey"> / </span>
+			  	</span>
+			  	<span ng-show="key == breadcrumbs.length - 1 || !breadcrumbs[key +1].name" style="color:grey" ng-bind="::breadcrumb.name"></span>
+		  		<!-- <span ng-style="{color: {true:'grey'}[key == breadcrumbs.length - 1 || !breadcrumbs[key +1].name]}" ng-bind="::breadcrumb.name" >  </span><span ng-show="key != breadcrumbs.length - 1 && breadcrumbs[key +1].name" style="color: grey"> / </span>  -->
+		  	</span>
+		  </span>
+		</span>
+	</div>
+	<div class="clearfix"></div>
+	<!-- Recent Jobs -->
+	<div class="eleven columns">
+	<div class="padding-right">
+	<div ng-show="!not_operating">
+		<!-- <form action="" method="get" class="list-search"> -->
+			<!-- <button ng-click="searchInResults()"><i class="fa fa-search"></i></button> -->
+			<!-- <button ng-click="refreshSearch()"><i class="fa fa-search"></i></button> -->
+			<!-- <input type="text" placeholder="job title, keywords or company name" value="" ng-model="new_search_text" /> -->
+			<!-- <input type="text" placeholder="job title, keywords or company name" value="" ng-model="search_in_results" />  -->
+
+			<!-- <button ng-click="refreshSearch()"><i class="fa fa-search"></i></button> 
+			<input type="text" placeholder="job title, keywords or company name" value="" ng-model="new_search_text" /> 
+			<input type="text" placeholder="job title, keywords or company name" value="" ng-model="new_search_text" /> 
+			<div class="clearfix"></div>
+
+				
+		<!-- </form>  -->
+
+
+		<ul class="job-list full ten columns" ng-show="search_results" >
+			<input type="hidden" id="pac-input" class="ico-02" placeholder="city, province or region" value=""/>
+			<li ng-show="!search_in_results && !search_in_results_city" ng-repeat="company in search_results" class="search-result-content ">
+				<span style="cursor: pointer;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><img ng-src="/uploads/{{company.logo}}" style="padding:0px; margin-top: 35px;" alt="" ng-if="company.logo" class="search-res-logo"></span>
+				<span style="cursor: pointer;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><img ng-src="/uploads/{{company.generic.logo}}" style="padding:0px; margin-top: 35px;" alt="" ng-if="!company.logo && company.generic.logo" class="search-res-logo"></span>
+				<span style="cursor: pointer;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><img src="/images/default-organization.png" style="padding:0px; margin-top: 35px;" alt="" ng-if="!company.logo && !company.generic.logo" class="search-res-logo"></span>
+				<div class="job-list-content job-list-content-sharado">
+					<div class="company-name-apply-wrap">
+						<span class="company-job-name" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)">{{company.name}}</span>
+						<span ng-show="company.short_description" class="company-short-description col-md-12">{{company.short_description | ellipsis:110}}</span>
+						<span ng-show="!company.short_description && company.generic.short_description" class="company-short-description col-md-12">{{company.generic.short_description | ellipsis:110}}</span>
+						<!-- <span ng-show="company.compensation" class="company-requirement col-md-4">{{company.compensation}}</span> -->
+						<!-- <span ng-show="!company.requirement && company.generic.requirement one column" class="company-requirement">{{company.generic.requirement}}</span> -->
+						
+					</div>
+					<div class="job-icons search-result-details">
+						<div class="company-short-description-wherelong-div">
+							<p ng-bind-html="company.short_description | ellipsis:130" class="company-short-description-wherelong"></p>
+						</div>
+						<p ng-show="company.description" class="company-description">{{company.description | ellipsis:300}}</p>
+						<p ng-show="!company.description && company.generic.description" class="company-description">{{company.generic.description | ellipsis:300}}</p>
+						<span class="sector-wrapper">
+							<span translate="sector"></span>:
+							<span ng-show="company.sector.name"><span style="cursor:pointer;" ng-click="topSectors(company.sector.id, company.sector.name)">{{company.sector.name}}</span></span>
+							<span ng-show="!company.sector.name && company.sector.defaultSector"><span style="cursor:pointer;" ng-click="topSectors(company.sector.id, company.sector.defaultSector.name)">{{company.sector.defaultSector.name}}</span></span>
+						</span>
+						<span ng-show="company.citiesOperating.length > 0" class="cities_operating_list">
+							In <i class="fa fa-map-marker" style="padding-right: 3px;"></i>
+								<span ng-show="company.citiesOperating">
+									<span ng-repeat="city in company.citiesOperating" style="cursor: pointer; padding-right: 5px;" ng-click="searchByTopLocation(city.city, city.latitude, city.longitude,  company.country.abbreviation)">{{city.city}}, </span>
+								<span ng-show="company.citiesOperatingCount"> + {{company.citiesOperatingCount}}</span>
+							</span>
+						</span>
+						
+					</div>
+				</div>
+				<div class="job-applying-content col-md-12">
+					<div class="">
+					<span ><span translate="jobs_gigs_for"></span><span class="company-category" ng-click="popularCategories(cat.id, cat.name, 'category')" ng-repeat="(key,cat) in company.jobCategories"> {{cat.name}} <span ng-show="key != company.jobCategories.length-1">,</span></span></span> 
+					</div>
+<!-- 					<a ng-show="company.apply && company.job" ng-show="company.job" href="" id="apply{{company.job.id}}" class="popup-with-zoom-anim button job-applying results-applying col-md-2 col-sm-8 col-xs-8" ng-click="applyForJobCompany(company.job.id, company.job.url_to_redirect)">Apply</a>
+					<a ng-show="!company.apply && company.job" ng-show="company.job" id="applied{{company.job.id}}" class="popup-with-zoom-anim button job-applying results-applying applied-job col-md-2 col-sm-8 col-xs-8" disabled="true" readonly="readonly">Applied</a>
+					<a style="display: none" id="appliedhidden{{company.job.id}}" class="popup-with-zoom-anim button job-applying results-applying applied-job col-md-2 col-sm-8 col-xs-8" disabled="true" readonly="readonly">Applied</a> -->
+					<div class="view-details-div">
+					<button class=" btn btn-sm view-details orange " href="" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)" translate="view_jobs"></button>
+					</div>
+
+				</div>
+				
+				<div class="clearfix"></div>
+			</li>
+<!-- 
+			<li ng-show="search_in_results || search_in_results_city" ng-repeat="company in search_results | filter:{name:search_in_results} | filter:{city_name:search_in_results_city}">
+				<span style="cursor: pointer;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><img ng-src="/uploads/{{company.logo}}" style="padding:0px; margin-top: 35px;" alt="" ng-if="company.logo"></span>
+				<span style="cursor: pointer;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><img src="/images/default-organization.png" style="padding:0px; margin-top: 35px;" alt="" ng-if="!company.logo"></span>
+				<div class="job-list-content">
+					<div class="company-name-apply-wrap">
+						<h4 class="company-job-name" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)">{{company.job.name}} <span style="padding: 7px;" ng-show="company.job.schedule" class="full-time">{{company.job.schedule}}</span></h4>
+						<a ng-show="company.job" href="" class="popup-with-zoom-anim button job-applying results-applying" id="company.job.id" ng-click="applyForJobCompany()">Apply</a>
+					</div>
+					<div class="job-icons">
+						<span style="cursor:pointer; padding-right: 20px;" ng-click="goToCompanyPage(company.name, company.type, company.sub_type, company.id)"><i style="padding-right: 3px;" class="fa fa-briefcase"></i> {{company.name}}</span>
+						<span ng-show="company.city_name" style="cursor: pointer; padding-right: 20px;" ng-click="searchByTopLocation(company.city_name, company.country.abbreviation)"><i class="fa fa-map-marker" style="padding-right: 3px;"></i> {{company.city_name}}</span> 
+						
+					</div>
+					<p>{{company.description}}</p>
+					
+				</div>
+				
+				<div class="clearfix"></div>
+			</li> -->
+
+			<!-- <li ng-show="search_in_results_city" ng-repeat="job in search_results | filter:{city_name:search_in_results_city}"><a href="job-page.html">
+				<img src="/uploads/{{job.company.logo}}" alt="">
+				<div class="job-list-content">
+					<h4>{{job.name}} <span ng-show="job.schedule !== 'Select Schedule'" class="full-time">{{job.schedule}}</span></h4>
+					<div class="job-icons">
+						<span><i class="fa fa-briefcase"></i> {{job.company.name}}</span>
+						<span><i class="fa fa-map-marker"></i> {{job.city_name}}</span>
+						
+					</div>
+					<p>{{job.description}}</p>
+					
+				</div>
+				</a>
+				<div class="clearfix"></div>
+			</li> -->
+
+			
+		</ul> 
+
+		<h2 ng-show="!search_results && !search_results_jobs" translate="no_results"></h2>
+		<div class="clearfix"></div>
+		<div ng-show="totalItems > 10" class="pagination-container">
+			<nav class="pagination sharado-pagination">
+				<!-- <ul style="margin-left: 33%;" uib-pagination total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;"  items-per-page="10" maxSize="maxSize" ng-change="pageChanged()"></ul> -->
+				<ul style="margin-left: 39%;" uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm results-pagination"  ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;"></ul>
+
+			</nav>		
+			<!-- <nav class="pagination-next-prev">
+				<ul>
+					<li><a href="#" class="prev">Previous</a></li>
+					<li><a href="#" class="next">Next</a></li>
+				</ul>
+			</nav> -->
+			<!-- <div data-pagination="" data-num-pages="10" 
+      		data-current-page="1" data-max-size="15"  
+      		data-boundary-links="true"></div>
+      		<pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination> -->
+		</div>
+
+		<!-- <span >
+            <ul class="pagination pagination-sm">
+                <li ng-class="{paginate_button :1, previous : 1, disabled : commands_prev_list}" aria-controls="sample_2" tabindex="0" id="sample_2_next">
+                    <a ng-click="commandsPrevList(id)"><i class="fa fa-angle-double-left"></i></a>
+                </li>
+                <li ng-class="{paginate_button :1, previous : 1, disabled : disableCommandsPrev}" aria-controls="sample_2" tabindex="0" id="sample_2_previous">
+                    <a ng-click="changeCommandsPage(commandsCurrentPage - 1, id)"><i class="fa fa-angle-left"></i></a>
+                </li>
+                <li  ng-class="{paginate_button: 1,active: page == commandsCurrentPage }" aria-controls="sample_2" tabindex="0" ng-repeat="page in commandsPagination">
+                    <a ng-click="changeCommandsPage(page, id)">@{{page + 1}}</a>
+                </li>
+                <li ng-class="{paginate_button :1, next : 1, disabled : disableCommandsNext}" aria-controls="sample_2" tabindex="0" id="sample_2_next">
+                    <a ng-click="changeCommandsPage(commandsCurrentPage + 1, id)"><i class="fa fa-angle-right"></i></a>
+                </li>
+                <li ng-class="{paginate_button :1, previous : 1, disabled : commands_next_list}" aria-controls="sample_2" tabindex="0" id="sample_2_next">
+                    <a ng-click="commandsNextList(id)"><i class="fa fa-angle-double-right"></i></a>
+                </li>
+            </ul>
+        </span> -->
+
+	</div>
+	</div>
+	</div>
+
+
+	<!-- Widgets -->
+<!-- 	<div class="five columns" ng-show="!not_operating">
+
+
+		<div class="widget">
+			<h4>Location</h4>
+			<form action="#" method="get">
+				<input type="text" placeholder="City" value="" ng-model="search_in_results_city"/>
+
+				<button class="button">Filter</button>
+			</form>
+		</div> 
+
+
+
+	</div> -->
+
+	<!-- Widgets / End -->
+
+		<!-- Subscribe for job -->
+	<div ng-show="subscribtion.activationAvailable == true || subscribtion.activationAvailable =='true'" class="five columns you-subscribed-qarakusik">
+		<!-- Location -->
+		<div class="widget alerts-box not_sub_widg" ng-show="!subscribtion_exists">
+			<div class="job-overview activate-alerts">
+				<h4 translate="get_alerts" class="get-alerts-h4"></h4>
+				<span ng-show="!loggedUser" translate="leave_email" class="leave-email"></span>
+				<span ng-show="loggedUser" translate="activate_alerts"></span>
+				<br />
+				<strong>
+					<span ng-bind="subscribtion.showParam"></span> <span ng-show="subscribtion.showParam && subscribtion.country">/</span>
+					<span ng-bind="subscribtion.country">/</span> <span ng-show="subscribtion.country && subscribtion.city">/</span>
+					<span ng-bind="subscribtion.city"></span>
+				</strong>
+				<div class="alert alert-success" ng-if="successMessage != undefined" ng-bind="successMessage"></div>
+				<div class="alert alert-danger" ng-if="existsMessage != undefined" ng-bind="existsMessage"></div>
+				<form ng-submit="subscribe()">
+					<input type="text" placeholder="Insert your email" value="" ng-model="subscribtion.email" ng-show="!loggedUser"/>
+					<div class="alert alert-danger" ng-if="email_error != undefined" >{{email_error}}</div>
+					<div class="alert alert-danger" ng-if="country_error != undefined">{{country_error}}</div>
+					<div class="alert alert-danger" ng-if="code_error != undefined">{{code_error}}</div>
+					<button style="width: 100%;" class="button" translate="dfasfsdaf"></button>
+				</form>					
+			</div>
+		</div>
+		<div class="widget sub_widg" ng-show="subscribtion_exists">
+			<div class="job-overview">
+				<h4 translate="activated"></h4>
+<!-- 				<span ng-show="!loggedUser">Leave us your email and we'll send you all of the new jobs for: </span>
+				<span ng-show="loggedUser">Activate alerts and we'll send to your email all of the new jobs for: </span> -->
+				<br />
+				<strong>
+					<span ng-bind="subscribtion.showParam"></span> <span ng-show="subscribtion.showParam && subscribtion.country">/</span>
+					<span ng-bind="subscribtion.country">/</span> <span ng-show="subscribtion.country && subscribtion.city">/</span>
+					<span ng-bind="subscribtion.city"></span>
+				</strong>
+<!-- 				<div class="alert alert-success" ng-if="successMessage != undefined" ng-bind="successMessage"></div>
+				<div class="alert alert-danger" ng-if="existsMessage != undefined" ng-bind="existsMessage"></div>
+				<input type="text" placeholder="Insert your email" value="" ng-model="subscribtion.email" ng-show="!loggedUser"/>
+				<div class="alert alert-danger" ng-if="errors['email'] != undefined" ng-bind="errors['email']"></div>
+				<div class="alert alert-danger" ng-if="errors['country'] != undefined" ng-bind="errors['country']"></div>
+				<div class="alert alert-danger" ng-if="errors['keyword'] != undefined" ng-bind="errors['keyword']"></div>
+				<button ng-click="subscribe()" style="width: 100%;" class="button">Activate</button> -->
+			</div>
+		</div>
+	</div>
+
+	<div ng-show="not_operating">
+		<p style="text-transform: uppercase; text-align: center"><span translate="there_is_no"></span><a href="" ng-click="goToCompanyPage(country_subsidiary.name, country_subsidiary.type, country_subsidiary.sub_type, country_subsidiary.id)">{{search_request}}</a> <span translate="in"></span> {{city}} .</p>
+	</div>
+
+	<div id="applyModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+	      <div class="modal-body">
+	        <p translate="you_have_already_applied"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="redirectToAppliedJob()">Ok</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+
+</div>

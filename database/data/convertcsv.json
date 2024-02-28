@@ -1,0 +1,2402 @@
+[
+ {
+   "City (en)": "Abu Dhabi",
+   "City (de)": "Abu Dhabi",
+   "Country (en)": "United Arab Emirates",
+   "Country (de)": "Vereinigte Arabische Emirate",
+   "Country code": "AE",
+   "Population": 603500,
+   "Latitude": 24.46667,
+   "Longitude": 54.36667
+ },
+ {
+   "City (en)": "Abuja",
+   "City (de)": "Abuja",
+   "Country (en)": "Nigeria",
+   "Country (de)": "Nigeria",
+   "Country code": "NG",
+   "Population": 1568900,
+   "Latitude": 9.05785,
+   "Longitude": 7.49508
+ },
+ {
+   "City (en)": "Accra",
+   "City (de)": "Accra",
+   "Country (en)": "Ghana",
+   "Country (de)": "Ghana",
+   "Country code": "GH",
+   "Population": 1963300,
+   "Latitude": 5.55602,
+   "Longitude": -0.1969
+ },
+ {
+   "City (en)": "Adamstown",
+   "City (de)": "Adamstown",
+   "Country (en)": "Pitcairn Islands",
+   "Country (de)": "Pitcairninseln",
+   "Country code": "PN",
+   "Population": 100,
+   "Latitude": -25.066397,
+   "Longitude": -130.100197
+ },
+ {
+   "City (en)": "Addis Ababa",
+   "City (de)": "Addis Abeba",
+   "Country (en)": "Ethiopia",
+   "Country (de)": "Äthiopien",
+   "Country code": "ET",
+   "Population": 2757700,
+   "Latitude": 9.02497,
+   "Longitude": 38.74689
+ },
+ {
+   "City (en)": "Algiers",
+   "City (de)": "Algier",
+   "Country (en)": "Algeria",
+   "Country (de)": "Algerien",
+   "Country code": "DZ",
+   "Population": 1977700,
+   "Latitude": 36.7525,
+   "Longitude": 3.04197
+ },
+ {
+   "City (en)": "Alofi",
+   "City (de)": "Alofi",
+   "Country (en)": "Niue",
+   "Country (de)": "Niue",
+   "Country code": "NU",
+   "Population": 600,
+   "Latitude": -19.05952,
+   "Longitude": -169.91867
+ },
+ {
+   "City (en)": "Amman",
+   "City (de)": "Amman",
+   "Country (en)": "Jordan",
+   "Country (de)": "Jordanien",
+   "Country code": "JO",
+   "Population": 1919000,
+   "Latitude": 31.95522,
+   "Longitude": 35.94503
+ },
+ {
+   "City (en)": "Amsterdam",
+   "City (de)": "Amsterdam",
+   "Country (en)": "Netherlands",
+   "Country (de)": "Niederlande",
+   "Country code": "NL",
+   "Population": 741600,
+   "Latitude": 52.37403,
+   "Longitude": 4.88969
+ },
+ {
+   "City (en)": "Andorra la Vella",
+   "City (de)": "Andorra la Vella",
+   "Country (en)": "Andorra",
+   "Country (de)": "Andorra",
+   "Country code": "AD",
+   "Population": 20400,
+   "Latitude": 42.50779,
+   "Longitude": 1.52109
+ },
+ {
+   "City (en)": "Ankara",
+   "City (de)": "Ankara",
+   "Country (en)": "Turkey",
+   "Country (de)": "Türkei",
+   "Country code": "TR",
+   "Population": 4338600,
+   "Latitude": 39.91987,
+   "Longitude": 32.85427
+ },
+ {
+   "City (en)": "Antananarivo",
+   "City (de)": "Antananarivo",
+   "Country (en)": "Madagascar",
+   "Country (de)": "Madagaskar",
+   "Country code": "MG",
+   "Population": 1816000,
+   "Latitude": -18.91368,
+   "Longitude": 47.53613
+ },
+ {
+   "City (en)": "Apia",
+   "City (de)": "Apia",
+   "Country (en)": "Samoa",
+   "Country (de)": "Samoa",
+   "Country code": "WS",
+   "Population": 40400,
+   "Latitude": -13.83333,
+   "Longitude": -171.76666
+ },
+ {
+   "City (en)": "Ashgabat",
+   "City (de)": "Ashgabat",
+   "Country (en)": "Turkmenistan",
+   "Country (de)": "Turkmenistan",
+   "Country code": "TM",
+   "Population": 727700,
+   "Latitude": 37.95,
+   "Longitude": 58.38333
+ },
+ {
+   "City (en)": "Asmara",
+   "City (de)": "Asmara",
+   "Country (en)": "Eritrea",
+   "Country (de)": "Eritrea",
+   "Country code": "ER",
+   "Population": 563900,
+   "Latitude": 15.33805,
+   "Longitude": 38.93184
+ },
+ {
+   "City (en)": "Astana",
+   "City (de)": "Astana",
+   "Country (en)": "Kazakhstan",
+   "Country (de)": "Kasachstan",
+   "Country code": "KZ",
+   "Population": 345600,
+   "Latitude": 51.1801,
+   "Longitude": 71.44598
+ },
+ {
+   "City (en)": "Asunción",
+   "City (de)": "Asunción",
+   "Country (en)": "Paraguay",
+   "Country (de)": "Paraguay",
+   "Country code": "PY",
+   "Population": 1482200,
+   "Latitude": -25.30066,
+   "Longitude": -57.63591
+ },
+ {
+   "City (en)": "Athens",
+   "City (de)": "Athen",
+   "Country (en)": "Greece",
+   "Country (de)": "Griechenland",
+   "Country code": "GR",
+   "Population": 664000,
+   "Latitude": 37.97945,
+   "Longitude": 23.71622
+ },
+ {
+   "City (en)": "Avarua",
+   "City (de)": "Avarua",
+   "Country (en)": "Cook Islands",
+   "Country (de)": "Cookinseln",
+   "Country code": "CK",
+   "Population": 13400,
+   "Latitude": -21.20778,
+   "Longitude": -159.775
+ },
+ {
+   "City (en)": "Baghdad",
+   "City (de)": "Bagdad",
+   "Country (en)": "Iraq",
+   "Country (de)": "Irak",
+   "Country code": "IQ",
+   "Population": 5514000,
+   "Latitude": 33.34058,
+   "Longitude": 44.40088
+ },
+ {
+   "City (en)": "Baku",
+   "City (de)": "Baku",
+   "Country (en)": "Azerbaijan",
+   "Country (de)": "Aserbaidschan",
+   "Country code": "AZ",
+   "Population": 1116500,
+   "Latitude": 40.37767,
+   "Longitude": 49.89201
+ },
+ {
+   "City (en)": "Bamako",
+   "City (de)": "Bamako",
+   "Country (en)": "Mali",
+   "Country (de)": "Mali",
+   "Country code": "ML",
+   "Population": 1297300,
+   "Latitude": 12.65,
+   "Longitude": -8
+ },
+ {
+   "City (en)": "Bandar Seri Begawan",
+   "City (de)": "Bandar Seri Begawan",
+   "Country (en)": "Brunei",
+   "Country (de)": "Brunei",
+   "Country code": "BN",
+   "Population": 64400,
+   "Latitude": 4.94029,
+   "Longitude": 114.94806
+ },
+ {
+   "City (en)": "Bangkok",
+   "City (de)": "Bangkok",
+   "Country (en)": "Thailand",
+   "Country (de)": "Thailand",
+   "Country code": "TH",
+   "Population": 5104500,
+   "Latitude": 13.75398,
+   "Longitude": 100.50144
+ },
+ {
+   "City (en)": "Bangui",
+   "City (de)": "Bangui",
+   "Country (en)": "Central African Republic",
+   "Country (de)": "Zentralafrikanische Republik",
+   "Country code": "CF",
+   "Population": 542400,
+   "Latitude": 4.36122,
+   "Longitude": 18.55496
+ },
+ {
+   "City (en)": "Banjul",
+   "City (de)": "Banjul",
+   "Country (en)": "Gambia",
+   "Country (de)": "Gambia",
+   "Country code": "GM",
+   "Population": 34600,
+   "Latitude": 13.45274,
+   "Longitude": -16.57803
+ },
+ {
+   "City (en)": "Basse-Terre",
+   "City (de)": "Basse-Terre",
+   "Country (en)": "Guadeloupe",
+   "Country (de)": "Guadeloupe",
+   "Country code": "GP",
+   "Population": 11500,
+   "Latitude": 15.99854,
+   "Longitude": -61.72548
+ },
+ {
+   "City (en)": "Basseterre",
+   "City (de)": "Basseterre",
+   "Country (en)": "Saint Kitts and Nevis",
+   "Country (de)": "St. Kitts und Nevis",
+   "Country code": "KN",
+   "Population": 12900,
+   "Latitude": 17.29484,
+   "Longitude": -62.7261
+ },
+ {
+   "City (en)": "Beirut",
+   "City (de)": "Beirut",
+   "Country (en)": "Lebanon",
+   "Country (de)": "Libanon",
+   "Country code": "LB",
+   "Population": 2060400,
+   "Latitude": 33.88894,
+   "Longitude": 35.49442
+ },
+ {
+   "City (en)": "Belgrade",
+   "City (de)": "Belgrade",
+   "Country (en)": "Serbia",
+   "Country (de)": "Serbien",
+   "Country code": "RS",
+   "Population": 1273700,
+   "Latitude": 44.80401,
+   "Longitude": 20.46513
+ },
+ {
+   "City (en)": "Belmopan",
+   "City (de)": "Belmopan",
+   "Country (en)": "Belize",
+   "Country (de)": "Belize",
+   "Country code": "BZ",
+   "Population": 13400,
+   "Latitude": 17.25,
+   "Longitude": -88.76667
+ },
+ {
+   "City (en)": "Berlin",
+   "City (de)": "Berlin",
+   "Country (en)": "Germany",
+   "Country (de)": "Deutschland",
+   "Country code": "DE",
+   "Population": 3419700,
+   "Latitude": 52.52437,
+   "Longitude": 13.41053
+ },
+ {
+   "City (en)": "Bern",
+   "City (de)": "Bern",
+   "Country (en)": "Switzerland",
+   "Country (de)": "Schweiz",
+   "Country code": "CH",
+   "Population": 121600,
+   "Latitude": 46.94809,
+   "Longitude": 7.44744
+ },
+ {
+   "City (en)": "Bishkek",
+   "City (de)": "Bishkek",
+   "Country (en)": "Kyrgyzstan",
+   "Country (de)": "Kirgisistan",
+   "Country code": "KG",
+   "Population": 900000,
+   "Latitude": 42.87,
+   "Longitude": 74.59
+ },
+ {
+   "City (en)": "Bissau",
+   "City (de)": "Bissau",
+   "Country (en)": "Guinea-Bissau",
+   "Country (de)": "Guinea-Bissau",
+   "Country code": "GW",
+   "Population": 388000,
+   "Latitude": 11.86357,
+   "Longitude": -15.59767
+ },
+ {
+   "City (en)": "Bogotá",
+   "City (de)": "Bogotá",
+   "Country (en)": "Colombia",
+   "Country (de)": "Kolumbien",
+   "Country code": "CO",
+   "Population": 6840200,
+   "Latitude": 4.60971,
+   "Longitude": -74.08175
+ },
+ {
+   "City (en)": "Brades",
+   "City (de)": "Brades",
+   "Country (en)": "Montserrat",
+   "Country (de)": "Montserrat",
+   "Country code": "MS",
+   "Population": 1000,
+   "Latitude": 16.79183,
+   "Longitude": -62.21058
+ },
+ {
+   "City (en)": "Brasília",
+   "City (de)": "Brasília",
+   "Country (en)": "Brazil",
+   "Country (de)": "Brasilien",
+   "Country code": "BR",
+   "Population": 2789800,
+   "Latitude": -15.77972,
+   "Longitude": -47.92972
+ },
+ {
+   "City (en)": "Bratislava",
+   "City (de)": "Bratislava",
+   "Country (en)": "Slovakia",
+   "Country (de)": "Slowakei",
+   "Country code": "SK",
+   "Population": 423700,
+   "Latitude": 48.14816,
+   "Longitude": 17.10674
+ },
+ {
+   "City (en)": "Brazzaville",
+   "City (de)": "Brazzaville",
+   "Country (en)": "Republic of the Congo",
+   "Country (de)": "Kongo",
+   "Country code": "CG",
+   "Population": 1115800,
+   "Latitude": -4.26613,
+   "Longitude": 15.28318
+ },
+ {
+   "City (en)": "Bridgetown",
+   "City (de)": "Bridgetown",
+   "Country (en)": "Barbados",
+   "Country (de)": "Barbados",
+   "Country code": "BB",
+   "Population": 98500,
+   "Latitude": 13.1,
+   "Longitude": -59.61667
+ },
+ {
+   "City (en)": "Brussels",
+   "City (de)": "Brüssel",
+   "Country (en)": "Belgium",
+   "Country (de)": "Belgien",
+   "Country code": "BE",
+   "Population": 1138900,
+   "Latitude": 50.85045,
+   "Longitude": 4.34878
+ },
+ {
+   "City (en)": "Budapest",
+   "City (de)": "Budapest",
+   "Country (en)": "Hungary",
+   "Country (de)": "Ungarn",
+   "Country code": "HU",
+   "Population": 1741000,
+   "Latitude": 47.49801,
+   "Longitude": 19.03991
+ },
+ {
+   "City (en)": "Buenos Aires",
+   "City (de)": "Buenos Aires",
+   "Country (en)": "Argentina",
+   "Country (de)": "Argentinien",
+   "Country code": "AR",
+   "Population": 2890200,
+   "Latitude": -34.61315,
+   "Longitude": -58.37723
+ },
+ {
+   "City (en)": "Bujumbura",
+   "City (de)": "Bujumbura",
+   "Country (en)": "Burundi",
+   "Country (de)": "Burundi",
+   "Country code": "BI",
+   "Population": 331700,
+   "Latitude": -3.3822,
+   "Longitude": 29.3644
+ },
+ {
+   "City (en)": "Bucharest",
+   "City (de)": "Bukarest",
+   "Country (en)": "Romania",
+   "Country (de)": "Rumänien",
+   "Country code": "RO",
+   "Population": 1883400,
+   "Latitude": 44.43225,
+   "Longitude": 26.10626
+ },
+ {
+   "City (en)": "Canberra",
+   "City (de)": "Canberra",
+   "Country (en)": "Australia",
+   "Country (de)": "Australien",
+   "Country code": "AU",
+   "Population": 367800,
+   "Latitude": -35.28346,
+   "Longitude": 149.12807
+ },
+ {
+   "City (en)": "Caracas",
+   "City (de)": "Caracas",
+   "Country (en)": "Venezuela",
+   "Country (de)": "Venezuela",
+   "Country code": "VE",
+   "Population": 5808900,
+   "Latitude": 10.48801,
+   "Longitude": -66.87919
+ },
+ {
+   "City (en)": "Castries",
+   "City (de)": "Castries",
+   "Country (en)": "Saint Lucia",
+   "Country (de)": "St. Lucia",
+   "Country code": "LC",
+   "Population": 20000,
+   "Latitude": 13.9957,
+   "Longitude": -61.00614
+ },
+ {
+   "City (en)": "Cayenne",
+   "City (de)": "Cayenne",
+   "Country (en)": "French Guiana",
+   "Country (de)": "Französisch-Guayana",
+   "Country code": "GF",
+   "Population": 61600,
+   "Latitude": 4.93333,
+   "Longitude": -52.33333
+ },
+ {
+   "City (en)": "Charlotte Amalie",
+   "City (de)": "Charlotte Amalie",
+   "Country (en)": "Virgin Islands",
+   "Country (de)": "Jungferninseln (US)",
+   "Country code": "VI",
+   "Population": 20000,
+   "Latitude": 18.3419,
+   "Longitude": -64.9307
+ },
+ {
+   "City (en)": "Chisinau",
+   "City (de)": "Chisinau",
+   "Country (en)": "Moldova",
+   "Country (de)": "Moldawien",
+   "Country code": "MD",
+   "Population": 636000,
+   "Latitude": 47.00556,
+   "Longitude": 28.8575
+ },
+ {
+   "City (en)": "Cockburn Town",
+   "City (de)": "Cockburn Town",
+   "Country (en)": "Turks and Caicos Islands",
+   "Country (de)": "Turks und Caicosinseln",
+   "Country code": "TC",
+   "Population": 3700,
+   "Latitude": 21.46122,
+   "Longitude": -71.14188
+ },
+ {
+   "City (en)": "Colombo",
+   "City (de)": "Colombo",
+   "Country (en)": "Sri Lanka",
+   "Country (de)": "Sri Lanka",
+   "Country code": "LK",
+   "Population": 648000,
+   "Latitude": 6.93194,
+   "Longitude": 79.84778
+ },
+ {
+   "City (en)": "Conakry",
+   "City (de)": "Conakry",
+   "Country (en)": "Guinea",
+   "Country (de)": "Guinea",
+   "Country code": "GN",
+   "Population": 1767200,
+   "Latitude": 9.53795,
+   "Longitude": -13.67729
+ },
+ {
+   "City (en)": "Concelho de Macau",
+   "City (de)": "Concelho de Macau",
+   "Country (en)": "Macau",
+   "Country (de)": "Macau",
+   "Country code": "MO",
+   "Population": 520400,
+   "Latitude": 22.20056,
+   "Longitude": 113.54611
+ },
+ {
+   "City (en)": "Copenhagen",
+   "City (de)": "Copenhagen",
+   "Country (en)": "Denmark",
+   "Country (de)": "Dänemark",
+   "Country code": "DK",
+   "Population": 1153600,
+   "Latitude": 55.67594,
+   "Longitude": 12.56553
+ },
+ {
+   "City (en)": "Dakar",
+   "City (de)": "Dakar",
+   "Country (en)": "Senegal",
+   "Country (de)": "Senegal",
+   "Country code": "SN",
+   "Population": 2476400,
+   "Latitude": 14.6937,
+   "Longitude": -17.44406
+ },
+ {
+   "City (en)": "Damascus",
+   "City (de)": "Damaskus",
+   "Country (en)": "Syria",
+   "Country (de)": "Syrien",
+   "Country code": "SY",
+   "Population": 1834700,
+   "Latitude": 33.5102,
+   "Longitude": 36.29128
+ },
+ {
+   "City (en)": "Dhaka",
+   "City (de)": "Dhaka",
+   "Country (en)": "Bangladesh",
+   "Country (de)": "Bangladesch",
+   "Country code": "BD",
+   "Population": 6725000,
+   "Latitude": 23.7104,
+   "Longitude": 90.40744
+ },
+ {
+   "City (en)": "Dili",
+   "City (de)": "Dili",
+   "Country (en)": "Timor-Leste",
+   "Country (de)": "Osttimor",
+   "Country code": "TL",
+   "Population": 150000,
+   "Latitude": -8.55861,
+   "Longitude": 125.57361
+ },
+ {
+   "City (en)": "Djibouti",
+   "City (de)": "Djibouti",
+   "Country (en)": "Djibouti",
+   "Country (de)": "Dschibuti",
+   "Country code": "DJ",
+   "Population": 623900,
+   "Latitude": 11.58901,
+   "Longitude": 43.14503
+ },
+ {
+   "City (en)": "Dodoma",
+   "City (de)": "Dodoma",
+   "Country (en)": "Tanzania",
+   "Country (de)": "Tansania",
+   "Country code": "TZ",
+   "Population": 180500,
+   "Latitude": -6.17221,
+   "Longitude": 35.73947
+ },
+ {
+   "City (en)": "Doha",
+   "City (de)": "Doha",
+   "Country (en)": "Qatar",
+   "Country (de)": "Katar",
+   "Country code": "QA",
+   "Population": 344900,
+   "Latitude": 25.27932,
+   "Longitude": 51.52245
+ },
+ {
+   "City (en)": "Douglas",
+   "City (de)": "Douglas",
+   "Country (en)": "Isle of Man",
+   "Country (de)": "Insel Man",
+   "Country code": "IM",
+   "Population": 26200,
+   "Latitude": 54.15,
+   "Longitude": -4.48333
+ },
+ {
+   "City (en)": "Dublin",
+   "City (de)": "Dublin",
+   "Country (en)": "Ireland",
+   "Country (de)": "Irland",
+   "Country code": "IE",
+   "Population": 1024000,
+   "Latitude": 53.33306,
+   "Longitude": -6.24889
+ },
+ {
+   "City (en)": "Dushanbe",
+   "City (de)": "Dushanbe",
+   "Country (en)": "Tajikistan",
+   "Country (de)": "Tadschikistan",
+   "Country code": "TJ",
+   "Population": 679400,
+   "Latitude": 38.53575,
+   "Longitude": 68.77905
+ },
+ {
+   "City (en)": "El Aaiún",
+   "City (de)": "El Aaiún",
+   "Country (en)": "Western Sahara",
+   "Country (de)": "Westsahara",
+   "Country code": "EH",
+   "Population": 196300,
+   "Latitude": 27.1418,
+   "Longitude": -13.18797
+ },
+ {
+   "City (en)": "Flying Fish Cove",
+   "City (de)": "Flying Fish Cove",
+   "Country (en)": "Christmas Island",
+   "Country (de)": "Weihnachtsinsel",
+   "Country code": "CX",
+   "Population": 500,
+   "Latitude": -10.42172,
+   "Longitude": 105.67912
+ },
+ {
+   "City (en)": "Fort-de-France",
+   "City (de)": "Fort-de-France",
+   "Country (en)": "Martinique",
+   "Country (de)": "Martinique",
+   "Country code": "MQ",
+   "Population": 90000,
+   "Latitude": 14.60892,
+   "Longitude": -61.07334
+ },
+ {
+   "City (en)": "Freetown",
+   "City (de)": "Freetown",
+   "Country (en)": "Sierra Leone",
+   "Country (de)": "Sierra Leone",
+   "Country code": "SL",
+   "Population": 802600,
+   "Latitude": 8.484,
+   "Longitude": -13.22994
+ },
+ {
+   "City (en)": "Funafuti",
+   "City (de)": "Funafuti",
+   "Country (en)": "Tuvalu",
+   "Country (de)": "Tuvalu",
+   "Country code": "TV",
+   "Population": 4500,
+   "Latitude": -8.52425,
+   "Longitude": 179.19417
+ },
+ {
+   "City (en)": "Gaborone",
+   "City (de)": "Gaborone",
+   "Country (en)": "Botswana",
+   "Country (de)": "Botswana",
+   "Country code": "BW",
+   "Population": 208400,
+   "Latitude": -24.65451,
+   "Longitude": 25.90859
+ },
+ {
+   "City (en)": "George Town",
+   "City (de)": "George Town",
+   "Country (en)": "Cayman Islands",
+   "Country (de)": "Kaimaninseln",
+   "Country code": "KY",
+   "Population": 29400,
+   "Latitude": 19.2866,
+   "Longitude": -81.37436
+ },
+ {
+   "City (en)": "Georgetown",
+   "City (de)": "Georgetown",
+   "Country (en)": "Guyana",
+   "Country (de)": "Guyana",
+   "Country code": "GY",
+   "Population": 235000,
+   "Latitude": 6.80448,
+   "Longitude": -58.15527
+ },
+ {
+   "City (en)": "Gibraltar",
+   "City (de)": "Gibraltar",
+   "Country (en)": "Gibraltar",
+   "Country (de)": "Gibraltar",
+   "Country code": "GI",
+   "Population": 26500,
+   "Latitude": 36.14474,
+   "Longitude": -5.35257
+ },
+ {
+   "City (en)": "Guatemala City",
+   "City (de)": "Guatemala-Stadt",
+   "Country (en)": "Guatemala",
+   "Country (de)": "Guatemala",
+   "Country code": "GT",
+   "Population": 994900,
+   "Latitude": 14.64072,
+   "Longitude": -90.51327
+ },
+ {
+   "City (en)": "Gustavia",
+   "City (de)": "Gustavia",
+   "Country (en)": "Saint Barthelemy",
+   "Country (de)": "Sankt Bartholomäus",
+   "Country code": "BL",
+   "Population": 6000,
+   "Latitude": 17.89618,
+   "Longitude": -62.84978
+ },
+ {
+   "City (en)": "Hagåtña",
+   "City (de)": "Hagåtña",
+   "Country (en)": "Guam",
+   "Country (de)": "Guam",
+   "Country code": "GU",
+   "Population": 1100,
+   "Latitude": 13.47567,
+   "Longitude": 144.74886
+ },
+ {
+   "City (en)": "Hamilton",
+   "City (de)": "Hamilton",
+   "Country (en)": "Bermuda",
+   "Country (de)": "Bermuda",
+   "Country code": "BM",
+   "Population": 900,
+   "Latitude": 32.2949,
+   "Longitude": -64.78303
+ },
+ {
+   "City (en)": "Hanoi",
+   "City (de)": "Hanoi",
+   "Country (en)": "Vietnam",
+   "Country (de)": "Vietnam",
+   "Country code": "VN",
+   "Population": 6448800,
+   "Latitude": 21.0245,
+   "Longitude": 105.84117
+ },
+ {
+   "City (en)": "Harare",
+   "City (de)": "Harare",
+   "Country (en)": "Zimbabwe",
+   "Country (de)": "Simbabwe",
+   "Country code": "ZW",
+   "Population": 1542800,
+   "Latitude": -17.82772,
+   "Longitude": 31.05337
+ },
+ {
+   "City (en)": "Havana",
+   "City (de)": "Havanna",
+   "Country (en)": "Cuba",
+   "Country (de)": "Kuba",
+   "Country code": "CU",
+   "Population": 2106100,
+   "Latitude": 23.13302,
+   "Longitude": -82.38304
+ },
+ {
+   "City (en)": "Helsinki",
+   "City (de)": "Helsinki",
+   "Country (en)": "Finland",
+   "Country (de)": "Finnland",
+   "Country code": "FI",
+   "Population": 558500,
+   "Latitude": 60.16952,
+   "Longitude": 24.93545
+ },
+ {
+   "City (en)": "Hong Kong",
+   "City (de)": "Hongkong",
+   "Country (en)": "Hong Kong",
+   "Country (de)": "Hongkong",
+   "Country code": "HK",
+   "Population": 7097600,
+   "Latitude": 22.28552,
+   "Longitude": 114.15769
+ },
+ {
+   "City (en)": "Honiara",
+   "City (de)": "Honiara",
+   "Country (en)": "Solomon Islands",
+   "Country (de)": "Salomonen",
+   "Country code": "SB",
+   "Population": 56300,
+   "Latitude": -9.43333,
+   "Longitude": 159.95
+ },
+ {
+   "City (en)": "Islamabad",
+   "City (de)": "Islamabad",
+   "Country (en)": "Pakistan",
+   "Country (de)": "Pakistan",
+   "Country code": "PK",
+   "Population": 601600,
+   "Latitude": 33.72148,
+   "Longitude": 73.04329
+ },
+ {
+   "City (en)": "Jakarta",
+   "City (de)": "Jakarta",
+   "Country (en)": "Indonesia",
+   "Country (de)": "Indonesien",
+   "Country code": "ID",
+   "Population": 9588200,
+   "Latitude": -6.21462,
+   "Longitude": 106.84513
+ },
+ {
+   "City (en)": "Jamestown",
+   "City (de)": "Jamestown",
+   "Country (en)": "Saint Helena, Ascension and Tristan da Cunha",
+   "Country (de)": "St. Helena",
+   "Country code": "SH",
+   "Population": 600,
+   "Latitude": -15.93872,
+   "Longitude": -5.71675
+ },
+ {
+   "City (en)": "Yaoundé",
+   "City (de)": "Jaunde",
+   "Country (en)": "Cameroon",
+   "Country (de)": "Kamerun",
+   "Country code": "CM",
+   "Population": 1299500,
+   "Latitude": 3.86667,
+   "Longitude": 11.51667
+ },
+ {
+   "City (en)": "Yerevan",
+   "City (de)": "Jerewan",
+   "Country (en)": "Armenia",
+   "Country (de)": "Armenien",
+   "Country code": "AM",
+   "Population": 1093500,
+   "Latitude": 40.18111,
+   "Longitude": 44.51361
+ },
+ {
+   "City (en)": "Jerusalem",
+   "City (de)": "Jerusalem",
+   "Country (en)": "Israel",
+   "Country (de)": "Israel",
+   "Country code": "IL",
+   "Population": 801000,
+   "Latitude": 31.76904,
+   "Longitude": 35.21633
+ },
+ {
+   "City (en)": "Juba",
+   "City (de)": "Juba",
+   "Country (en)": "South Sudan",
+   "Country (de)": "Südsudan",
+   "Country code": "SS",
+   "Population": 300000,
+   "Latitude": 4.85165,
+   "Longitude": 31.58247
+ },
+ {
+   "City (en)": "Kabul",
+   "City (de)": "Kabul",
+   "Country (en)": "Afghanistan",
+   "Country (de)": "Afghanistan",
+   "Country code": "AF",
+   "Population": 3290000,
+   "Latitude": 34.52813,
+   "Longitude": 69.17233
+ },
+ {
+   "City (en)": "Cairo",
+   "City (de)": "Kairo",
+   "Country (en)": "Egypt",
+   "Country (de)": "Ägypten",
+   "Country code": "EG",
+   "Population": 7734600,
+   "Latitude": 30.06263,
+   "Longitude": 31.24967
+ },
+ {
+   "City (en)": "Kampala",
+   "City (de)": "Kampala",
+   "Country (en)": "Uganda",
+   "Country (de)": "Uganda",
+   "Country code": "UG",
+   "Population": 1353200,
+   "Latitude": 0.31628,
+   "Longitude": 32.58219
+ },
+ {
+   "City (en)": "Kathmandu",
+   "City (de)": "Kathmandu",
+   "Country (en)": "Nepal",
+   "Country (de)": "Nepal",
+   "Country code": "NP",
+   "Population": 1442300,
+   "Latitude": 27.70169,
+   "Longitude": 85.3206
+ },
+ {
+   "City (en)": "Khartoum",
+   "City (de)": "Khartum",
+   "Country (en)": "Sudan",
+   "Country (de)": "Sudan",
+   "Country code": "SD",
+   "Population": 2682500,
+   "Latitude": 15.55177,
+   "Longitude": 32.53241
+ },
+ {
+   "City (en)": "Kiev",
+   "City (de)": "Kiew",
+   "Country (en)": "Ukraine",
+   "Country (de)": "Ukraine",
+   "Country code": "UA",
+   "Population": 2797600,
+   "Latitude": 50.45466,
+   "Longitude": 30.5238
+ },
+ {
+   "City (en)": "Kigali",
+   "City (de)": "Kigali",
+   "Country (en)": "Rwanda",
+   "Country (de)": "Ruanda",
+   "Country code": "RW",
+   "Population": 1168600,
+   "Latitude": -1.94995,
+   "Longitude": 30.05885
+ },
+ {
+   "City (en)": "King Edward Point",
+   "City (de)": "King Edward Point",
+   "Country (en)": "South Georgia and South Sandwich Islands",
+   "Country (de)": "Südgeorgien und die Südlichen Sandwichinseln",
+   "Country code": "GS",
+   "Population": 0,
+   "Latitude": -54.283349,
+   "Longitude": -36.494533
+ },
+ {
+   "City (en)": "Kingston",
+   "City (de)": "Kingston",
+   "Country (en)": "Jamaica",
+   "Country (de)": "Jamaika",
+   "Country code": "JM",
+   "Population": 937700,
+   "Latitude": 17.99702,
+   "Longitude": -76.79358
+ },
+ {
+   "City (en)": "Kingston",
+   "City (de)": "Kingston",
+   "Country (en)": "Norfolk Island",
+   "Country (de)": "Norfolkinsel",
+   "Country code": "NF",
+   "Population": 900,
+   "Latitude": -29.05459,
+   "Longitude": 167.96628
+ },
+ {
+   "City (en)": "Kingstown",
+   "City (de)": "Kingstown",
+   "Country (en)": "Saint Vincent and the Grenadines",
+   "Country (de)": "St. Vincent und die Grenadinen",
+   "Country code": "VC",
+   "Population": 24500,
+   "Latitude": 13.15872,
+   "Longitude": -61.22475
+ },
+ {
+   "City (en)": "Kinshasa",
+   "City (de)": "Kinshasa",
+   "Country (en)": "Democratic Republic of the Congo",
+   "Country (de)": "Demokratische Republik Kongo",
+   "Country code": "CD",
+   "Population": 9463800,
+   "Latitude": -4.32758,
+   "Longitude": 15.31357
+ },
+ {
+   "City (en)": "Kuala Lumpur",
+   "City (de)": "Kuala Lumpur",
+   "Country (en)": "Malaysia",
+   "Country (de)": "Malaysia",
+   "Country code": "MY",
+   "Population": 1454000,
+   "Latitude": 3.1412,
+   "Longitude": 101.68653
+ },
+ {
+   "City (en)": "Kuwait City",
+   "City (de)": "Kuwait City",
+   "Country (en)": "Kuwait",
+   "Country (de)": "Kuwait",
+   "Country code": "KW",
+   "Population": 60100,
+   "Latitude": 29.36972,
+   "Longitude": 47.97833
+ },
+ {
+   "City (en)": "Libreville",
+   "City (de)": "Libreville",
+   "Country (en)": "Gabon",
+   "Country (de)": "Gabun",
+   "Country code": "GA",
+   "Population": 578200,
+   "Latitude": 0.39241,
+   "Longitude": 9.45356
+ },
+ {
+   "City (en)": "Lilongwe",
+   "City (de)": "Lilongwe",
+   "Country (en)": "Malawi",
+   "Country (de)": "Malawi",
+   "Country code": "MW",
+   "Population": 646800,
+   "Latitude": -13.96692,
+   "Longitude": 33.78725
+ },
+ {
+   "City (en)": "Lima",
+   "City (de)": "Lima",
+   "Country (en)": "Peru",
+   "Country (de)": "Peru",
+   "Country code": "PE",
+   "Population": 7605800,
+   "Latitude": -12.04318,
+   "Longitude": -77.02824
+ },
+ {
+   "City (en)": "Lisbon",
+   "City (de)": "Lissabon",
+   "Country (en)": "Portugal",
+   "Country (de)": "Portugal",
+   "Country code": "PT",
+   "Population": 517800,
+   "Latitude": 38.71667,
+   "Longitude": -9.13333
+ },
+ {
+   "City (en)": "Ljubljana",
+   "City (de)": "Ljubljana",
+   "Country (en)": "Slovenia",
+   "Country (de)": "Slowenien",
+   "Country code": "SI",
+   "Population": 272200,
+   "Latitude": 46.05108,
+   "Longitude": 14.50513
+ },
+ {
+   "City (en)": "Lomé",
+   "City (de)": "Lomé",
+   "Country (en)": "Togo",
+   "Country (de)": "Togo",
+   "Country code": "TG",
+   "Population": 749700,
+   "Latitude": 6.13748,
+   "Longitude": 1.21227
+ },
+ {
+   "City (en)": "London",
+   "City (de)": "London",
+   "Country (en)": "United Kingdom",
+   "Country (de)": "Vereinigtes Königreich",
+   "Country code": "GB",
+   "Population": 7556900,
+   "Latitude": 51.50853,
+   "Longitude": -0.12574
+ },
+ {
+   "City (en)": "Longyearbyen",
+   "City (de)": "Longyearbyen",
+   "Country (en)": "Svalbard",
+   "Country (de)": "Svalbard und Jan Mayen",
+   "Country code": "SJ",
+   "Population": 2100,
+   "Latitude": 78.22334,
+   "Longitude": 15.64689
+ },
+ {
+   "City (en)": "Luanda",
+   "City (de)": "Luanda",
+   "Country (en)": "Angola",
+   "Country (de)": "Angola",
+   "Country code": "AO",
+   "Population": 2776200,
+   "Latitude": -8.83682,
+   "Longitude": 13.23432
+ },
+ {
+   "City (en)": "Lusaka",
+   "City (de)": "Lusaka",
+   "Country (en)": "Zambia",
+   "Country (de)": "Sambia",
+   "Country code": "ZM",
+   "Population": 1413000,
+   "Latitude": -15.40669,
+   "Longitude": 28.28713
+ },
+ {
+   "City (en)": "Luxembourg",
+   "City (de)": "Luxembourg",
+   "Country (en)": "Luxembourg",
+   "Country (de)": "Luxemburg",
+   "Country code": "LU",
+   "Population": 76700,
+   "Latitude": 49.61167,
+   "Longitude": 6.13
+ },
+ {
+   "City (en)": "Madrid",
+   "City (de)": "Madrid",
+   "Country (en)": "Spain",
+   "Country (de)": "Spanien",
+   "Country code": "ES",
+   "Population": 3255900,
+   "Latitude": 40.4165,
+   "Longitude": -3.70256
+ },
+ {
+   "City (en)": "Majuro",
+   "City (de)": "Majuro",
+   "Country (en)": "Marshall Islands",
+   "Country (de)": "Marshallinseln",
+   "Country code": "MH",
+   "Population": 25400,
+   "Latitude": 7.08971,
+   "Longitude": 171.38027
+ },
+ {
+   "City (en)": "Malabo",
+   "City (de)": "Malabo",
+   "Country (en)": "Equatorial Guinea",
+   "Country (de)": "Äquatorialguinea",
+   "Country code": "GQ",
+   "Population": 156000,
+   "Latitude": 3.75,
+   "Longitude": 8.78333
+ },
+ {
+   "City (en)": "Male",
+   "City (de)": "Male",
+   "Country (en)": "Maldives",
+   "Country (de)": "Malediven",
+   "Country code": "MV",
+   "Population": 103700,
+   "Latitude": 4.1748,
+   "Longitude": 73.50888
+ },
+ {
+   "City (en)": "Mamoudzou",
+   "City (de)": "Mamoudzou",
+   "Country (en)": "Mayotte",
+   "Country (de)": "Mayotte",
+   "Country code": "YT",
+   "Population": 54800,
+   "Latitude": -12.78234,
+   "Longitude": 45.22878
+ },
+ {
+   "City (en)": "Managua",
+   "City (de)": "Managua",
+   "Country (en)": "Nicaragua",
+   "Country (de)": "Nicaragua",
+   "Country code": "NI",
+   "Population": 973100,
+   "Latitude": 12.13282,
+   "Longitude": -86.2504
+ },
+ {
+   "City (en)": "Manama",
+   "City (de)": "Manama",
+   "Country (en)": "Bahrain",
+   "Country (de)": "Bahrain",
+   "Country code": "BH",
+   "Population": 147100,
+   "Latitude": 26.21536,
+   "Longitude": 50.5832
+ },
+ {
+   "City (en)": "Manila",
+   "City (de)": "Manila",
+   "Country (en)": "Philippines",
+   "Country (de)": "Philippinen",
+   "Country code": "PH",
+   "Population": 1652200,
+   "Latitude": 14.6042,
+   "Longitude": 120.9822
+ },
+ {
+   "City (en)": "Maputo",
+   "City (de)": "Maputo",
+   "Country (en)": "Mozambique",
+   "Country (de)": "Mosambik",
+   "Country code": "MZ",
+   "Population": 1191600,
+   "Latitude": -25.96553,
+   "Longitude": 32.58322
+ },
+ {
+   "City (en)": "Mariehamn",
+   "City (de)": "Mariehamn",
+   "Country (en)": "Åland Islands",
+   "Country (de)": "Ålandinseln",
+   "Country code": "AX",
+   "Population": 10700,
+   "Latitude": 60.09726,
+   "Longitude": 19.93481
+ },
+ {
+   "City (en)": "Maseru",
+   "City (de)": "Maseru",
+   "Country (en)": "Lesotho",
+   "Country (de)": "Lesotho",
+   "Country code": "LS",
+   "Population": 118400,
+   "Latitude": -29.31667,
+   "Longitude": 27.48333
+ },
+ {
+   "City (en)": "Mata-Utu",
+   "City (de)": "Mata-Utu",
+   "Country (en)": "Wallis and Futuna",
+   "Country (de)": "Wallis und Futuna",
+   "Country code": "WF",
+   "Population": 1200,
+   "Latitude": -13.28163,
+   "Longitude": -176.17453
+ },
+ {
+   "City (en)": "Mbabane",
+   "City (de)": "Mbabane",
+   "Country (en)": "Swaziland",
+   "Country (de)": "Swasiland",
+   "Country code": "SZ",
+   "Population": 76200,
+   "Latitude": -26.31667,
+   "Longitude": 31.13333
+ },
+ {
+   "City (en)": "Mexico City",
+   "City (de)": "Mexiko City",
+   "Country (en)": "Mexico",
+   "Country (de)": "Mexiko",
+   "Country code": "MX",
+   "Population": 8851100,
+   "Latitude": 19.42847,
+   "Longitude": -99.12766
+ },
+ {
+   "City (en)": "Minsk",
+   "City (de)": "Minsk",
+   "Country (en)": "Belarus",
+   "Country (de)": "Belarus",
+   "Country code": "BY",
+   "Population": 1921900,
+   "Latitude": 53.9,
+   "Longitude": 27.56667
+ },
+ {
+   "City (en)": "Mogadishu",
+   "City (de)": "Mogadishu",
+   "Country (en)": "Somalia",
+   "Country (de)": "Somalia",
+   "Country code": "SO",
+   "Population": 1353000,
+   "Latitude": 2.03711,
+   "Longitude": 45.34375
+ },
+ {
+   "City (en)": "Monaco",
+   "City (de)": "Monaco",
+   "Country (en)": "Monaco",
+   "Country (de)": "Monaco",
+   "Country code": "MC",
+   "Population": 33000,
+   "Latitude": 43.73333,
+   "Longitude": 7.41667
+ },
+ {
+   "City (en)": "Monrovia",
+   "City (de)": "Monrovia",
+   "Country (en)": "Liberia",
+   "Country (de)": "Liberia",
+   "Country code": "LR",
+   "Population": 939500,
+   "Latitude": 6.30054,
+   "Longitude": -10.7969
+ },
+ {
+   "City (en)": "Montevideo",
+   "City (de)": "Montevideo",
+   "Country (en)": "Uruguay",
+   "Country (de)": "Uruguay",
+   "Country code": "UY",
+   "Population": 1338400,
+   "Latitude": -34.90328,
+   "Longitude": -56.18816
+ },
+ {
+   "City (en)": "Moroni",
+   "City (de)": "Moroni",
+   "Country (en)": "Comoros",
+   "Country (de)": "Komoren",
+   "Country code": "KM",
+   "Population": 42900,
+   "Latitude": -11.70216,
+   "Longitude": 43.25506
+ },
+ {
+   "City (en)": "Moscow",
+   "City (de)": "Moskau",
+   "Country (en)": "Russia",
+   "Country (de)": "Russland",
+   "Country code": "RU",
+   "Population": 10381200,
+   "Latitude": 55.75222,
+   "Longitude": 37.61556
+ },
+ {
+   "City (en)": "Muscat",
+   "City (de)": "Muskat",
+   "Country (en)": "Oman",
+   "Country (de)": "Oman",
+   "Country code": "OM",
+   "Population": 797000,
+   "Latitude": 23.61387,
+   "Longitude": 58.5922
+ },
+ {
+   "City (en)": "N'Djamena",
+   "City (de)": "N'Djamena",
+   "Country (en)": "Chad",
+   "Country (de)": "Tschad",
+   "Country code": "TD",
+   "Population": 1092000,
+   "Latitude": 12.10672,
+   "Longitude": 15.0444
+ },
+ {
+   "City (en)": "Nairobi",
+   "City (de)": "Nairobi",
+   "Country (en)": "Kenya",
+   "Country (de)": "Kenia",
+   "Country code": "KE",
+   "Population": 2750500,
+   "Latitude": -1.28333,
+   "Longitude": 36.81667
+ },
+ {
+   "City (en)": "Nassau",
+   "City (de)": "Nassau",
+   "Country (en)": "Bahamas",
+   "Country (de)": "Bahamas",
+   "Country code": "BS",
+   "Population": 227900,
+   "Latitude": 25.05823,
+   "Longitude": -77.34306
+ },
+ {
+   "City (en)": "Nay Pyi Taw",
+   "City (de)": "Nay Pyi Taw",
+   "Country (en)": "Burma",
+   "Country (de)": "Myanmar",
+   "Country code": "MM",
+   "Population": 925000,
+   "Latitude": 19.745,
+   "Longitude": 96.12972
+ },
+ {
+   "City (en)": "New Delhi",
+   "City (de)": "Neu-Delhi",
+   "Country (en)": "India",
+   "Country (de)": "Indien",
+   "Country code": "IN",
+   "Population": 317800,
+   "Latitude": 28.63576,
+   "Longitude": 77.22445
+ },
+ {
+   "City (en)": "Niamey",
+   "City (de)": "Niamey",
+   "Country (en)": "Niger",
+   "Country (de)": "Niger",
+   "Country code": "NE",
+   "Population": 774200,
+   "Latitude": 13.51366,
+   "Longitude": 2.1098
+ },
+ {
+   "City (en)": "Nicosia",
+   "City (de)": "Nikosia",
+   "Country (en)": "Cyprus",
+   "Country (de)": "Zypern",
+   "Country code": "CY",
+   "Population": 200500,
+   "Latitude": 35.17531,
+   "Longitude": 33.3642
+ },
+ {
+   "City (en)": "Nouakchott",
+   "City (de)": "Nouakchott",
+   "Country (en)": "Mauritania",
+   "Country (de)": "Mauretanien",
+   "Country code": "MR",
+   "Population": 661400,
+   "Latitude": 18.08581,
+   "Longitude": -15.9785
+ },
+ {
+   "City (en)": "Nouméa",
+   "City (de)": "Nouméa",
+   "Country (en)": "New Caledonia",
+   "Country (de)": "Neukaledonien",
+   "Country code": "NC",
+   "Population": 93100,
+   "Latitude": -22.27631,
+   "Longitude": 166.4572
+ },
+ {
+   "City (en)": "Nukunonu",
+   "City (de)": "Nukunonu",
+   "Country (en)": "Tokelau",
+   "Country (de)": "Tokelau",
+   "Country code": "TK",
+   "Population": 400,
+   "Latitude": -9.20045,
+   "Longitude": -171.84804
+ },
+ {
+   "City (en)": "Nuku‘alofa",
+   "City (de)": "Nuku‘alofa",
+   "Country (en)": "Tonga",
+   "Country (de)": "Tonga",
+   "Country code": "TO",
+   "Population": 22400,
+   "Latitude": -21.13938,
+   "Longitude": -175.2018
+ },
+ {
+   "City (en)": "Nuuk",
+   "City (de)": "Nuuk",
+   "Country (en)": "Greenland",
+   "Country (de)": "Grönland",
+   "Country code": "GL",
+   "Population": 14800,
+   "Latitude": 64.18347,
+   "Longitude": -51.72157
+ },
+ {
+   "City (en)": "Oranjestad",
+   "City (de)": "Oranjestad",
+   "Country (en)": "Aruba",
+   "Country (de)": "Aruba",
+   "Country code": "AW",
+   "Population": 30000,
+   "Latitude": 12.52398,
+   "Longitude": -70.02703
+ },
+ {
+   "City (en)": "Oslo",
+   "City (de)": "Oslo",
+   "Country (en)": "Norway",
+   "Country (de)": "Norwegen",
+   "Country code": "NO",
+   "Population": 580000,
+   "Latitude": 59.91273,
+   "Longitude": 10.74609
+ },
+ {
+   "City (en)": "Ottawa",
+   "City (de)": "Ottawa",
+   "Country (en)": "Canada",
+   "Country (de)": "Kanada",
+   "Country code": "CA",
+   "Population": 812100,
+   "Latitude": 45.41117,
+   "Longitude": -75.69812
+ },
+ {
+   "City (en)": "Ouagadougou",
+   "City (de)": "Ouagadougou",
+   "Country (en)": "Burkina Faso",
+   "Country (de)": "Burkina Faso",
+   "Country code": "BF",
+   "Population": 1086500,
+   "Latitude": 12.36566,
+   "Longitude": -1.53388
+ },
+ {
+   "City (en)": "Pago Pago",
+   "City (de)": "Pago Pago",
+   "Country (en)": "American Samoa",
+   "Country (de)": "Amerikanisch Samoa",
+   "Country code": "AS",
+   "Population": 11500,
+   "Latitude": -14.27806,
+   "Longitude": -170.7025
+ },
+ {
+   "City (en)": "Panamá",
+   "City (de)": "Panamá",
+   "Country (en)": "Panama",
+   "Country (de)": "Panama",
+   "Country code": "PA",
+   "Population": 408200,
+   "Latitude": 8.9936,
+   "Longitude": -79.51973
+ },
+ {
+   "City (en)": "Papeete",
+   "City (de)": "Papeete",
+   "Country (en)": "French Polynesia",
+   "Country (de)": "Französisch-Polynesien",
+   "Country code": "PF",
+   "Population": 26400,
+   "Latitude": -17.53733,
+   "Longitude": -149.5665
+ },
+ {
+   "City (en)": "Paramaribo",
+   "City (de)": "Paramaribo",
+   "Country (en)": "Suriname",
+   "Country (de)": "Suriname",
+   "Country code": "SR",
+   "Population": 223800,
+   "Latitude": 5.86638,
+   "Longitude": -55.16682
+ },
+ {
+   "City (en)": "Paris",
+   "City (de)": "Paris",
+   "Country (en)": "France",
+   "Country (de)": "Frankreich",
+   "Country code": "FR",
+   "Population": 2138600,
+   "Latitude": 48.85341,
+   "Longitude": 2.3488
+ },
+ {
+   "City (en)": "Beijing",
+   "City (de)": "Peking",
+   "Country (en)": "China",
+   "Country (de)": "China",
+   "Country code": "CN",
+   "Population": 11716600,
+   "Latitude": 39.9075,
+   "Longitude": 116.39723
+ },
+ {
+   "City (en)": "Philipsburg",
+   "City (de)": "Philipsburg",
+   "Country (en)": "Saint Martin",
+   "Country (de)": "Sint Maarten",
+   "Country code": "SX",
+   "Population": 1400,
+   "Latitude": 18.025415,
+   "Longitude": -63.050516
+ },
+ {
+   "City (en)": "Phnom Penh",
+   "City (de)": "Phnom Penh",
+   "Country (en)": "Cambodia",
+   "Country (de)": "Kambodscha",
+   "Country code": "KH",
+   "Population": 1501700,
+   "Latitude": 11.56245,
+   "Longitude": 104.91601
+ },
+ {
+   "City (en)": "Pyongyang",
+   "City (de)": "Pjöngjang",
+   "Country (en)": "North Korea",
+   "Country (de)": "Nordkorea",
+   "Country code": "KP",
+   "Population": 4138200,
+   "Latitude": 39.03385,
+   "Longitude": 125.75432
+ },
+ {
+   "City (en)": "Podgorica",
+   "City (de)": "Podgorica",
+   "Country (en)": "Montenegro",
+   "Country (de)": "Montenegro",
+   "Country code": "ME",
+   "Population": 136500,
+   "Latitude": 42.44111,
+   "Longitude": 19.26361
+ },
+ {
+   "City (en)": "Port Louis",
+   "City (de)": "Port Louis",
+   "Country (en)": "Mauritius",
+   "Country (de)": "Mauritius",
+   "Country code": "MU",
+   "Population": 155200,
+   "Latitude": -20.16194,
+   "Longitude": 57.49889
+ },
+ {
+   "City (en)": "Port Moresby",
+   "City (de)": "Port Moresby",
+   "Country (en)": "Papua New Guinea",
+   "Country (de)": "Papua-Neuguinea",
+   "Country code": "PG",
+   "Population": 283700,
+   "Latitude": -9.44314,
+   "Longitude": 147.17972
+ },
+ {
+   "City (en)": "Port-au-Prince",
+   "City (de)": "Port-au-Prince",
+   "Country (en)": "Haiti",
+   "Country (de)": "Haiti",
+   "Country code": "HT",
+   "Population": 1275000,
+   "Latitude": 18.53917,
+   "Longitude": -72.335
+ },
+ {
+   "City (en)": "Port-aux-Français",
+   "City (de)": "Port-aux-Français",
+   "Country (en)": "French Southern and Antarctic Lands",
+   "Country (de)": "Französische Süd- und Antarktisgebiete",
+   "Country code": "TF",
+   "Population": 0,
+   "Latitude": -49.35,
+   "Longitude": 70.21667
+ },
+ {
+   "City (en)": "Port-of-Spain",
+   "City (de)": "Port-of-Spain",
+   "Country (en)": "Trinidad and Tobago",
+   "Country (de)": "Trinidad und Tobago",
+   "Country code": "TT",
+   "Population": 49000,
+   "Latitude": 10.66668,
+   "Longitude": -61.51889
+ },
+ {
+   "City (en)": "Port-Vila",
+   "City (de)": "Port-Vila",
+   "Country (en)": "Vanuatu",
+   "Country (de)": "Vanuatu",
+   "Country code": "VU",
+   "Population": 35900,
+   "Latitude": -17.73381,
+   "Longitude": 168.32188
+ },
+ {
+   "City (en)": "Porto-Novo",
+   "City (de)": "Porto-Novo",
+   "Country (en)": "Benin",
+   "Country (de)": "Benin",
+   "Country code": "BJ",
+   "Population": 234200,
+   "Latitude": 6.49646,
+   "Longitude": 2.60359
+ },
+ {
+   "City (en)": "Prague",
+   "City (de)": "Prag",
+   "Country (en)": "Czech Republic",
+   "Country (de)": "Tschechien",
+   "Country code": "CZ",
+   "Population": 1243200,
+   "Latitude": 50.08804,
+   "Longitude": 14.42076
+ },
+ {
+   "City (en)": "Praia",
+   "City (de)": "Praia",
+   "Country (en)": "Cape Verde",
+   "Country (de)": "Kap Verde",
+   "Country code": "CV",
+   "Population": 113400,
+   "Latitude": 14.93152,
+   "Longitude": -23.51254
+ },
+ {
+   "City (en)": "Pretoria",
+   "City (de)": "Pretoria",
+   "Country (en)": "South Africa",
+   "Country (de)": "Südafrika",
+   "Country code": "ZA",
+   "Population": 1619400,
+   "Latitude": -25.74486,
+   "Longitude": 28.18783
+ },
+ {
+   "City (en)": "Pristina",
+   "City (de)": "Pristina",
+   "Country (en)": "Kosovo",
+   "Country (de)": "Kosovo",
+   "Country code": "XK",
+   "Population": 550000,
+   "Latitude": 42.67272,
+   "Longitude": 21.16688
+ },
+ {
+   "City (en)": "Quito",
+   "City (de)": "Quito",
+   "Country (en)": "Ecuador",
+   "Country (de)": "Ecuador",
+   "Country code": "EC",
+   "Population": 2239200,
+   "Latitude": -0.22985,
+   "Longitude": -78.52495
+ },
+ {
+   "City (en)": "Rabat",
+   "City (de)": "Rabat",
+   "Country (en)": "Morocco",
+   "Country (de)": "Marokko",
+   "Country code": "MA",
+   "Population": 1655800,
+   "Latitude": 34.01325,
+   "Longitude": -6.83255
+ },
+ {
+   "City (en)": "Ramallah",
+   "City (de)": "Ramallah",
+   "Country (en)": "Palestine",
+   "Country (de)": "Palästina",
+   "Country code": "PS",
+   "Population": 24600,
+   "Latitude": 31.89964,
+   "Longitude": 35.20422
+ },
+ {
+   "City (en)": "Reykjavík",
+   "City (de)": "Reykjavík",
+   "Country (en)": "Iceland",
+   "Country (de)": "Island",
+   "Country code": "IS",
+   "Population": 118900,
+   "Latitude": 64.13548,
+   "Longitude": -21.89541
+ },
+ {
+   "City (en)": "Riyadh",
+   "City (de)": "Riad",
+   "Country (en)": "Saudi Arabia",
+   "Country (de)": "Saudi-Arabien",
+   "Country code": "SA",
+   "Population": 5700000,
+   "Latitude": 24.68773,
+   "Longitude": 46.72185
+ },
+ {
+   "City (en)": "Riga",
+   "City (de)": "Riga",
+   "Country (en)": "Latvia",
+   "Country (de)": "Lettland",
+   "Country code": "LV",
+   "Population": 742600,
+   "Latitude": 56.946,
+   "Longitude": 24.10589
+ },
+ {
+   "City (en)": "Road Town",
+   "City (de)": "Road Town",
+   "Country (en)": "British Virgin Islands",
+   "Country (de)": "Jungferninseln (UK)",
+   "Country code": "VG",
+   "Population": 8400,
+   "Latitude": 18.42693,
+   "Longitude": -64.62079
+ },
+ {
+   "City (en)": "Rome",
+   "City (de)": "Rom",
+   "Country (en)": "Italy",
+   "Country (de)": "Italien",
+   "Country code": "IT",
+   "Population": 2863300,
+   "Latitude": 41.89193,
+   "Longitude": 12.51133
+ },
+ {
+   "City (en)": "Roseau",
+   "City (de)": "Roseau",
+   "Country (en)": "Dominica",
+   "Country (de)": "Dominica",
+   "Country code": "DM",
+   "Population": 16600,
+   "Latitude": 15.30174,
+   "Longitude": -61.38808
+ },
+ {
+   "City (en)": "Saint George's",
+   "City (de)": "Saint George's",
+   "Country (en)": "Grenada",
+   "Country (de)": "Grenada",
+   "Country code": "GD",
+   "Population": 7500,
+   "Latitude": 12.05644,
+   "Longitude": -61.74849
+ },
+ {
+   "City (en)": "Saint Helier",
+   "City (de)": "Saint Helier",
+   "Country (en)": "Jersey",
+   "Country (de)": "Jersey",
+   "Country code": "JE",
+   "Population": 28000,
+   "Latitude": 49.18804,
+   "Longitude": -2.10491
+ },
+ {
+   "City (en)": "Saint John’s",
+   "City (de)": "Saint John’s",
+   "Country (en)": "Antigua and Barbuda",
+   "Country (de)": "Antigua und Barbuda",
+   "Country code": "AG",
+   "Population": 24200,
+   "Latitude": 17.11717,
+   "Longitude": -61.84573
+ },
+ {
+   "City (en)": "Saint Peter Port",
+   "City (de)": "Saint Peter Port",
+   "Country (en)": "Guernsey",
+   "Country (de)": "Guernsey",
+   "Country code": "GG",
+   "Population": 16500,
+   "Latitude": 49.45981,
+   "Longitude": -2.53527
+ },
+ {
+   "City (en)": "Saint-Denis",
+   "City (de)": "Saint-Denis",
+   "Country (en)": "Reunion",
+   "Country (de)": "Réunion",
+   "Country code": "RE",
+   "Population": 137200,
+   "Latitude": -20.88231,
+   "Longitude": 55.4504
+ },
+ {
+   "City (en)": "Saint-Pierre",
+   "City (de)": "Saint-Pierre",
+   "Country (en)": "Saint Pierre and Miquelon",
+   "Country (de)": "St. Pierre und Miquelon",
+   "Country code": "PM",
+   "Population": 6200,
+   "Latitude": 46.77914,
+   "Longitude": -56.1773
+ },
+ {
+   "City (en)": "Saipan",
+   "City (de)": "Saipan",
+   "Country (en)": "Northern Mariana Islands",
+   "Country (de)": "Nördliche Marianen",
+   "Country code": "MP",
+   "Population": 48200,
+   "Latitude": 15.21233,
+   "Longitude": 145.7545
+ },
+ {
+   "City (en)": "San José",
+   "City (de)": "San José",
+   "Country (en)": "Costa Rica",
+   "Country (de)": "Costa Rica",
+   "Country code": "CR",
+   "Population": 335000,
+   "Latitude": 9.93333,
+   "Longitude": -84.08333
+ },
+ {
+   "City (en)": "San Juan",
+   "City (de)": "San Juan",
+   "Country (en)": "Puerto Rico",
+   "Country (de)": "Puerto Rico",
+   "Country code": "PR",
+   "Population": 418100,
+   "Latitude": 18.46633,
+   "Longitude": -66.10572
+ },
+ {
+   "City (en)": "San Marino",
+   "City (de)": "San Marino",
+   "Country (en)": "San Marino",
+   "Country (de)": "San Marino",
+   "Country code": "SM",
+   "Population": 4500,
+   "Latitude": 43.93667,
+   "Longitude": 12.44639
+ },
+ {
+   "City (en)": "San Salvador",
+   "City (de)": "San Salvador",
+   "Country (en)": "El Salvador",
+   "Country (de)": "El Salvador",
+   "Country code": "SV",
+   "Population": 526000,
+   "Latitude": 13.68935,
+   "Longitude": -89.18718
+ },
+ {
+   "City (en)": "Sanaa",
+   "City (de)": "Sanaa",
+   "Country (en)": "Yemen",
+   "Country (de)": "Jemen",
+   "Country code": "YE",
+   "Population": 1937500,
+   "Latitude": 15.35472,
+   "Longitude": 44.20667
+ },
+ {
+   "City (en)": "Santiago",
+   "City (de)": "Santiago",
+   "Country (en)": "Chile",
+   "Country (de)": "Chile",
+   "Country code": "CL",
+   "Population": 4837300,
+   "Latitude": -33.45694,
+   "Longitude": -70.64827
+ },
+ {
+   "City (en)": "Santo Domingo",
+   "City (de)": "Santo Domingo",
+   "Country (en)": "Dominican Republic",
+   "Country (de)": "Dominikanische Republik",
+   "Country code": "DO",
+   "Population": 2987000,
+   "Latitude": 18.50012,
+   "Longitude": -69.98857
+ },
+ {
+   "City (en)": "São Tomé",
+   "City (de)": "São Tomé",
+   "Country (en)": "Sao Tome and Principe",
+   "Country (de)": "São Tomé und Príncipe",
+   "Country code": "ST",
+   "Population": 53300,
+   "Latitude": 0.33654,
+   "Longitude": 6.72732
+ },
+ {
+   "City (en)": "Sarajevo",
+   "City (de)": "Sarajevo",
+   "Country (en)": "Bosnia and Herzegovina",
+   "Country (de)": "Bosnien und Herzegowina",
+   "Country code": "BA",
+   "Population": 696700,
+   "Latitude": 43.84864,
+   "Longitude": 18.35644
+ },
+ {
+   "City (en)": "Seoul",
+   "City (de)": "Seoul",
+   "Country (en)": "South Korea",
+   "Country (de)": "Südkorea",
+   "Country code": "KR",
+   "Population": 10349300,
+   "Latitude": 37.566,
+   "Longitude": 126.9784
+ },
+ {
+   "City (en)": "Singapore",
+   "City (de)": "Singapur",
+   "Country (en)": "Singapore",
+   "Country (de)": "Singapur",
+   "Country code": "SG",
+   "Population": 5399200,
+   "Latitude": 1.28967,
+   "Longitude": 103.85007
+ },
+ {
+   "City (en)": "Skopje",
+   "City (de)": "Skopje",
+   "Country (en)": "Macedonia",
+   "Country (de)": "Mazedonien",
+   "Country code": "MK",
+   "Population": 474900,
+   "Latitude": 41.99646,
+   "Longitude": 21.43141
+ },
+ {
+   "City (en)": "Sofia",
+   "City (de)": "Sofia",
+   "Country (en)": "Bulgaria",
+   "Country (de)": "Bulgarien",
+   "Country code": "BG",
+   "Population": 1271700,
+   "Latitude": 42.69751,
+   "Longitude": 23.32415
+ },
+ {
+   "City (en)": "Stanley",
+   "City (de)": "Stanley",
+   "Country (en)": "Falkland Islands",
+   "Country (de)": "Falklandinseln",
+   "Country code": "FK",
+   "Population": 2200,
+   "Latitude": -51.7,
+   "Longitude": -57.85
+ },
+ {
+   "City (en)": "Stockholm",
+   "City (de)": "Stockholm",
+   "Country (en)": "Sweden",
+   "Country (de)": "Schweden",
+   "Country code": "SE",
+   "Population": 1253300,
+   "Latitude": 59.33258,
+   "Longitude": 18.0649
+ },
+ {
+   "City (en)": "Sucre",
+   "City (de)": "Sucre",
+   "Country (en)": "Bolivia",
+   "Country (de)": "Bolivien",
+   "Country code": "BO",
+   "Population": 224800,
+   "Latitude": -19.03332,
+   "Longitude": -65.26274
+ },
+ {
+   "City (en)": "Suva",
+   "City (de)": "Suva",
+   "Country (en)": "Fiji",
+   "Country (de)": "Fidschi",
+   "Country code": "FJ",
+   "Population": 77400,
+   "Latitude": -18.14161,
+   "Longitude": 178.44149
+ },
+ {
+   "City (en)": "Taipei",
+   "City (de)": "Taipei",
+   "Country (en)": "Taiwan",
+   "Country (de)": "Taiwan",
+   "Country code": "TW",
+   "Population": 2693700,
+   "Latitude": 25.04776,
+   "Longitude": 121.53185
+ },
+ {
+   "City (en)": "Tallinn",
+   "City (de)": "Tallinn",
+   "Country (en)": "Estonia",
+   "Country (de)": "Estland",
+   "Country code": "EE",
+   "Population": 394000,
+   "Latitude": 59.43696,
+   "Longitude": 24.75353
+ },
+ {
+   "City (en)": "Tarawa",
+   "City (de)": "Tarawa",
+   "Country (en)": "Kiribati",
+   "Country (de)": "Kiribati",
+   "Country code": "KI",
+   "Population": 40300,
+   "Latitude": 1.3278,
+   "Longitude": 172.97696
+ },
+ {
+   "City (en)": "Tashkent",
+   "City (de)": "Taschkent",
+   "Country (en)": "Uzbekistan",
+   "Country (de)": "Usbekistan",
+   "Country code": "UZ",
+   "Population": 2140500,
+   "Latitude": 41.26465,
+   "Longitude": 69.21627
+ },
+ {
+   "City (en)": "Tegucigalpa",
+   "City (de)": "Tegucigalpa",
+   "Country (en)": "Honduras",
+   "Country (de)": "Honduras",
+   "Country code": "HN",
+   "Population": 850800,
+   "Latitude": 14.0818,
+   "Longitude": -87.20681
+ },
+ {
+   "City (en)": "Tehran",
+   "City (de)": "Teheran",
+   "Country (en)": "Iran",
+   "Country (de)": "Iran",
+   "Country code": "IR",
+   "Population": 7153300,
+   "Latitude": 35.69439,
+   "Longitude": 51.42151
+ },
+ {
+   "City (en)": "The Valley",
+   "City (de)": "The Valley",
+   "Country (en)": "Anguilla",
+   "Country (de)": "Anguilla",
+   "Country code": "AI",
+   "Population": 2000,
+   "Latitude": 18.21704,
+   "Longitude": -63.05783
+ },
+ {
+   "City (en)": "Thimphu",
+   "City (de)": "Thimphu",
+   "Country (en)": "Bhutan",
+   "Country (de)": "Bhutan",
+   "Country code": "BT",
+   "Population": 98700,
+   "Latitude": 27.46609,
+   "Longitude": 89.64191
+ },
+ {
+   "City (en)": "Tórshavn",
+   "City (de)": "Thorshaven",
+   "Country (en)": "Faroe Islands",
+   "Country (de)": "Färöer-Inseln",
+   "Country code": "FO",
+   "Population": 13200,
+   "Latitude": 62.00973,
+   "Longitude": -6.77164
+ },
+ {
+   "City (en)": "Tbilisi",
+   "City (de)": "Tiflis",
+   "Country (en)": "Georgia",
+   "Country (de)": "Georgien",
+   "Country code": "GE",
+   "Population": 1162400,
+   "Latitude": 41.69411,
+   "Longitude": 44.83368
+ },
+ {
+   "City (en)": "Tirana",
+   "City (de)": "Tirana",
+   "Country (en)": "Albania",
+   "Country (de)": "Albanien",
+   "Country code": "AL",
+   "Population": 374800,
+   "Latitude": 41.3275,
+   "Longitude": 19.81889
+ },
+ {
+   "City (en)": "Tokyo",
+   "City (de)": "Tokio",
+   "Country (en)": "Japan",
+   "Country (de)": "Japan",
+   "Country code": "JP",
+   "Population": 8336600,
+   "Latitude": 35.6895,
+   "Longitude": 139.69171
+ },
+ {
+   "City (en)": "Tripoli",
+   "City (de)": "Tripolis",
+   "Country (en)": "Libya",
+   "Country (de)": "Libyen",
+   "Country code": "LY",
+   "Population": 1780000,
+   "Latitude": 32.87519,
+   "Longitude": 13.18746
+ },
+ {
+   "City (en)": "Tunis",
+   "City (de)": "Tunis",
+   "Country (en)": "Tunisia",
+   "Country (de)": "Tunesien",
+   "Country code": "TN",
+   "Population": 693200,
+   "Latitude": 36.81897,
+   "Longitude": 10.16579
+ },
+ {
+   "City (en)": "Ulaanbaatar",
+   "City (de)": "Ulaanbaatar",
+   "Country (en)": "Mongolia",
+   "Country (de)": "Mongolei",
+   "Country code": "MN",
+   "Population": 844800,
+   "Latitude": 47.90771,
+   "Longitude": 106.88324
+ },
+ {
+   "City (en)": "Vaduz",
+   "City (de)": "Vaduz",
+   "Country (en)": "Liechtenstein",
+   "Country (de)": "Liechtenstein",
+   "Country code": "LI",
+   "Population": 5200,
+   "Latitude": 47.14151,
+   "Longitude": 9.52154
+ },
+ {
+   "City (en)": "Valletta",
+   "City (de)": "Valletta",
+   "Country (en)": "Malta",
+   "Country (de)": "Malta",
+   "Country code": "MT",
+   "Population": 6800,
+   "Latitude": 35.89972,
+   "Longitude": 14.51472
+ },
+ {
+   "City (en)": "Victoria",
+   "City (de)": "Victoria",
+   "Country (en)": "Seychelles",
+   "Country (de)": "Seychellen",
+   "Country code": "SC",
+   "Population": 22900,
+   "Latitude": -4.61667,
+   "Longitude": 55.45
+ },
+ {
+   "City (en)": "Vientiane",
+   "City (de)": "Vientiane",
+   "Country (en)": "Laos",
+   "Country (de)": "Laos",
+   "Country code": "LA",
+   "Population": 196700,
+   "Latitude": 17.96667,
+   "Longitude": 102.6
+ },
+ {
+   "City (en)": "Vilnius",
+   "City (de)": "Vilnius",
+   "Country (en)": "Lithuania",
+   "Country (de)": "Litauen",
+   "Country code": "LT",
+   "Population": 542400,
+   "Latitude": 54.68916,
+   "Longitude": 25.2798
+ },
+ {
+   "City (en)": "Warsaw",
+   "City (de)": "Warschau",
+   "Country (en)": "Poland",
+   "Country (de)": "Polen",
+   "Country code": "PL",
+   "Population": 1702100,
+   "Latitude": 52.22977,
+   "Longitude": 21.01178
+ },
+ {
+   "City (en)": "Washington, D.C.",
+   "City (de)": "Washington, D.C.",
+   "Country (en)": "United States",
+   "Country (de)": "Vereinigte Staaten von Amerika",
+   "Country code": "US",
+   "Population": 601700,
+   "Latitude": 38.89511,
+   "Longitude": -77.03637
+ },
+ {
+   "City (en)": "Wellington",
+   "City (de)": "Wellington",
+   "Country (en)": "New Zealand",
+   "Country (de)": "Neuseeland",
+   "Country code": "NZ",
+   "Population": 381900,
+   "Latitude": -41.28664,
+   "Longitude": 174.77557
+ },
+ {
+   "City (en)": "West Island",
+   "City (de)": "West Island",
+   "Country (en)": "Cocos Islands",
+   "Country (de)": "Kokosinseln",
+   "Country code": "CC",
+   "Population": 100,
+   "Latitude": -12.14603,
+   "Longitude": 96.822424
+ },
+ {
+   "City (en)": "Vienna",
+   "City (de)": "Wien",
+   "Country (en)": "Austria",
+   "Country (de)": "Österreich",
+   "Country code": "AT",
+   "Population": 1691500,
+   "Latitude": 48.20849,
+   "Longitude": 16.37208
+ },
+ {
+   "City (en)": "Willemstad",
+   "City (de)": "Willemstad",
+   "Country (en)": "Netherlands Antilles",
+   "Country (de)": "Niederländische Antillen",
+   "Country code": "AN",
+   "Population": 125000,
+   "Latitude": 12.133649,
+   "Longitude": -68.930873
+ },
+ {
+   "City (en)": "Windhoek",
+   "City (de)": "Windhoek",
+   "Country (en)": "Namibia",
+   "Country (de)": "Namibia",
+   "Country code": "NA",
+   "Population": 268100,
+   "Latitude": -22.55941,
+   "Longitude": 17.08323
+ },
+ {
+   "City (en)": "Yamoussoukro",
+   "City (de)": "Yamoussoukro",
+   "Country (en)": "Ivory Coast",
+   "Country (de)": "Elfenbeinküste",
+   "Country code": "CI",
+   "Population": 194500,
+   "Latitude": 6.82055,
+   "Longitude": -5.27674
+ },
+ {
+   "City (en)": "Yaren",
+   "City (de)": "Yaren",
+   "Country (en)": "Nauru",
+   "Country (de)": "Nauru",
+   "Country code": "NR",
+   "Population": 1100,
+   "Latitude": -0.55085,
+   "Longitude": 166.9252
+ },
+ {
+   "City (en)": "Zagreb",
+   "City (de)": "Zagreb",
+   "Country (en)": "Croatia",
+   "Country (de)": "Kroatien",
+   "Country code": "HR",
+   "Population": 699000,
+   "Latitude": 45.81444,
+   "Longitude": 15.97798
+ }
+]

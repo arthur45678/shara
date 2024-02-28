@@ -1,0 +1,126 @@
+<div ncy-breadcrumb></div>
+<div id="banner" class="with-transparent-header parallax background main-banner" style="background-image: url(angular/images/background-optimized.jpg)" data-img-width="2000" data-img-height="1330" data-diff="300">
+	<div class="container">
+		<div class="sixteen columns home-top-content">
+			<form ng-submit = "searchByLocation()" name="myForm"> 
+			
+			<div class="search-container">
+
+				<!-- Form -->
+				<h2 translate="get_a_job_fast_and_easy"></h2>
+				<input type="text" class="ico-01 search-loc-input" placeholder="{{'placeholder_search_text' | translate }}" value="" ng-model="$root.search_text"/>
+				<input ng-model="locationField" type="text" id="pac-input" class="ico-02 search-loc-input search-location" placeholder="{{'placeholder_search_location' | translate}}" value=""/>
+				<button id="search-button " class=" home-search"  type="submit"><i class="fa fa-search"></i></button>
+
+				
+				<h4 class="empty-error" ng-show="emptyError" style="float: left; color: red;" translate="empty_search_query"></h4>
+				<!-- Announce -->
+				<div class="announce" style="float:left">
+					<span translate="whether_you_are"></span> <strong translate="hundreds"></strong> <span translate="job_opportunities"></span>
+				</div>
+
+			</div>
+</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+
+<!-- Categories -->
+<div class="container">
+	<div class="sixteen columns">
+		<h3 class="margin-bottom-25" translate="popular_categories"></h3>
+		<ul id="popular-categories">
+			<li ng-repeat = "category in homeCategories" ng-show="!category.category.name"><a href=""  ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')"><i ng-show="category.category.icon" class="ln  {{category.category.icon}}"></i><i ng-show="!category.category.icon" class="ln  ln-icon-Bar-Chart"></i>{{category.defaultCategory.name}}</a></li>
+			<li ng-repeat = "category in homeCategories" ng-show="category.category.name"><a href=""  ng-click="popularCategories(category.category.id, category.category.name, 'category')"><i ng-show="category.category.icon" class="ln  {{category.category.icon}}"></i><i ng-show="!category.category.icon" class="ln  ln-icon-Bar-Chart"></i>{{category.category.name}}</a></li>
+		</ul>
+
+		<div class="clearfix"></div>
+		<div class="margin-top-30"></div>
+
+		<a href="" ui-sref="all-categories" class="button centered" translate="browse_all_categories"></a>
+		<div class="margin-bottom-50"></div>
+	</div>
+</div>
+
+
+<div class="container">
+	
+	
+
+	<!-- Icon Boxes -->
+<div class="section-background top-0 action homepage-round-icons-wrapper">
+	<div class="container">
+
+		<div class="one-third column">
+			<div class="icon-box rounded alt">
+				<i class="ln ln-icon-Folder-Add homepage-round-icon" style="cursor: pointer;" ng-show="!loggedUser" data-toggle="modal" data-target="#myModal"></i>
+				<i class="ln ln-icon-Folder-Add homepage-round-icon" style="cursor: pointer;" ng-show="loggedUser" ng-click="myProfileTab(1)"></i>
+				<h4 translate="create_universal_profile"></h4>
+				<p translate="create_universal_profile_text"></p>
+			</div>
+		</div>
+
+		<div class="one-third column">
+			<div class="icon-box rounded alt">
+				<i class="ln ln-icon-Search-onCloud homepage-round-icon" style="cursor: pointer;" ng-click="browseJobsGigs()"></i>
+				<h4 translate="find_jobs_gigs"></h4>
+				<p translate="find_jobs_gigs_text"></p>
+			</div>
+		</div>
+
+		<div class="one-third column">
+			<div class="icon-box rounded alt">
+				<i class="ln ln-icon-Business-ManWoman homepage-round-icon" style="cursor: pointer;" ng-click="browseJobsGigs()"></i>
+				<h4 translate="work_across_services"></h4>
+				<p translate="work_across_services_text"></p>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- Icon Boxes / End -->
+
+<div class="section-background top-0 tops">
+	<div class="container">
+
+		<div class="one-third column sharado-top">
+			<div class="icon-box rounded alt top-sector-icon-box">
+				
+				<h4 translate="top_sectors"></h4>
+				<ul>
+					<li ng-repeat='sector in sectors' ng-show="sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.sector.name)">{{sector.sector.name}}</a></li>
+					<li ng-repeat='sector in sectors' ng-show="!sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.defaultSector.name)">{{sector.defaultSector.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="one-third column sharado-top">
+			<div class="icon-box rounded alt">
+				
+				<h4 translate="top_locations"></h4>
+				<ul>
+					<li ng-repeat='location in locations'><a  ng-click="searchByTopLocation(location.city, location.latitude, location.longitude)" href="">{{location.city}}</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="one-third column sharado-top">
+			<div class="icon-box rounded alt">
+				
+				<h4 translate="top_jobs_gigs"></h4>
+				<ul>
+					<!-- <li ng-repeat='(key, job) in jobs'><a ng-click="topGigs(key)" href="">{{key}}</a></li> -->
+					<li ng-repeat="category in categories" ng-show="!category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')">{{category.defaultCategory.name}}</a></li>
+					<li ng-repeat="category in categories" ng-show="category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.category.name, 'category')">{{category.category.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</div>

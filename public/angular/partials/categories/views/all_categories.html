@@ -1,0 +1,79 @@
+<div class="cover cover--no-search" data-type="background" data-speed="2"  style="background: url('img/bg-cover.jpg') center center; background-size: cover; background-attachment: fixed;">
+  <div class="cover__filter"></div>
+  <p class="text-center" id="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></p>
+</div>
+<div class="form-wide animate">
+    <div class="container">
+      <form ng-submit = "searchByLocation()" name="myForm" class="search-results-upper-search"> 
+
+          <div class="form-wide__col">
+            <input  type="text" class="ico-01 search-loc-input six columns form-wide__col__input" placeholder="job, keyword or company" value="" ng-model="$root.search_text">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="form-wide__col">
+            <input name="location" type="text" id="pac-input" class="ico-02 search-loc-input six columns pac-input-results  search-location form-wide__col__input" placeholder="city, province or region" value="" ng-model="inSearchLocation">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <div class="form-wide__col form-wide__col--small">
+            <input class="button not_collapsing_search_button" type="submit" value="Search Jobs" id="search-button">
+
+          </div>
+      </form>
+    </div>
+</div>
+<section class="content">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<h3 class="huger light text-center margin-bottom" translate="all_categories" translate-default="&nbsp;"></h3>
+    		</div>
+    	</div>
+    	<div class="row margin-top">
+    		<div ng-repeat-start="(key,category) in categoriesList | orderBy:'name'" ng-show="key%4==0" class="col-sm-3">
+                <p ng-show="!category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.defaultCategory.name, 'category')" ng-bind="category.defaultCategory.name"></p>
+                <p ng-show="category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.name, 'category')" ng-bind="category.name"></p>
+            </div>
+    		<div ng-show="key%4==1" class="col-sm-3">
+                <p ng-show="!category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.defaultCategory.name, 'category')" ng-bind="category.defaultCategory.name"></p>
+                <p ng-show="category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.name, 'category')" ng-bind="category.name"></p>
+            </div>
+    		<div ng-show="key%4==2" class="col-sm-3">
+                <p ng-show="!category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.defaultCategory.name, 'category')" ng-bind="category.defaultCategory.name"></p>
+                <p ng-show="category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.name, 'category')" ng-bind="category.name"></p>
+            </div>
+    		<div ng-repeat-end ng-show="key%4==3" class="col-sm-3">
+                <p ng-show="!category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.defaultCategory.name, 'category')" ng-bind="category.defaultCategory.name"></p>
+                <p ng-show="category.name" style="cursor: pointer;" ng-click="popularCategories(category.id, category.name, 'category')" ng-bind="category.name"></p>
+            </div>
+    	</div>
+	</div>
+</section>
+
+<section class="prefooter">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_sectors" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat='sector in topSectors' ng-show="sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.sector.name)">{{sector.sector.name}}</a></li>
+            <li ng-repeat='sector in topSectors' ng-show="!sector.sector.name"><a href="" ng-click="topSectors(sector.sector.id, sector.defaultSector.name)">{{sector.defaultSector.name}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_locations" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat='location in topLocations'><a  ng-click="searchByTopLocation(location.city, location.latitude, location.longitude)" href="">{{location.city}}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="margin-top" translate="top_jobs" translate-default="&nbsp;"></h3>
+          <ul>
+            <li ng-repeat="category in topCategories" ng-show="!category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.defaultCategory.name, 'category')">{{category.defaultCategory.name}}</a></li>
+            <li ng-repeat="category in topCategories" ng-show="category.category.name"><a href="" ng-click="popularCategories(category.category.id, category.category.name, 'category')">{{category.category.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>

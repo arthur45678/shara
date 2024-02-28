@@ -1,0 +1,132 @@
+<div class="container company-details-container">
+	<div class="clearfix"></div>
+	<div class="bububu">
+		<div class=" search-in-results">
+			<!-- Form -->
+			<form ng-submit = "searchByLocation()" name="myForm" class="search-results-upper-search">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 search-box-inner">
+						
+						<div id="notCollapsingBox">
+							<div class="col-md-5 col-sm-5 col-xs-12 search-field-results">
+								<input type="text" class="ico-01 search-loc-input six columns" placeholder="job, keyword or company" value="" ng-model="$root.search_text"/>
+							</div >
+							<div class="col-md-5 col-sm-5 col-xs-12 search-field-results">
+								<input name="location" type="text" id="pac-input" class="ico-02 search-loc-input six columns pac-input-results  search-location" placeholder="city, province or region" value="" ng-model="inSearchLocation"/>
+							</div>
+						</div>
+										
+							<button class="search_btn not_collapsing_search_button" type="submit" id="search-button"><i class="fa fa-search"></i></button>
+							<button class="search_btn collapsing_search_button" type="button" id="search-button" ng-click="changeSearchButtons()" data-toggle="collapse" data-target="#collapsingBox"><i class="fa fa-search"></i></button>
+						<h4 class="empty-error" ng-show="emptyError" style="color: red;" translate="empty_search_query"></h4>
+
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="company-details-breadcrumb" ncy-breadcrumb style="background-color: white; "></div>
+	</div>
+	<div class="clearfix"></div>
+	<!-- Recent Jobs -->
+	<div class="eleven columns main-eleven">
+	<div class="padding-right">
+		
+		<!-- Company Info -->
+		<div class="company-info company-details-info">
+			
+			<div class="content col-md-8 col-sm-6 col-xs-9 company-details-divik">
+			<img ng-show="company.logo" src="/uploads/{{company.logo}}" alt="" class="overview-image">
+			<img ng-show="!company.logo" src="/images/default-organization.png" alt="" class="overview-image">
+			<div class="divik-indivik">
+				<h4>{{company.name}}</h4>
+				<p ng-show="company.short_description" class="col-md-8 col-sm-8 col-cs-10 short-desc">{{company.short_description}}</p>
+				<span translate="sector"></span>:
+				<span ng-show="company.sector.name"><span style="cursor:pointer;" ng-click="topSectors(company.sector.id, company.sector.name)">{{company.sector.name}}</span></span>
+				<span ng-show="!company.sector.name"><span style="cursor:pointer;" ng-click="topSectors(company.sector.id, company.sector.defaultSector)">{{company.sector.defaultSector}}</span></span>
+				<span ng-show="company.citiesOperating.length > 0" class="cities_operating_list">
+					In <i class="fa fa-map-marker" style="padding-right: 3px;"></i>
+						<span ng-show="company.citiesOperating">
+							<span ng-repeat="city in company.citiesOperating" style="cursor: pointer; padding-right: 5px;" ng-click="searchByTopLocation(city.city, city.latitude, city.longitude,  company.country.abbreviation)">{{city.city}}, </span>
+						<span ng-show="company.citiesOperatingCount"> + {{company.citiesOperatingCount}}</span>
+					</span>
+				</span>
+			</div>
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="company-content-info">
+
+			<div ng-show="company.jobs">
+				<div class="tabs-wrapper col-md-12 ">
+					<h4 class="company-jobs">JOBS:</h4>
+			  		<ul class="nav nav-pills nav-stacked jobs-tags">
+				       	<li class="my-profile-tab job-tab" ng-repeat="(key, job) in company.jobs" ng-class="{ active: isSet(key+1)}">
+				          	<a href ng-click="setTab(key+1)" class="job-pill">{{job.name}}</a>
+				       	</li>
+			     	</ul>
+			  	</div>
+			  	<div ng-repeat="(key, job) in company.jobs" ng-show="$root.companyTab == key+1">
+			  			<h4 class="job-name-underlined">{{job.name}}</h4>
+
+				  		<div ng-show="job.description">
+							<h4 class="company-h4">Job Description</h4>
+							<p class="text-with-spaces company-p" ng-bind-html="job.description"></p>	
+						</div>
+						<div ng-show="job.benefits">
+							<h4 class="company-h4">Benefits</h4>
+							<p class="text-with-spaces company-p" ng-bind-html="job.benefits"></p>
+						</div>
+						<div ng-show="job.requirement">
+							<h4 class="company-h4">Job Requirements</h4>
+							<p class="text-with-spaces company-p" ng-bind-html="job.requirement"></p>
+						</div>
+
+						<div ng-show="job.why_us">
+							<h4 class="company-h4">Why Us</h4>
+							<p ng-bind-html="job.why_us" class="company-p"></p>
+						</div>
+
+						
+
+						<div ng-show="job.compensation ">
+							<h4 class="company-h4 company-p">Compensation</h4>
+							<p>{{job.compensation }}</p>
+						</div>
+
+						<a ng-show="job.apply && job.job_applying == 'form'" href="" class="popup-with-zoom-anim button job-applying" id="apply{{job.id}}" ng-click="applyForJobCompany(job.id, job.url_to_redirect)">Apply</a>
+						<a ng-show="job.apply && job.job_applying == 'redirect' && !company.logged_in && !job.userApplied" href="" class="popup-with-zoom-anim button job-applying" id="apply{{job.id}}" ng-click="applyForJobCompany(job.id, job.url_to_redirect)">Apply</a>
+						<a ng-show="job.job_applying == 'redirect' && company.logged_in" href="{{job.url_to_redirect}}" target="__blank" class="popup-with-zoom-anim button job-applying job-applying-with-href" id="apply{{job.id}}" ng-click="applyForJobCompany(job.id, job.url_to_redirect)">Apply</a>
+						<a style="display: none;" href="" class="popup-with-zoom-anim button job-applying job-applying-user-applied" id="apply{{job.id}}" ng-click="applyForJobCompany(job.id, job.url_to_redirect)">Apply</a>
+						<a ng-show="!job.apply" id="applied{{job.id}}" class="popup-with-zoom-anim button job-applying applied-job col-md-2 col-sm-8 col-xs-8" disabled="true" readonly="readonly">Applied</a>
+						<a style="display: none" id="appliedhidden{{job.id}}" class="popup-with-zoom-anim button job-applying applied-job col-md-2 col-sm-8 col-xs-8" disabled="true" readonly="readonly">Applied</a>
+			  	</div>
+					
+				
+			</div>
+		
+		</div>
+		<!-- Widgets -->
+	<div class="five columns main-five">
+
+		<!-- Sort by -->
+		<div class="widget">
+
+			<div class="job-overview">
+				<h4 class="overview-company-name">{{company.name}}</h4>
+				<p ng-show="company.description" ng-bind-html="company.description" class="margin-reset text-with-spaces overview-description">
+				
+				</p>
+				<p ng-show="!company.description && company.generic.descriprion" ng-bind-html="company.generic.description" class="margin-reset text-with-spaces overview-description">
+					
+				</p>				
+
+			</div>
+
+		</div>
+
+	</div>
+	</div>				
+	</div>
+
+</div>
